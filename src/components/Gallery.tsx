@@ -49,7 +49,7 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
           <SwiperSlide key={img}>
             <div className="relative w-full max-h-64 md:max-h-96">
               <img
-                src={`${img}`}
+                src={img}
                 className="w-full max-h-96 object-cover rounded-xl"
                 alt={`Gallery ${idx + 1}`}
                 onLoad={() => handleImageLoad(idx)}
@@ -83,7 +83,7 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
               className={`relative w-full h-16 rounded ${activeIndex === idx ? '' : 'brightness-50'}`}
             >
               <img
-                src={`${img}`}
+                src={img}
                 className={`w-full h-16 object-cover rounded cursor-pointer border-2 ${activeIndex === idx ? 'border-[#000]' : 'border-transparent'}`}
                 alt={`Thumbnail ${idx + 1}`}
               />
