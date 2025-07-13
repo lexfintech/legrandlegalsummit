@@ -1,7 +1,17 @@
 import React from 'react';
-import { 
-  Lightbulb, Award, Star, Users, Laptop, Coffee, 
-  Camera, FileText, BookOpen, UserCheck, Globe, Handshake 
+import {
+  Lightbulb,
+  Award,
+  Star,
+  Users,
+  Laptop,
+  Coffee,
+  Camera,
+  FileText,
+  BookOpen,
+  UserCheck,
+  Globe,
+  Handshake,
 } from 'lucide-react';
 
 const WhatToExpect = () => {
@@ -9,63 +19,53 @@ const WhatToExpect = () => {
     {
       icon: Lightbulb,
       title: 'Insight Sessions',
-      description: 'Deep-dive sessions with industry experts and thought leaders'
+      description: 'from India’s top legal minds',
     },
     {
       icon: Award,
       title: 'Bharat Nyaya Puraskar',
-      description: 'Prestigious awards recognizing excellence in legal practice'
+      description: 'Ceremony with 50+ Legal Awards',
     },
     {
       icon: Star,
       title: 'Celebrity Presence',
-      description: 'Meet renowned personalities from legal and entertainment industry'
+      description: ' Actor Saurabh Raj Jain as Chief Guest',
     },
     {
       icon: Users,
       title: '500+ Legal Professionals',
-      description: 'Network with top lawyers, judges, and legal practitioners'
+      description: 'from across India',
     },
     {
       icon: Laptop,
       title: 'Legal Tech Expo',
-      description: 'Explore cutting-edge technology solutions for legal practice'
+      description: 'Startup Showcase',
     },
     {
       icon: Coffee,
       title: 'Exclusive Networking Lounges',
-      description: 'Premium networking spaces for meaningful connections'
+      description: 'over lunch & high tea',
     },
     {
       icon: Camera,
       title: 'Media Coverage',
-      description: 'Comprehensive coverage by leading legal and mainstream media'
+      description: 'and post-event brand exposure',
     },
     {
       icon: FileText,
       title: 'Participation Certificates',
-      description: 'Official certificates for professional development records'
+      description: 'for all attendees',
     },
     {
       icon: BookOpen,
       title: 'Summit Magazine',
-      description: 'Exclusive publication with conference insights and articles'
+      description: ' featuring insights, sponsors, and awardees',
     },
-    {
-      icon: UserCheck,
-      title: 'Access to Legal Influencers',
-      description: 'Direct interaction with top legal influencers and thought leaders'
-    },
+
     {
       icon: Globe,
-      title: 'GCS Participation',
-      description: 'Global Compliance Summit integration and international perspectives'
+      title: 'Access to legal influencers, GCs & Partners',
     },
-    {
-      icon: Handshake,
-      title: 'Strategic Partners',
-      description: 'Meet with leading legal tech companies and service providers'
-    }
   ];
 
   return (
@@ -77,7 +77,8 @@ const WhatToExpect = () => {
           </h2>
           <div className="w-24 h-1 bg-[#2E86AB] mx-auto mb-6"></div>
           <p className="text-xl text-[#4A4A4A] max-w-3xl mx-auto">
-            Le Confluence offers an unparalleled experience with exclusive opportunities for learning, networking, and professional growth
+            Le Confluence offers an unparalleled experience with exclusive
+            opportunities for learning, networking, and professional growth
           </p>
         </div>
 
@@ -85,7 +86,7 @@ const WhatToExpect = () => {
           {expectations.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 group"
+              className={`bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 group${index === expectations.length - 1 ? ' lg:col-start-2' : ''}`}
             >
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">

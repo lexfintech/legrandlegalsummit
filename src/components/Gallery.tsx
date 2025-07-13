@@ -16,7 +16,7 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
   const [loaded, setLoaded] = useState(Array(images.length).fill(false));
 
   const handleImageLoad = (idx: number) => {
-    setLoaded(prev => {
+    setLoaded((prev) => {
       const copy = [...prev];
       copy[idx] = true;
       return copy;
@@ -42,15 +42,15 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
         thumbs={{ swiper: thumbsSwiper }}
         spaceBetween={10}
         className="mb-4 rounded-xl shadow-lg"
-        onSlideChange={swiper => setActiveIndex(swiper.realIndex)}
-        onSwiper={swiper => setActiveIndex(swiper.realIndex)}
+        onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+        onSwiper={(swiper) => setActiveIndex(swiper.realIndex)}
       >
         {images.map((img, idx) => (
           <SwiperSlide key={img}>
-            <div className="relative w-full min-h-96">
+            <div className="relative w-full max-h-64 md:max-h-96">
               <img
-                src={`/images/gallery/${img}`}
-                className="w-full min-h-96 object-cover rounded-xl"
+                src={`${img}`}
+                className="w-full max-h-96 object-cover rounded-xl"
                 alt={`Gallery ${idx + 1}`}
                 onLoad={() => handleImageLoad(idx)}
               />
@@ -79,9 +79,11 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
       >
         {images.map((img, idx) => (
           <SwiperSlide key={img}>
-            <div className={`relative w-full h-16 rounded ${activeIndex === idx ? '' : 'brightness-50'}`}>
+            <div
+              className={`relative w-full h-16 rounded ${activeIndex === idx ? '' : 'brightness-50'}`}
+            >
               <img
-                src={`/images/gallery/${img}`}
+                src={`${img}`}
                 className={`w-full h-16 object-cover rounded cursor-pointer border-2 ${activeIndex === idx ? 'border-[#000]' : 'border-transparent'}`}
                 alt={`Thumbnail ${idx + 1}`}
               />
@@ -93,4 +95,4 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
   );
 };
 
-export default Gallery; 
+export default Gallery;

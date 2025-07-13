@@ -4,20 +4,17 @@ import { FileCheck, Shield, Building2 } from 'lucide-react';
 const SupportLetters = () => {
   const supportLetters = [
     {
-      title: 'Ministry of Law & Justice',
-      image: 'https://images.pexels.com/photos/8112190/pexels-photo-8112190.jpeg',
-      description: 'Official endorsement from the Ministry of Law & Justice, Government of India'
+      title: 'Ministry of State for Social Justice & Empowerment',
+      image: './images/docs/MSJE-support-letter.jpg',
+      description:
+        'Support letter from Ramdas Athawale, Minister of State for Social Justice & Empowerment, Government of India',
     },
     {
-      title: 'Supreme Court of India',
-      image: 'https://images.pexels.com/photos/5669619/pexels-photo-5669619.jpeg',
-      description: 'Support letter from the Hon\'ble Supreme Court of India'
+      title: 'Le Confluence',
+      image: './images/docs/leconfluence-support-letter.jpg',
+      description:
+        'Endorsement from Moksha Kalyanram Abhiramula, Le Confluence',
     },
-    {
-      title: 'Bar Council of India',
-      image: 'https://images.pexels.com/photos/5668882/pexels-photo-5668882.jpeg',
-      description: 'Formal recognition and support from Bar Council of India'
-    }
   ];
 
   return (
@@ -29,21 +26,25 @@ const SupportLetters = () => {
           </h2>
           <div className="w-24 h-1 bg-[#2E86AB] mx-auto mb-6"></div>
           <p className="text-xl text-[#4A4A4A] max-w-3xl mx-auto">
-            Le Confluence is officially recognized and supported by leading institutions in the Indian legal system
+            Le Confluence is officially recognized and supported by leading
+            institutions in the Indian legal system
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-8">
           {supportLetters.map((letter, index) => (
-            <div
+            <a
               key={index}
-              className="bg-[#F7F7F7] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 group"
+              className="bg-[#F7F7F7] cursor-pointer rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 group"
+              href={letter.image}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <div className="relative overflow-hidden">
                 <img
                   src={letter.image}
                   alt={letter.title}
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 <div className="absolute top-4 left-4">
                   <div className="bg-[#2E86AB] p-2 rounded-lg">
@@ -59,7 +60,7 @@ const SupportLetters = () => {
                   {letter.description}
                 </p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 

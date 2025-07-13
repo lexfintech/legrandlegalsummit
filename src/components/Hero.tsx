@@ -12,7 +12,7 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) =>
-        prevIndex === delhiImages.length - 1 ? 0 : prevIndex + 1
+        prevIndex === delhiImages.length - 1 ? 0 : prevIndex + 1,
       );
     }, 5000);
 
@@ -26,8 +26,9 @@ const Hero = () => {
         {delhiImages.map((image, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-              }`}
+            className={`absolute inset-0 transition-opacity duration-1000 ${
+              index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+            }`}
           >
             <img
               src={image}
@@ -58,7 +59,10 @@ const Hero = () => {
           </div>
 
           {/* Event Details */}
-          <div className="space-y-6 animate-fadeInUp" style={{ animationDelay: '0.5s' }}>
+          <div
+            className="space-y-6 animate-fadeInUp"
+            style={{ animationDelay: '0.5s' }}
+          >
             <div className="flex items-center justify-center gap-4 text-xl md:text-2xl">
               <Calendar className="text-[#2E86AB]" size={28} />
               <span className="font-semibold">19th & 20th July 2025</span>
@@ -71,7 +75,10 @@ const Hero = () => {
           </div>
 
           {/* Supported By */}
-          <div className="mt-8 animate-fadeInUp" style={{ animationDelay: '1s' }}>
+          <div
+            className="mt-8 animate-fadeInUp"
+            style={{ animationDelay: '1s' }}
+          >
             <p className="text-lg mb-6">Supported By</p>
             <div className="flex justify-center gap-8">
               <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg">

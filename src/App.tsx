@@ -1,4 +1,3 @@
-import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import KeyHighlights from './components/KeyHighlights';
@@ -11,9 +10,11 @@ import AdvisoryBoard from './components/AdvisoryBoard';
 import EventSpeakers from './components/EventSpeakers';
 import EventPartners from './components/EventPartners';
 import MediaPartners from './components/MediaPartners';
-import UpcomingEvents from './components/UpcomingEvents';
-import Signup from './components/Signup';
+// import UpcomingEvents from './components/UpcomingEvents';
+// import Signup from './components/Signup';
 import Footer from './components/Footer';
+import HonourableGuests from './components/HonourableGuests';
+import VideoHighlight from './components/VideoHighlight';
 
 function App() {
   return (
@@ -26,12 +27,14 @@ function App() {
       <WhatToExpect />
       <SupportLetters />
       <GuestsOfHonour />
+      <HonourableGuests />
       <AdvisoryBoard />
       <EventSpeakers />
       <EventPartners />
       <MediaPartners />
-      <UpcomingEvents />
-      <Signup />
+      {/* <UpcomingEvents /> */}
+      {/* <Signup /> */}
+      <VideoHighlight />
       <Footer />
     </div>
   );

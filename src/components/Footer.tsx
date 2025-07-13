@@ -1,5 +1,13 @@
 import React from 'react';
-import { Youtube, Instagram, Linkedin, MessageCircle, Mail, Phone, MapPin } from 'lucide-react';
+import {
+  Youtube,
+  Instagram,
+  Linkedin,
+  MessageCircle,
+  Mail,
+  Phone,
+  MapPin,
+} from 'lucide-react';
 
 const Footer = () => {
   const quickLinks = [
@@ -7,14 +15,14 @@ const Footer = () => {
     { name: 'Privacy Policy', href: '#privacy' },
     { name: 'Refund Policy', href: '#refund' },
     { name: 'Terms & Conditions', href: '#terms' },
-    { name: 'Contact Us', href: '#contact' }
+    { name: 'Contact Us', href: '#contact' },
   ];
 
   const socialLinks = [
     { icon: Youtube, href: '#', color: 'hover:text-red-500' },
     { icon: Instagram, href: '#', color: 'hover:text-pink-500' },
     { icon: Linkedin, href: '#', color: 'hover:text-blue-600' },
-    { icon: MessageCircle, href: '#', color: 'hover:text-green-500' }
+    { icon: MessageCircle, href: '#', color: 'hover:text-green-500' },
   ];
 
   return (
@@ -23,19 +31,24 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="lg:col-span-2">
-            <h3 className="text-3xl font-bold text-[#2E86AB] mb-4">Le Confluence</h3>
+            <h3 className="text-3xl font-bold text-[#2E86AB] mb-4">
+              Le Grand Legal Summit
+            </h3>
             <p className="text-[#C0C0C0] leading-relaxed mb-6">
-              India's premier legal conference bringing together distinguished legal minds, innovative solutions, 
-              and transformative discussions. Join us in shaping the future of the Indian legal system.
+              India's premier legal conference bringing together distinguished
+              legal minds, innovative solutions, and transformative discussions.
+              Join us in shaping the future of the Indian legal system.
             </p>
             <div className="space-y-2">
               <div className="flex items-center gap-3">
                 <Mail className="text-[#2E86AB]" size={18} />
-                <span className="text-[#C0C0C0]">info@leconfluence.in</span>
+                <span className="text-[#C0C0C0]">
+                  info@legrandlegalsummit.com
+                </span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="text-[#2E86AB]" size={18} />
-                <span className="text-[#C0C0C0]">+91 98765 43210</span>
+                <span className="text-[#C0C0C0]">+91 95827 23995</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="text-[#2E86AB]" size={18} />
@@ -75,7 +88,7 @@ const Footer = () => {
                 </a>
               ))}
             </div>
-            
+
             {/* Newsletter Signup */}
             <div className="mt-8">
               <h5 className="font-semibold mb-3">Newsletter</h5>
@@ -97,16 +110,25 @@ const Footer = () => {
         <div className="border-t border-[#4A4A4A] mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-[#C0C0C0] text-sm">
-              © 2025 Le Confluence. All rights reserved.
+              © 2025 Le Grand Legal Summit. All rights reserved.
             </p>
             <div className="flex gap-6 mt-4 md:mt-0">
-              <a href="#privacy" className="text-[#C0C0C0] hover:text-[#2E86AB] text-sm transition-colors duration-300">
+              <a
+                href="#privacy"
+                className="text-[#C0C0C0] hover:text-[#2E86AB] text-sm transition-colors duration-300"
+              >
                 Privacy Policy
               </a>
-              <a href="#terms" className="text-[#C0C0C0] hover:text-[#2E86AB] text-sm transition-colors duration-300">
+              <a
+                href="#terms"
+                className="text-[#C0C0C0] hover:text-[#2E86AB] text-sm transition-colors duration-300"
+              >
                 Terms of Service
               </a>
-              <a href="#cookies" className="text-[#C0C0C0] hover:text-[#2E86AB] text-sm transition-colors duration-300">
+              <a
+                href="#cookies"
+                className="text-[#C0C0C0] hover:text-[#2E86AB] text-sm transition-colors duration-300"
+              >
                 Cookie Policy
               </a>
             </div>

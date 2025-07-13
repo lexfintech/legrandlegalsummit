@@ -1,39 +1,40 @@
-import React from 'react';
-
 const MediaPartners = () => {
   const mediaPartners = [
     {
-      name: 'Legal India Today',
-      logo: 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg'
+      name: 'The Bharat News',
+      logo: './images/media-partners/the-bharat-news.jpg',
+      website: 'https://thebharatnewsnetwork.in/',
     },
     {
-      name: 'Bar & Bench',
-      logo: 'https://images.pexels.com/photos/7688374/pexels-photo-7688374.jpeg'
+      name: 'Quatro Hive',
+      logo: './images/media-partners/quatro-hive.jpg',
+      website: 'https://quatrohive.com/',
     },
     {
-      name: 'Live Law',
-      logo: 'https://images.pexels.com/photos/7688460/pexels-photo-7688460.jpeg'
+      name: 'Conventus Law',
+      logo: './images/media-partners/conventus-law.jpg',
+      website: 'https://conventuslaw.com/',
     },
     {
-      name: 'The Legal News',
-      logo: 'https://images.pexels.com/photos/7688370/pexels-photo-7688370.jpeg'
+      name: 'LawTeller',
+      logo: './images/media-partners/lawteller.jpg',
+      website: 'https://lawteller.com/',
     },
     {
-      name: 'Legal Era',
-      logo: 'https://images.pexels.com/photos/7688367/pexels-photo-7688367.jpeg'
+      name: 'CIO Tech Outlook',
+      logo: './images/media-partners/cio-tech-outlook.jpg',
+      website: 'https://www.ciotechoutlook.com/',
     },
     {
-      name: 'Indian Legal',
-      logo: 'https://images.pexels.com/photos/7688390/pexels-photo-7688390.jpeg'
+      name: 'LatestLaws.com',
+      logo: './images/media-partners/latestlaws.jpg',
+      website: 'https://www.latestlaws.com/',
     },
     {
-      name: 'Legal Correspondent',
-      logo: 'https://images.pexels.com/photos/7688420/pexels-photo-7688420.jpeg'
+      name: 'Asia Briefing',
+      logo: './images/media-partners/asia-briefing.jpg',
+      website: 'https://www.asiabriefing.com/',
     },
-    {
-      name: 'Justice Tribune',
-      logo: 'https://images.pexels.com/photos/7688371/pexels-photo-7688371.jpeg'
-    }
   ];
 
   return (
@@ -49,23 +50,26 @@ const MediaPartners = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
           {mediaPartners.map((partner, index) => (
-            <div
+            <a
               key={index}
-              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 group flex flex-col items-center"
+              className="bg-white cursor-pointer rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 group flex flex-col items-center"
+              href={partner.website}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <div className="w-20 h-20 mb-4 overflow-hidden rounded-lg">
+              <div className="max-w-full max-h-40 mb-4 overflow-hidden rounded-lg">
                 <img
                   src={partner.logo}
                   alt={partner.name}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
-              <h3 className="text-center font-semibold text-[#1B263B] group-hover:text-[#2E86AB] transition-colors duration-300">
+              <h3 className="text-center text-md md:text-2xl font-semibold text-[#1B263B] group-hover:text-[#2E86AB] transition-colors duration-300">
                 {partner.name}
               </h3>
-            </div>
+            </a>
           ))}
         </div>
       </div>

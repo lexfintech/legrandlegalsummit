@@ -1,56 +1,75 @@
 import React from 'react';
-import { ExternalLink, Linkedin, Twitter } from 'lucide-react';
+import { ExternalLink, Instagram, Linkedin, Youtube } from 'lucide-react';
 
 const AdvisoryBoard = () => {
   const boardMembers = [
     {
-      name: 'Dr. Pradeep Kumar Jha',
-      designation: 'Former Law Secretary, Government of India',
-      image: 'https://images.pexels.com/photos/5668772/pexels-photo-5668772.jpeg',
+      name: 'Honourable Sri Justice B.Prakash Rao (Retd.)',
+      designation: ['Former High Court Judge'],
+      image: './images/advisory-board/prakash-rao.jpg',
       linkedin: '#',
-      twitter: '#',
-      website: '#'
+      youtube: 'https://youtu.be/eb2Hh7-VknU?si=g-a2ZuhHlQgIsRhD',
+      website: 'https://tshc.gov.in/showFormerJudgeProfile?id=330',
+      instagram: '#',
     },
     {
-      name: 'Ms. Indira Jaising',
-      designation: 'Senior Advocate & Human Rights Lawyer',
-      image: 'https://images.pexels.com/photos/8112190/pexels-photo-8112190.jpeg',
-      linkedin: '#',
-      twitter: '#',
-      website: '#'
+      name: 'Dr. CS Ahalada Rao',
+      designation: [
+        'Practicing Company Secretary & Former Vice President - ICSI',
+      ],
+      image: './images/advisory-board/cs-ahalada-rao.jpg',
+      linkedin:
+        'https://www.linkedin.com/in/cs-dr-ahalada-rao-v-telangana-05a1781aa/',
+      youtube: 'https://youtu.be/OdyqRauH2pk?si=AnXqt80-pbE5iL5e',
+      website: '#',
+      instagram: '#',
     },
     {
-      name: 'Dr. Ashok Kumar Jain',
-      designation: 'Former Chief Information Commissioner',
-      image: 'https://images.pexels.com/photos/5669602/pexels-photo-5669602.jpeg',
-      linkedin: '#',
-      twitter: '#',
-      website: '#'
+      name: 'Ashok Ram Kumar',
+      designation: ['Senior Advocate'],
+      image: './images/advisory-board/ashok-ram-kumar.jpg',
+      linkedin: 'https://www.linkedin.com/in/ashok-ram-kumar-2505b423/',
+      youtube: 'https://youtu.be/zBUSYNJDjvA?si=oEETMOebAQKonVck',
+      website: '#',
+      instagram: '#',
     },
     {
-      name: 'Justice Kailash Gambhir',
-      designation: 'Former Judge, Delhi High Court',
-      image: 'https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg',
-      linkedin: '#',
-      twitter: '#',
-      website: '#'
+      name: 'Dr. Moksha Kalyanram',
+      designation: ['Advocate'],
+      image: './images/advisory-board/moksha-kalyanram.jpg',
+      linkedin: 'https://www.linkedin.com/in/drmoksha-advocate/',
+      youtube: 'https://youtu.be/TdDa7Q-P_r4?si=2BouZGhcsrFuJshb',
+      website: '#',
+      instagram: '#',
     },
     {
-      name: 'Prof. Usha Tandon',
-      designation: 'Professor of Law, University of Delhi',
-      image: 'https://images.pexels.com/photos/5669619/pexels-photo-5669619.jpeg',
-      linkedin: '#',
-      twitter: '#',
-      website: '#'
+      name: 'Dr. A. V. Narasimha Rao',
+      designation: ['Accredited Mediator'],
+      image: './images/advisory-board/a-v-narasimha-rao.jpg',
+      linkedin: 'https://insolvencylawacademy.com/prof-a-v-narsimha-rao/',
+      youtube: '#',
+      website: 'https://insolvencylawacademy.com/',
+      instagram: '#',
     },
     {
-      name: 'Mr. Rajesh Kumar Singh',
-      designation: 'Managing Partner, Legal Advisors Group',
-      image: 'https://images.pexels.com/photos/5668882/pexels-photo-5668882.jpeg',
-      linkedin: '#',
-      twitter: '#',
-      website: '#'
-    }
+      name: 'Adv. Saurabh Sharma',
+      designation: ['Senior Advocate'],
+      image: './images/advisory-board/saurabh-sharma.jpg',
+      linkedin: 'https://www.linkedin.com/in/saurabh-sharma-3169167/',
+      youtube: 'https://youtu.be/rDiPD4tKE7Q?si=IYoWXr5c3yZQ6ds7',
+      website: '#',
+      instagram: '#',
+    },
+    {
+      name: 'Balakrishna Gopalakrishnan',
+      designation: ['Senior Advocate'],
+      image: './images/advisory-board/balakrishna-gopalakrishnan.jpg',
+      linkedin:
+        'https://www.linkedin.com/in/balakrishna-gopalakrishnan-015b7014/',
+      youtube: 'https://youtu.be/dbZ_LXRlFYA?si=RZ2EIjbgAGQmCU_B',
+      website: '#',
+      instagram: '#',
+    },
   ];
 
   return (
@@ -62,11 +81,12 @@ const AdvisoryBoard = () => {
           </h2>
           <div className="w-24 h-1 bg-[#2E86AB] mx-auto mb-6"></div>
           <p className="text-xl text-[#4A4A4A] max-w-3xl mx-auto">
-            Distinguished legal experts and thought leaders guiding our vision and mission
+            Distinguished legal experts and thought leaders guiding our vision
+            and mission
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {boardMembers.map((member, index) => (
             <div
               key={index}
@@ -76,33 +96,71 @@ const AdvisoryBoard = () => {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-[#1B263B] mb-2 group-hover:text-[#2E86AB] transition-colors duration-300">
                   {member.name}
                 </h3>
-                <p className="text-[#4A4A4A] mb-4">{member.designation}</p>
+                <div className="text-[#4A4A4A] mb-4">
+                  {Array.isArray(member.designation)
+                    ? member.designation.map((d, i) => <div key={i}>{d}</div>)
+                    : member.designation}
+                </div>
                 <div className="flex gap-3">
-                  <a
-                    href={member.linkedin}
-                    className="flex items-center justify-center w-10 h-10 bg-[#2E86AB]/10 rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300 group"
-                  >
-                    <Linkedin size={16} className="text-[#2E86AB] group-hover:text-white" />
-                  </a>
-                  <a
-                    href={member.twitter}
-                    className="flex items-center justify-center w-10 h-10 bg-[#2E86AB]/10 rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300 group"
-                  >
-                    <Twitter size={16} className="text-[#2E86AB] group-hover:text-white" />
-                  </a>
-                  <a
-                    href={member.website}
-                    className="flex items-center justify-center w-10 h-10 bg-[#2E86AB]/10 rounded-lg hover:bg-[#2E86AB] hover:text-white transition-all duration-300 group"
-                  >
-                    <ExternalLink size={16} className="text-[#2E86AB] group-hover:text-white" />
-                  </a>
+                  {member.website && member.website !== '#' && (
+                    <a
+                      href={member.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-10 h-10 bg-[#2E86AB]/10 rounded-lg group-hover:bg-[#2E86AB] transition-all duration-300"
+                    >
+                      <ExternalLink
+                        size={16}
+                        className="text-[#2E86AB] group-hover:text-white"
+                      />
+                    </a>
+                  )}
+                  {member.youtube && member.youtube !== '#' && (
+                    <a
+                      href={member.youtube}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-10 h-10 bg-[#2E86AB]/10 rounded-lg group-hover:bg-red-600 transition-all duration-300"
+                    >
+                      <Youtube
+                        size={16}
+                        className="text-[#2E86AB] group-hover:text-white"
+                      />
+                    </a>
+                  )}
+                  {member.instagram && member.instagram !== '#' && (
+                    <a
+                      href={member.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-10 h-10 bg-[#2E86AB]/10 rounded-lg group-hover:bg-[linear-gradient(45deg,_#405de6,_#5851db,_#833ab4,_#c13584,_#e1306c,_#fd1d1d)] transition-all duration-300"
+                    >
+                      <Instagram
+                        size={16}
+                        className="text-[#2E86AB] group-hover:text-white"
+                      />
+                    </a>
+                  )}
+                  {member.linkedin && member.linkedin !== '#' && (
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-10 h-10 bg-[#2E86AB]/10 rounded-lg group-hover:bg-blue-600 transition-all duration-300"
+                    >
+                      <Linkedin
+                        size={16}
+                        className="text-[#2E86AB] group-hover:text-white"
+                      />
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

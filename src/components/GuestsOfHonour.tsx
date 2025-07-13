@@ -1,67 +1,103 @@
-import React from 'react';
-import { ExternalLink, Youtube } from 'lucide-react';
+import { ExternalLink, Instagram, Youtube, Linkedin } from 'lucide-react';
 
 const GuestsOfHonour = () => {
   const guestsOfHonour = [
     {
-      name: 'Justice N.V. Ramana',
-      designation: 'Former Chief Justice of India',
-      image: 'https://images.pexels.com/photos/5668772/pexels-photo-5668772.jpeg',
-      website: '#',
-      youtube: '#'
+      name: 'Dr. Ramdas Bandu Athawale',
+      designation:
+        'Union Minister of State, India: Social Justice & Empowerment',
+      image: './images/guest-of-honours/ramdas-athawale.jpg',
+      website: 'https://en.wikipedia.org/wiki/Ramdas_Athawale',
+      youtube: 'https://youtu.be/v_aAwVWnAd8?feature=shared',
+      instagram: '#',
+      linkedin: '#',
     },
     {
-      name: 'Dr. Harish Salve',
-      designation: 'Senior Advocate, Supreme Court',
-      image: 'https://images.pexels.com/photos/5669602/pexels-photo-5669602.jpeg',
+      name: 'Smt. Himadri Singh',
+      designation: 'Member of Parliament, Lok Sabha',
+      image: './images/guest-of-honours/himdri-singh.jpg',
       website: '#',
-      youtube: '#'
+      youtube: 'https://youtu.be/FIN9wP2t6uc?si=WhZ5Pi4Dex9V-03y',
+      instagram: 'https://www.instagram.com/himadri4bjp/',
+      linkedin: '#',
     },
     {
-      name: 'Justice D.Y. Chandrachud',
-      designation: 'Chief Justice of India',
-      image: 'https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg',
+      name: 'Faggan Singh Kulaste',
+      designation:
+        'Former Minister of State in the Ministry of Steel; Minister of State in the Ministry of Rural Development, Government of India',
+      image: './images/guest-of-honours/faggan-singh.png',
       website: '#',
-      youtube: '#'
+      youtube: 'https://youtu.be/GPMYw9q0Ew0?si=C1yzRN-pkLS_sT0i',
+      instagram:
+        'https://www.instagram.com/fskulaste?igsh=MWltZm1pbnhoenB0Mg%3D%3D',
+      linkedin: '#',
     },
     {
-      name: 'Mr. Fali Nariman',
-      designation: 'Senior Advocate & Constitutional Expert',
-      image: 'https://images.pexels.com/photos/5669619/pexels-photo-5669619.jpeg',
+      name: 'Shri Kapil Mishra',
+      designation: 'Cabinet Minister, Govt of Delhi Vice President BJP Delhi',
+      image: './images/guest-of-honours/kapil-mishra.jpg',
       website: '#',
-      youtube: '#'
+      youtube: 'https://youtu.be/INYozth43wc?si=wD3GlxMdRRaRylio',
+      instagram: 'https://www.instagram.com/kapilmishra_ind/?hl=en',
+      linkedin: '#',
     },
     {
-      name: 'Justice Indu Malhotra',
-      designation: 'Former Judge, Supreme Court',
-      image: 'https://images.pexels.com/photos/5668882/pexels-photo-5668882.jpeg',
-      website: '#',
-      youtube: '#'
+      name: 'Shri Satish Upadhyay',
+      designation: 'MLA - Malviya Nagar, Delhi',
+      image: './images/guest-of-honours/satish-upadhyay.jpg',
+      website:
+        'https://en.wikipedia.org/wiki/Satish_Upadhyay#:~:text=Upadhyay%20joined%20the%20Rashtriya%20Swayamsevak,Nagar%20Assembly%20constituency%20in%202025.',
+      youtube: 'https://www.youtube.com/watch?v=fT1w7Xh274Q',
+      instagram: '#',
+      linkedin: '#',
     },
     {
-      name: 'Mr. Mukul Rohatgi',
-      designation: 'Former Attorney General of India',
-      image: 'https://images.pexels.com/photos/5669691/pexels-photo-5669691.jpeg',
+      name: 'Adv. Shikha Rai',
+      designation: [
+        'MLA - Greater Kailash, Delhi',
+        '1st Woman Chairperson Standing Committee',
+        '1st Woman Leader of the House',
+        'Advocate at Supreme Court of India',
+      ],
+      image: './images/guest-of-honours/shikha-rai.jpg',
       website: '#',
-      youtube: '#'
-    }
-  ];
-
-  const honourableGuests = [
-    {
-      name: 'Justice Uday Umesh Lalit',
-      designation: 'Former Chief Justice of India',
-      image: 'https://images.pexels.com/photos/8112176/pexels-photo-8112176.jpeg'
+      youtube: 'https://youtu.be/AFi990nGCQg?feature=shared',
+      instagram:
+        'https://www.instagram.com/shikharaibjp?utm_source=ig_web_button_share_sheet&igsh=c2phYzE3ZGd3MHln',
+      linkedin: '#',
     },
     {
-      name: 'Dr. Menaka Guruswamy',
-      designation: 'Senior Advocate & Constitutional Lawyer',
-      image: 'https://images.pexels.com/photos/8112190/pexels-photo-8112190.jpeg'
-    }
+      name: 'Raghuraj Singh',
+      designation: 'MLA, Uttar Pradesh',
+      image: './images/guest-of-honours/raghuraj-singh.png',
+      website: '#',
+      youtube: 'https://www.youtube.com/watch?v=rfPV5SPQJMU',
+      instagram: 'https://www.instagram.com/raghurajsinghbjp/?hl=en',
+      linkedin: '#',
+    },
+    {
+      name: 'Pravesh Ratn',
+      designation: 'MLA, Patel Nagar, Delhi',
+      image: './images/guest-of-honours/pravesh-ratn.png',
+      website: '#',
+      youtube: 'https://youtu.be/-4UFmKuxPLg?si=RRzyFXiz3PTldMOE',
+      instagram: 'https://www.instagram.com/praveshratn/?hl=en',
+      linkedin: '#',
+    },
+    {
+      name: 'Shri Vinay Choudhary',
+      designation: 'National Co-Incharge Research & Policy - BJP',
+      image: './images/guest-of-honours/shri-vinay-choudhary.jpg',
+      website: '#',
+      youtube: 'https://www.youtube.com/watch?v=rfPV5SPQJMU',
+      instagram:
+        'https://www.instagram.com/vinaybjpvoice?igsh=aDJ3NDZvMW1tZGoy',
+      linkedin: '#',
+    },
   ];
 
   return (
-    <section className="py-20 bg-[#F7F7F7]">
+    <section className="py-10 bg-[#F7F7F7]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Guests of Honour */}
         <div className="text-center mb-16">
@@ -71,69 +107,82 @@ const GuestsOfHonour = () => {
           <div className="w-24 h-1 bg-[#2E86AB] mx-auto"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-10">
           {guestsOfHonour.map((guest, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 group"
+              className="w-[70%] md:w-full mx-auto bg-white cursor-pointer rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 group"
             >
               <div className="relative overflow-hidden">
                 <img
                   src={guest.image}
                   alt={guest.name}
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-[#1B263B] mb-2 group-hover:text-[#2E86AB] transition-colors duration-300">
                   {guest.name}
                 </h3>
-                <p className="text-[#4A4A4A] mb-4">{guest.designation}</p>
-                <div className="flex gap-3">
-                  <a
-                    href={guest.website}
-                    className="flex items-center justify-center w-10 h-10 bg-[#2E86AB]/10 rounded-lg hover:bg-[#2E86AB] hover:text-white transition-all duration-300 group"
-                  >
-                    <ExternalLink size={16} className="text-[#2E86AB] group-hover:text-white" />
-                  </a>
-                  <a
-                    href={guest.youtube}
-                    className="flex items-center justify-center w-10 h-10 bg-[#2E86AB]/10 rounded-lg hover:bg-red-600 hover:text-white transition-all duration-300 group"
-                  >
-                    <Youtube size={16} className="text-[#2E86AB] group-hover:text-white" />
-                  </a>
+                <div className="text-[#4A4A4A] mb-4">
+                  {Array.isArray(guest.designation)
+                    ? guest.designation.map((d, i) => <div key={i}>{d}</div>)
+                    : guest.designation}
                 </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Honourable Guests */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1B263B] mb-6">
-            Honourable & Eminent Guests
-          </h2>
-          <div className="w-24 h-1 bg-[#2E86AB] mx-auto"></div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {honourableGuests.map((guest, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 group"
-            >
-              <div className="relative overflow-hidden">
-                <img
-                  src={guest.image}
-                  alt={guest.name}
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-[#1B263B] mb-2 group-hover:text-[#2E86AB] transition-colors duration-300">
-                  {guest.name}
-                </h3>
-                <p className="text-[#4A4A4A]">{guest.designation}</p>
+                <div className="flex gap-3">
+                  {guest.website && guest.website !== '#' && (
+                    <a
+                      href={guest.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-10 h-10 bg-[#2E86AB]/10 rounded-lg group-hover:bg-[#2E86AB] transition-all duration-300"
+                    >
+                      <ExternalLink
+                        size={16}
+                        className="text-[#2E86AB] group-hover:text-white"
+                      />
+                    </a>
+                  )}
+                  {guest.youtube && guest.youtube !== '#' && (
+                    <a
+                      href={guest.youtube}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-10 h-10 bg-[#2E86AB]/10 rounded-lg group-hover:bg-red-600 transition-all duration-300"
+                    >
+                      <Youtube
+                        size={16}
+                        className="text-[#2E86AB] group-hover:text-white"
+                      />
+                    </a>
+                  )}
+                  {guest.instagram && guest.instagram !== '#' && (
+                    <a
+                      href={guest.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-10 h-10 bg-[#2E86AB]/10 rounded-lg group-hover:bg-[linear-gradient(45deg,_#405de6,_#5851db,_#833ab4,_#c13584,_#e1306c,_#fd1d1d)] transition-all duration-300"
+                    >
+                      <Instagram
+                        size={16}
+                        className="text-[#2E86AB] group-hover:text-white"
+                      />
+                    </a>
+                  )}
+                  {guest.linkedin && guest.linkedin !== '#' && (
+                    <a
+                      href={guest.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-10 h-10 bg-[#2E86AB]/10 rounded-lg group-hover:bg-blue-600 transition-all duration-300"
+                    >
+                      <Linkedin
+                        size={16}
+                        className="text-[#2E86AB] group-hover:text-white"
+                      />
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           ))}

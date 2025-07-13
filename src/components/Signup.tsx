@@ -7,14 +7,16 @@ const Signup = () => {
     email: '',
     phone: '',
     organization: '',
-    interests: ''
+    interests: '',
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -33,18 +35,28 @@ const Signup = () => {
           </h2>
           <div className="w-24 h-1 bg-[#2E86AB] mx-auto mb-6"></div>
           <p className="text-xl text-[#C0C0C0] max-w-3xl mx-auto">
-            Subscribe to our newsletter for updates on Le Confluence and upcoming legal events
+            Subscribe to our newsletter for updates on Le Confluence and
+            upcoming legal events
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="bg-white rounded-xl p-8 shadow-2xl">
+        <form
+          onSubmit={handleSubmit}
+          className="bg-white rounded-xl p-8 shadow-2xl"
+        >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="fullName" className="block text-sm font-semibold text-[#1B263B] mb-2">
+              <label
+                htmlFor="fullName"
+                className="block text-sm font-semibold text-[#1B263B] mb-2"
+              >
                 Full Name *
               </label>
               <div className="relative">
-                <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#4A4A4A]" size={20} />
+                <User
+                  className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#4A4A4A]"
+                  size={20}
+                />
                 <input
                   type="text"
                   id="fullName"
@@ -59,11 +71,17 @@ const Signup = () => {
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-semibold text-[#1B263B] mb-2">
+              <label
+                htmlFor="email"
+                className="block text-sm font-semibold text-[#1B263B] mb-2"
+              >
                 Email Address *
               </label>
               <div className="relative">
-                <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#4A4A4A]" size={20} />
+                <Mail
+                  className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#4A4A4A]"
+                  size={20}
+                />
                 <input
                   type="email"
                   id="email"
@@ -78,11 +96,17 @@ const Signup = () => {
             </div>
 
             <div>
-              <label htmlFor="phone" className="block text-sm font-semibold text-[#1B263B] mb-2">
+              <label
+                htmlFor="phone"
+                className="block text-sm font-semibold text-[#1B263B] mb-2"
+              >
                 Phone Number
               </label>
               <div className="relative">
-                <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#4A4A4A]" size={20} />
+                <Phone
+                  className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#4A4A4A]"
+                  size={20}
+                />
                 <input
                   type="tel"
                   id="phone"
@@ -96,11 +120,17 @@ const Signup = () => {
             </div>
 
             <div>
-              <label htmlFor="organization" className="block text-sm font-semibold text-[#1B263B] mb-2">
+              <label
+                htmlFor="organization"
+                className="block text-sm font-semibold text-[#1B263B] mb-2"
+              >
                 Organization
               </label>
               <div className="relative">
-                <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#4A4A4A]" size={20} />
+                <Building
+                  className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#4A4A4A]"
+                  size={20}
+                />
                 <input
                   type="text"
                   id="organization"
@@ -115,7 +145,10 @@ const Signup = () => {
           </div>
 
           <div className="mt-6">
-            <label htmlFor="interests" className="block text-sm font-semibold text-[#1B263B] mb-2">
+            <label
+              htmlFor="interests"
+              className="block text-sm font-semibold text-[#1B263B] mb-2"
+            >
               Areas of Interest
             </label>
             <textarea

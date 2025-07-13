@@ -1,0 +1,119 @@
+import { ExternalLink, Instagram, Linkedin, Youtube } from 'lucide-react';
+const honourableGuests = [
+  {
+    name: 'Justice Hima Kohli (Retd.)',
+    designation: ['Former Supreme Court Judge'],
+    image: './images/honourable-guests/hima-kohli.png',
+    type: 'Honourable Guest',
+    website: 'https://www.sci.gov.in/judge/justice-hima-kohli/',
+    youtube: 'https://youtu.be/-KTgTaihOAI?si=xROCy3nDkrBcIZbT',
+    instagram: '#',
+    linkedin: '#',
+  },
+  {
+    name: 'Dr. Adish C Aggarwala, Sr. Adv',
+    designation: [
+      'President, International Council of Jurists',
+      'Former President, Supreme Court Bar Association',
+      'Chairman, All India Bar Association',
+      'Ex. VC- BCI',
+    ],
+    image: './images/honourable-guests/adish-c-aggarwala.jpg',
+    type: 'Eminent Guest',
+    website: '#',
+    youtube: 'https://www.youtube.com/watch?v=6b4blcWZnE4',
+    instagram: 'https://www.instagram.com/adishaggarwala/',
+    linkedin: '#',
+  },
+];
+const HonourableGuests = () => {
+  return (
+    <div className="py-16 px-2 md:px-8 rounded-2xl bg-white">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+        {honourableGuests.map((guest, index) => (
+          <div
+            key={index}
+            className="bg-white cursor-pointer rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 group"
+          >
+            <div className="bg-[#2E86AB]/10 text-[#2E86AB] font-bold text-center py-2 text-xl uppercase tracking-wide">
+              {guest.type}
+            </div>
+            <div className="relative overflow-hidden">
+              <img
+                src={guest.image}
+                alt={guest.name}
+                className="w-full object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="text-xl font-bold text-[#1B263B] mb-2 group-hover:text-[#2E86AB] transition-colors duration-300">
+                {guest.name}
+              </h3>
+              <div className="text-[#4A4A4A] mb-4">
+                {Array.isArray(guest.designation)
+                  ? guest.designation.map((d, i) => <div key={i}>{d}</div>)
+                  : guest.designation}
+              </div>
+              <div className="flex gap-3">
+                {guest.website && guest.website !== '#' && (
+                  <a
+                    href={guest.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center w-10 h-10 bg-[#2E86AB]/10 rounded-lg group-hover:bg-[#2E86AB] transition-all duration-300"
+                  >
+                    <ExternalLink
+                      size={16}
+                      className="text-[#2E86AB] group-hover:text-white"
+                    />
+                  </a>
+                )}
+                {guest.youtube && guest.youtube !== '#' && (
+                  <a
+                    href={guest.youtube}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center w-10 h-10 bg-[#2E86AB]/10 rounded-lg group-hover:bg-red-600 transition-all duration-300"
+                  >
+                    <Youtube
+                      size={16}
+                      className="text-[#2E86AB] group-hover:text-white"
+                    />
+                  </a>
+                )}
+                {guest.instagram && guest.instagram !== '#' && (
+                  <a
+                    href={guest.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center w-10 h-10 bg-[#2E86AB]/10 rounded-lg group-hover:bg-[linear-gradient(45deg,_#405de6,_#5851db,_#833ab4,_#c13584,_#e1306c,_#fd1d1d)] transition-all duration-300"
+                  >
+                    <Instagram
+                      size={16}
+                      className="text-[#2E86AB] group-hover:text-white"
+                    />
+                  </a>
+                )}
+                {guest.linkedin && guest.linkedin !== '#' && (
+                  <a
+                    href={guest.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center w-10 h-10 bg-[#2E86AB]/10 rounded-lg group-hover:bg-blue-600 transition-all duration-300"
+                  >
+                    <Linkedin
+                      size={16}
+                      className="text-[#2E86AB] group-hover:text-white"
+                    />
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default HonourableGuests;

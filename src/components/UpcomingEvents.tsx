@@ -7,23 +7,29 @@ const UpcomingEvents = () => {
       title: 'Legal Tech Summit 2025',
       date: 'March 15-16, 2025',
       location: 'Mumbai, Maharashtra',
-      description: 'Exploring the intersection of artificial intelligence and legal practice with focus on automation, ethics, and future trends.',
-      image: 'https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg'
+      description:
+        'Exploring the intersection of artificial intelligence and legal practice with focus on automation, ethics, and future trends.',
+      image:
+        'https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg',
     },
     {
       title: 'Constitutional Law Conference',
       date: 'June 8-9, 2025',
       location: 'Bengaluru, Karnataka',
-      description: 'Deep dive into recent constitutional amendments, fundamental rights evolution, and judicial interpretation of constitutional principles.',
-      image: 'https://images.pexels.com/photos/5669602/pexels-photo-5669602.jpeg'
+      description:
+        'Deep dive into recent constitutional amendments, fundamental rights evolution, and judicial interpretation of constitutional principles.',
+      image:
+        'https://images.pexels.com/photos/5669602/pexels-photo-5669602.jpeg',
     },
     {
       title: 'Corporate Governance Forum',
       date: 'September 22-23, 2025',
       location: 'Chennai, Tamil Nadu',
-      description: 'Comprehensive discussion on corporate compliance, ESG frameworks, and emerging challenges in corporate governance.',
-      image: 'https://images.pexels.com/photos/5668772/pexels-photo-5668772.jpeg'
-    }
+      description:
+        'Comprehensive discussion on corporate compliance, ESG frameworks, and emerging challenges in corporate governance.',
+      image:
+        'https://images.pexels.com/photos/5668772/pexels-photo-5668772.jpeg',
+    },
   ];
 
   return (
@@ -35,7 +41,8 @@ const UpcomingEvents = () => {
           </h2>
           <div className="w-24 h-1 bg-[#2E86AB] mx-auto mb-6"></div>
           <p className="text-xl text-[#4A4A4A] max-w-3xl mx-auto">
-            Stay ahead with our series of specialized legal conferences and professional development events
+            Stay ahead with our series of specialized legal conferences and
+            professional development events
           </p>
         </div>
 
@@ -56,7 +63,7 @@ const UpcomingEvents = () => {
                 <h3 className="text-xl font-bold text-[#1B263B] mb-3 group-hover:text-[#2E86AB] transition-colors duration-300">
                   {event.title}
                 </h3>
-                
+
                 <div className="space-y-2 mb-4">
                   <div className="flex items-center gap-2 text-[#4A4A4A]">
                     <Calendar size={16} className="text-[#2E86AB]" />
@@ -67,14 +74,17 @@ const UpcomingEvents = () => {
                     <span className="text-sm">{event.location}</span>
                   </div>
                 </div>
-                
+
                 <p className="text-[#4A4A4A] leading-relaxed mb-6">
                   {event.description}
                 </p>
-                
+
                 <button className="bg-[#2E86AB] hover:bg-[#2E86AB]/80 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 hover:transform hover:scale-105 flex items-center gap-2 group">
                   More Details
-                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
+                  <ArrowRight
+                    size={16}
+                    className="group-hover:translate-x-1 transition-transform duration-300"
+                  />
                 </button>
               </div>
             </div>
