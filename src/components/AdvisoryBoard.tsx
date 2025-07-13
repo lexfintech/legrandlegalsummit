@@ -1,4 +1,3 @@
-import React from 'react';
 import { ExternalLink, Instagram, Linkedin, Youtube } from 'lucide-react';
 
 const AdvisoryBoard = () => {
@@ -36,7 +35,7 @@ const AdvisoryBoard = () => {
     {
       name: 'Dr. Moksha Kalyanram',
       designation: ['Advocate'],
-      image: './images/advisory-board/moksha-kalyanram.jpg',
+      image: './images/advisory-board/moksha-kalyanram.png',
       linkedin: 'https://www.linkedin.com/in/drmoksha-advocate/',
       youtube: 'https://youtu.be/TdDa7Q-P_r4?si=2BouZGhcsrFuJshb',
       website: '#',

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Calendar, MapPin } from 'lucide-react';
 
 const Hero = () => {
@@ -45,16 +45,10 @@ const Hero = () => {
         <div className="text-center text-white px-4 max-w-4xl mx-auto">
           {/* Logo Section */}
           <div className="mb-4 animate-fadeInUp">
-            <div className="animate-pulse">
-              <h1 className="text-4xl font-bold text-[#2E86AB] animate-fadeInUp">
-                Leconfluence
-              </h1>
-              <p className="text-2xl font-semibold mb-3">presents</p>
-            </div>
             <img
               src="./images/logos/legrandlegalsummit.png"
               alt="Le Grand Legal Summit"
-              className="h-32 mx-auto object-contain"
+              className="h-48 mx-auto object-contain"
             />
           </div>
 

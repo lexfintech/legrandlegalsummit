@@ -1,4 +1,3 @@
-import React from 'react';
 import { ExternalLink, Linkedin, Youtube, Instagram } from 'lucide-react';
 
 const EventSpeakers = () => {
@@ -344,7 +343,7 @@ const EventSpeakers = () => {
       designation: [
         'Advocate, Member TAC, Dept of Telecommunication, Ministry of Communication, Govt of India',
       ],
-      image: './images/event-speakers/moksha-kalyanram.jpg',
+      image: './images/event-speakers/moksha-kalyanram.png',
       linkedin: 'https://www.linkedin.com/in/drmoksha-advocate/',
       youtube: '#',
       website: '#',
@@ -360,7 +359,7 @@ const EventSpeakers = () => {
       instagram: '#',
     },
     {
-      name: 'Adv. C.S. Avdhesh Kr. Varshney',
+      name: 'Adv. CS Avdhesh Kr. Varshney',
       designation: ['Founder & Mentor Justicewings Lexedge Solutions LLP'],
       image: './images/event-speakers/c-s-avdhesh-kr-varshney.png',
       linkedin: 'https://www.linkedin.com/in/avdheshvarshney/',

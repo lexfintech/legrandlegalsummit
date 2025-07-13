@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Clock, Calendar, MapPin } from 'lucide-react';
 
 const EventAgenda = () => {
@@ -204,7 +204,7 @@ const EventAgenda = () => {
             </div>
             <div className="flex items-center gap-2">
               <MapPin size={20} />
-              <span>ITC Dwarka, Delhi</span>
+              <span>Welcomhotel by ITC Dwarka, Delhi</span>
             </div>
           </div>
         </div>

@@ -1,5 +1,4 @@
-import React from 'react';
-import { FileCheck, Shield, Building2 } from 'lucide-react';
+import { FileCheck, Shield } from 'lucide-react';
 
 const SupportLetters = () => {
   const supportLetters = [
@@ -22,7 +21,7 @@ const SupportLetters = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[#1B263B] mb-6">
-            Support Letters from Ministry
+            Recommendation Letters from Ministry
           </h2>
           <div className="w-24 h-1 bg-[#2E86AB] mx-auto mb-6"></div>
           <p className="text-xl text-[#4A4A4A] max-w-3xl mx-auto">

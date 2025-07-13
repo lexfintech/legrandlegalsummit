@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Lightbulb,
   Award,
@@ -9,9 +8,7 @@ import {
   Camera,
   FileText,
   BookOpen,
-  UserCheck,
   Globe,
-  Handshake,
 } from 'lucide-react';
 
 const WhatToExpect = () => {

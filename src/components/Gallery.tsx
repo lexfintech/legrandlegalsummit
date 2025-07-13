@@ -23,6 +23,8 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
     });
   };
 
+  console.log(images, 'images');
+
   return (
     <div>
       <style>{`
