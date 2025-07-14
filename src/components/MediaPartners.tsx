@@ -2,37 +2,37 @@ const MediaPartners = () => {
   const mediaPartners = [
     {
       name: 'The Bharat News',
-      logo: './images/media-partners/the-bharat-news.jpg',
+      logo: './images/media-partners/the-bharat-news.webp',
       website: 'https://thebharatnewsnetwork.in/',
     },
     {
       name: 'Quatro Hive',
-      logo: './images/media-partners/quatro-hive.jpg',
+      logo: './images/media-partners/quatro-hive.webp',
       website: 'https://quatrohive.com/',
     },
     {
       name: 'Conventus Law',
-      logo: './images/media-partners/conventus-law.jpg',
+      logo: './images/media-partners/conventus-law.webp',
       website: 'https://conventuslaw.com/',
     },
     {
       name: 'LawTeller',
-      logo: './images/media-partners/lawteller.jpg',
+      logo: './images/media-partners/lawteller.webp',
       website: 'https://lawteller.com/',
     },
     {
       name: 'CIO Tech Outlook',
-      logo: './images/media-partners/cio-tech-outlook.jpg',
+      logo: './images/media-partners/cio-tech-outlook.webp',
       website: 'https://www.ciotechoutlook.com/',
     },
     {
       name: 'LatestLaws.com',
-      logo: './images/media-partners/latestlaws.jpg',
+      logo: './images/media-partners/latestlaws.webp',
       website: 'https://www.latestlaws.com/',
     },
     {
       name: 'Asia Briefing',
-      logo: './images/media-partners/asia-briefing.jpg',
+      logo: './images/media-partners/asia-briefing.webp',
       website: 'https://www.asiabriefing.com/',
     },
   ];

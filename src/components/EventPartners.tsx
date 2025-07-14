@@ -2,42 +2,42 @@ const EventPartners = () => {
   const partners = [
     {
       name: 'EY - Exclusive Partner',
-      logo: './images/event-partners/ey.jpg',
+      logo: './images/event-partners/ey.webp',
       website: 'https://www.ey.com/en_in',
     },
     {
       name: 'La Mintage Legal - Strategic Legal Partner',
-      logo: './images/event-partners/lawmintage.jpg',
+      logo: './images/event-partners/lawmintage.webp',
       website: 'https://lamintage.com/',
     },
     {
       name: 'Dispute Resolution Hub - Resolution Partner',
-      logo: './images/event-partners/dispute-hub.jpg',
+      logo: './images/event-partners/dispute-hub.webp',
       website: 'https://resolutionhub.in/',
     },
     {
       name: 'JSSB Legal - Legal Excellence Partner',
-      logo: './images/event-partners/jssb-legal.jpg',
+      logo: './images/event-partners/jssb-legal.webp',
       website: 'https://www.jssblegal.com/',
     },
     {
       name: 'Gyanauka - Knowledge Partner',
-      logo: './images/event-partners/gyanauka.jpg',
+      logo: './images/event-partners/gyanauka.webp',
       website: 'https://gyanauka.com/',
     },
     {
       name: 'BGK Law Associates - Supporting Partner',
-      logo: './images/event-partners/bgk-law-associates.jpg',
+      logo: './images/event-partners/bgk-law-associates.webp',
       website: 'https://bgklawassociates.co.in/',
     },
     {
       name: 'CaseDocker - Legal-Tech Partner',
-      logo: './images/event-partners/casedocker.jpg',
+      logo: './images/event-partners/casedocker.webp',
       website: 'https://www.casedocker.com/landing/',
     },
     {
       name: 'LawyerInsta - Official Legal Directory Partner',
-      logo: './images/event-partners/lawyerinsta.jpg',
+      logo: './images/event-partners/lawyerinsta.webp',
       website: 'https://lawyerinsta.com/',
     },
   ];

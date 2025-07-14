@@ -39,7 +39,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center gap-2">
             <img
-              src="./images/logos/legrandlegalsummit.png"
+              src="./images/logos/legrandlegalsummit.webp"
               alt="Le Grand Legal Summit"
               className="h-16 w-auto object-contain"
             />

@@ -3,7 +3,7 @@ const honourableGuests = [
   {
     name: 'Justice Hima Kohli (Retd.)',
     designation: ['Former Supreme Court Judge'],
-    image: './images/honourable-guests/hima-kohli.png',
+    image: './images/honourable-guests/hima-kohli.webp',
     type: 'Honourable Guest',
     website: 'https://www.sci.gov.in/judge/justice-hima-kohli/',
     youtube: 'https://youtu.be/-KTgTaihOAI?si=xROCy3nDkrBcIZbT',
@@ -18,7 +18,7 @@ const honourableGuests = [
       'Chairman, All India Bar Association',
       'Ex. VC- BCI',
     ],
-    image: './images/honourable-guests/adish-c-aggarwala.jpg',
+    image: './images/honourable-guests/adish-c-aggarwala.webp',
     type: 'Eminent Guest',
     website: '#',
     youtube: 'https://www.youtube.com/watch?v=6b4blcWZnE4',

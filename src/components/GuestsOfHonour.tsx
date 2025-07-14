@@ -6,7 +6,7 @@ const GuestsOfHonour = () => {
       name: 'Dr. Ramdas Bandu Athawale',
       designation:
         'Union Minister of State, India: Social Justice & Empowerment',
-      image: './images/guest-of-honours/ramdas-athawale.jpg',
+      image: './images/guest-of-honours/ramdas-athawale.webp',
       website: 'https://en.wikipedia.org/wiki/Ramdas_Athawale',
       youtube: 'https://youtu.be/v_aAwVWnAd8?feature=shared',
       instagram: '#',
@@ -15,7 +15,7 @@ const GuestsOfHonour = () => {
     {
       name: 'Smt. Himadri Singh',
       designation: 'Member of Parliament, Lok Sabha',
-      image: './images/guest-of-honours/himdri-singh.jpg',
+      image: './images/guest-of-honours/himdri-singh.webp',
       website: '#',
       youtube: 'https://youtu.be/FIN9wP2t6uc?si=WhZ5Pi4Dex9V-03y',
       instagram: 'https://www.instagram.com/himadri4bjp/',
@@ -25,7 +25,7 @@ const GuestsOfHonour = () => {
       name: 'Faggan Singh Kulaste',
       designation:
         'Former Minister of State in the Ministry of Steel; Minister of State in the Ministry of Rural Development, Government of India',
-      image: './images/guest-of-honours/faggan-singh.png',
+      image: './images/guest-of-honours/faggan-singh.webp',
       website: '#',
       youtube: 'https://youtu.be/GPMYw9q0Ew0?si=C1yzRN-pkLS_sT0i',
       instagram:
@@ -35,7 +35,7 @@ const GuestsOfHonour = () => {
     {
       name: 'Shri Kapil Mishra',
       designation: 'Cabinet Minister, Govt of Delhi Vice President BJP Delhi',
-      image: './images/guest-of-honours/kapil-mishra.jpg',
+      image: './images/guest-of-honours/kapil-mishra.webp',
       website: '#',
       youtube: 'https://youtu.be/INYozth43wc?si=wD3GlxMdRRaRylio',
       instagram: 'https://www.instagram.com/kapilmishra_ind/?hl=en',
@@ -44,7 +44,7 @@ const GuestsOfHonour = () => {
     {
       name: 'Shri Satish Upadhyay',
       designation: 'MLA - Malviya Nagar, Delhi',
-      image: './images/guest-of-honours/satish-upadhyay.jpg',
+      image: './images/guest-of-honours/satish-upadhyay.webp',
       website:
         'https://en.wikipedia.org/wiki/Satish_Upadhyay#:~:text=Upadhyay%20joined%20the%20Rashtriya%20Swayamsevak,Nagar%20Assembly%20constituency%20in%202025.',
       youtube: 'https://www.youtube.com/watch?v=fT1w7Xh274Q',
@@ -59,7 +59,7 @@ const GuestsOfHonour = () => {
         '1st Woman Leader of the House',
         'Advocate at Supreme Court of India',
       ],
-      image: './images/guest-of-honours/shikha-rai.jpg',
+      image: './images/guest-of-honours/shikha-rai.webp',
       website: '#',
       youtube: 'https://youtu.be/AFi990nGCQg?feature=shared',
       instagram:
@@ -69,7 +69,7 @@ const GuestsOfHonour = () => {
     {
       name: 'Raghuraj Singh',
       designation: 'MLA, Uttar Pradesh',
-      image: './images/guest-of-honours/raghuraj-singh.png',
+      image: './images/guest-of-honours/raghuraj-singh.webp',
       website: '#',
       youtube: 'https://www.youtube.com/watch?v=rfPV5SPQJMU',
       instagram: 'https://www.instagram.com/raghurajsinghbjp/?hl=en',
@@ -78,7 +78,7 @@ const GuestsOfHonour = () => {
     {
       name: 'Pravesh Ratn',
       designation: 'MLA, Patel Nagar, Delhi',
-      image: './images/guest-of-honours/pravesh-ratn.png',
+      image: './images/guest-of-honours/pravesh-ratn.webp',
       website: '#',
       youtube: 'https://youtu.be/-4UFmKuxPLg?si=RRzyFXiz3PTldMOE',
       instagram: 'https://www.instagram.com/praveshratn/?hl=en',
@@ -87,7 +87,7 @@ const GuestsOfHonour = () => {
     {
       name: 'Shri Vinay Choudhary',
       designation: 'National Co-Incharge Research & Policy - BJP',
-      image: './images/guest-of-honours/shri-vinay-choudhary.jpg',
+      image: './images/guest-of-honours/shri-vinay-choudhary.webp',
       website: '#',
       youtube: 'https://www.youtube.com/watch?v=rfPV5SPQJMU',
       instagram:

@@ -5,7 +5,7 @@ const EventSpeakers = () => {
     {
       name: 'Rajiv Malik',
       designation: ['Legal Leader - LG Electronics'],
-      image: './images/event-speakers/rajiv-malik.jpg',
+      image: './images/event-speakers/rajiv-malik.webp',
       linkedin: 'https://www.linkedin.com/in/rajiv-m-02890b1a/',
       youtube: '#',
       website: 'https://www.lg.com/in',
@@ -14,7 +14,7 @@ const EventSpeakers = () => {
     {
       name: 'Anurag Pareek',
       designation: ['Vice President Legal - OYO'],
-      image: './images/event-speakers/anurag-pareek.jpg',
+      image: './images/event-speakers/anurag-pareek.webp',
       linkedin: 'https://www.linkedin.com/in/anurag-pareek-b8380063/',
       youtube: '#',
       website: 'https://www.oyorooms.com/',
@@ -23,7 +23,7 @@ const EventSpeakers = () => {
     {
       name: 'Susheel Jad',
       designation: ['President and General Counsel - Think Gas'],
-      image: './images/event-speakers/susheel-jad.jpg',
+      image: './images/event-speakers/susheel-jad.webp',
       linkedin: 'https://www.linkedin.com/in/susheel-jad-7170a2122/',
       youtube: '#',
       website: 'https://www.think-gas.com/',
@@ -32,7 +32,7 @@ const EventSpeakers = () => {
     {
       name: 'Balakrishna Gopalakrishnan',
       designation: ['Founder - BKG Law Associate, Advocates & Legal Advisors'],
-      image: './images/event-speakers/balakrishna-gopalakrishnan.jpg',
+      image: './images/event-speakers/balakrishna-gopalakrishnan.webp',
       linkedin:
         'https://www.linkedin.com/in/balakrishna-gopalakrishnan-015b7014/',
       youtube: '#',
@@ -42,7 +42,7 @@ const EventSpeakers = () => {
     {
       name: 'Niti Mittal',
       designation: ['Global General Counsel - Coforge'],
-      image: './images/event-speakers/niti-mittal.jpg',
+      image: './images/event-speakers/niti-mittal.webp',
       linkedin: 'https://www.linkedin.com/in/niti-mittal-a3358518/',
       youtube: '#',
       website: 'https://www.coforge.com/',
@@ -53,7 +53,7 @@ const EventSpeakers = () => {
       designation: [
         "B.S.L., LL.B., LL.M. (IPR) Dean's Scholar, New York (NY), USA Supreme Court of India and Delhi High Court",
       ],
-      image: './images/event-speakers/vasundhra-prasad.jpg',
+      image: './images/event-speakers/vasundhra-prasad.webp',
       linkedin:
         'https://www.linkedin.com/in/vasundhraprasad/?originalSubdomain=in',
       youtube: 'https://www.youtube.com/watch?v=OywFoOcQEZo',
@@ -63,7 +63,7 @@ const EventSpeakers = () => {
     {
       name: 'Sushma Shankar',
       designation: ['Vice President Legal Accenture'],
-      image: './images/event-speakers/sushma-shankar.jpg',
+      image: './images/event-speakers/sushma-shankar.webp',
       linkedin: 'https://www.linkedin.com/in/sushma-shankar-8bba8a39/',
       youtube: '#',
       website: 'https://www.accenture.com/in-en',
@@ -72,7 +72,7 @@ const EventSpeakers = () => {
     {
       name: 'Saguna Sodhi',
       designation: ['Partner - EY Forensic & Integrity Services.'],
-      image: './images/event-speakers/saguna-sodhi.jpg',
+      image: './images/event-speakers/saguna-sodhi.webp',
       linkedin: 'https://www.linkedin.com/in/sagunasodhi/?originalSubdomain=in',
       youtube: '#',
       website: 'https://www.ey.com/en_in/people/saguna-sodhi',
@@ -83,7 +83,7 @@ const EventSpeakers = () => {
       designation: [
         'General Counsel - Sr. Vice President (Legal) and Chief Compliance Officer - NEC Corporation India Pvt. Ltd',
       ],
-      image: './images/event-speakers/amar-sundram.jpg',
+      image: './images/event-speakers/amar-sundram.webp',
       linkedin: 'https://www.linkedin.com/in/amar-sundram-a7833618/',
       youtube: '#',
       website: 'https://in.nec.com/',
@@ -94,7 +94,7 @@ const EventSpeakers = () => {
       designation: [
         'Vice President Legal & FAA - Goods And Services Tax Network',
       ],
-      image: './images/event-speakers/rajeev-tripathi.jpg',
+      image: './images/event-speakers/rajeev-tripathi.webp',
       linkedin: 'https://www.linkedin.com/in/rajeevtripathi2807/',
       youtube: '#',
       website: 'https://www.gstn.org.in/',
@@ -105,7 +105,7 @@ const EventSpeakers = () => {
       designation: [
         'General Counsel and Company Secretary -Luminous Power Technologies (P) Ltd.',
       ],
-      image: './images/event-speakers/ashish-kumar-pandey.jpg',
+      image: './images/event-speakers/ashish-kumar-pandey.webp',
       linkedin: 'https://www.linkedin.com/in/ashish-kumar-p-60592037/',
       youtube: '#',
       website: 'https://www.luminousindia.com/',
@@ -114,7 +114,7 @@ const EventSpeakers = () => {
     {
       name: 'Amit Goyal',
       designation: ['Partner - EY Forensic & Integrity Services'],
-      image: './images/event-speakers/amit-goyal.jpg',
+      image: './images/event-speakers/amit-goyal.webp',
       linkedin:
         'https://www.linkedin.com/in/amit-goyal-97994b17/?originalSubdomain=in',
       youtube: '#',
@@ -126,7 +126,7 @@ const EventSpeakers = () => {
       designation: [
         'Assistant Vice President -Legal and FCU - India first Life Insurance',
       ],
-      image: './images/event-speakers/manish-mittal.jpg',
+      image: './images/event-speakers/manish-mittal.webp',
       linkedin: 'https://www.linkedin.com/in/manish-mittal-601239136/',
       youtube: '#',
       website: 'https://www.indiafirstlife.com/',
@@ -135,7 +135,7 @@ const EventSpeakers = () => {
     {
       name: 'Shweta Prasad',
       designation: ['Associate Director Accenture'],
-      image: './images/event-speakers/shewta-prasad.jpg',
+      image: './images/event-speakers/shewta-prasad.webp',
       linkedin: 'https://www.linkedin.com/in/shweta-prasad-80378034/',
       youtube: '#',
       website: 'https://www.accenture.com/in-en',
@@ -144,7 +144,7 @@ const EventSpeakers = () => {
     {
       name: 'Rajeev Goswami',
       designation: ['VP Legal - Indus Towers Limited'],
-      image: './images/event-speakers/rajeev-goswami.jpg',
+      image: './images/event-speakers/rajeev-goswami.webp',
       linkedin: 'https://www.linkedin.com/in/rajeevgoswami/',
       youtube: '#',
       website: 'https://www.industowers.com/',
@@ -153,7 +153,7 @@ const EventSpeakers = () => {
     {
       name: 'Meeru Gupta',
       designation: ['General Counsel (VP) - Bata Limited'],
-      image: './images/event-speakers/meeru-gupta.jpg',
+      image: './images/event-speakers/meeru-gupta.webp',
       linkedin: 'https://www.linkedin.com/in/meeru-gupta-596a0213/',
       youtube: '#',
       website:
@@ -165,7 +165,7 @@ const EventSpeakers = () => {
       designation: [
         'General Counsel, Senior Vice President (VP) - Aditya Birla Fashion and Retail Limited',
       ],
-      image: './images/event-speakers/jyothi-vk.jpg',
+      image: './images/event-speakers/jyothi-vk.webp',
       linkedin: 'https://www.linkedin.com/in/jyothi-v-k/',
       youtube: '#',
       website:
@@ -177,7 +177,7 @@ const EventSpeakers = () => {
       designation: [
         'General Counsel (VP) Legal & Regulatory - Honasa Consumer Ltd.',
       ],
-      image: './images/event-speakers/ankita-sharma.jpg',
+      image: './images/event-speakers/ankita-sharma.webp',
       linkedin:
         'https://www.linkedin.com/in/ankita-sharma-a7871715b/?originalSubdomain=in',
       youtube: '#',
@@ -187,7 +187,7 @@ const EventSpeakers = () => {
     {
       name: 'Kapil Singhal',
       designation: ['CEO & Founder - CaseDocker'],
-      image: './images/event-speakers/kapil-singhal.png',
+      image: './images/event-speakers/kapil-singhal.webp',
       linkedin: 'https://www.linkedin.com/in/singhalkapil/',
       youtube: '#',
       website: 'https://www.casedocker.com/landing/',
@@ -196,7 +196,7 @@ const EventSpeakers = () => {
     {
       name: 'Preet Sethi',
       designation: ['Deputy General Counsel - Vedanta Resources Ltd.'],
-      image: './images/event-speakers/preet-sethi.jpg',
+      image: './images/event-speakers/preet-sethi.webp',
       linkedin: 'https://www.linkedin.com/in/preetsethi/',
       youtube: '#',
       website: 'https://www.vedantalimited.com/eng/',
@@ -205,7 +205,7 @@ const EventSpeakers = () => {
     {
       name: 'Mehak Oberoi',
       designation: ['Legal Head - Hydro (APAC) - GE Vernova'],
-      image: './images/event-speakers/mehak-oberoi.jpg',
+      image: './images/event-speakers/mehak-oberoi.webp',
       linkedin: 'https://www.linkedin.com/in/oberoimehak/',
       youtube: '#',
       website: 'https://www.gevernova.com/',
@@ -214,7 +214,7 @@ const EventSpeakers = () => {
     {
       name: 'Vidhi Thukral',
       designation: ['Chief Manager: ESG - Axis Max Life Insurance'],
-      image: './images/event-speakers/vidhi-thukral.jpg',
+      image: './images/event-speakers/vidhi-thukral.webp',
       linkedin: 'https://www.linkedin.com/in/vidhi-thukral-b5952962/',
       youtube: '#',
       website: 'https://www.axisbank.com/retail/insurance/max-life-insurance',
@@ -223,7 +223,7 @@ const EventSpeakers = () => {
     {
       name: 'Raveena Rani',
       designation: ['Solicitor - Solicitors Regulation Authority'],
-      image: './images/event-speakers/raveena-rani.jpg',
+      image: './images/event-speakers/raveena-rani.webp',
       linkedin: 'http://linkedin.com/in/raveena-rani-458766116',
       youtube: '#',
       website: 'https://www.sra.org.uk/',
@@ -232,7 +232,7 @@ const EventSpeakers = () => {
     {
       name: 'Babita Kumari',
       designation: ['Sr. Legal Counsel - Malomatia India Technology Services'],
-      image: './images/event-speakers/babita-kumari.jpg',
+      image: './images/event-speakers/babita-kumari.webp',
       linkedin: 'https://www.linkedin.com/in/csbabitarajput/',
       youtube: '#',
       website: 'https://www.malomatia.com/',
@@ -241,7 +241,7 @@ const EventSpeakers = () => {
     {
       name: 'Anjali Sheoran',
       designation: ['Legal Counsel - Atlan'],
-      image: './images/event-speakers/anjali-sheoran.jpg',
+      image: './images/event-speakers/anjali-sheoran.webp',
       linkedin: 'https://www.linkedin.com/in/anjalisheoran/',
       youtube: '#',
       website: 'https://atlan.com/',
@@ -250,7 +250,7 @@ const EventSpeakers = () => {
     {
       name: 'Dr. Akshay Kant Chaturvedi',
       designation: ['Corporate Head - IPR - Gujarat Fluorochemicals Limited'],
-      image: './images/event-speakers/akshay-kant-chaturvedi.jpg',
+      image: './images/event-speakers/akshay-kant-chaturvedi.webp',
       linkedin:
         'https://www.linkedin.com/in/dr-akshay-kant-chaturvedi-38797b1/',
       youtube: '#',
@@ -260,7 +260,7 @@ const EventSpeakers = () => {
     {
       name: 'Shuchita Singhal',
       designation: ['COO - CaseDocker'],
-      image: './images/event-speakers/shuchita-singhal.png',
+      image: './images/event-speakers/shuchita-singhal.webp',
       linkedin: 'https://www.linkedin.com/in/shuchita-singhal/',
       youtube: '#',
       website: 'https://www.casedocker.com/landing/',
@@ -271,7 +271,7 @@ const EventSpeakers = () => {
       designation: [
         'Legal Strategist and Compliance Thought Leader in BFSI & Strategic Advisor - Pashyanti Ventures LLP',
       ],
-      image: './images/event-speakers/manoj-gujaran.jpg',
+      image: './images/event-speakers/manoj-gujaran.webp',
       linkedin: 'https://www.linkedin.com/in/manoj-gujaran-a8030014/',
       youtube: '#',
       website: '#',
@@ -282,7 +282,7 @@ const EventSpeakers = () => {
       designation: [
         'Chief Legal & Compliance Officer - YES Securities (India) Limited',
       ],
-      image: './images/event-speakers/aditya-goenka.jpg',
+      image: './images/event-speakers/aditya-goenka.webp',
       linkedin:
         'https://www.linkedin.com/in/adv-aditya-goenka/?originalSubdomain=in',
       youtube: '#',
@@ -292,7 +292,7 @@ const EventSpeakers = () => {
     {
       name: 'Hitendra Palia',
       designation: ['Legal Coundel - PhonePe'],
-      image: './images/event-speakers/hitendra-palia.jpg',
+      image: './images/event-speakers/hitendra-palia.webp',
       linkedin: 'https://www.linkedin.com/in/hitendra-palia-3a39b045/',
       youtube: '#',
       website: 'https://www.phonepe.com/',
@@ -301,7 +301,7 @@ const EventSpeakers = () => {
     {
       name: 'Raunak Singh',
       designation: ['Legal Counsel & Company Secretary Amway'],
-      image: './images/event-speakers/raunak-singh.jpg',
+      image: './images/event-speakers/raunak-singh.webp',
       linkedin:
         'https://www.linkedin.com/in/raunak-singh-9461463a/?originalSubdomain=in',
       youtube: '#',
@@ -311,7 +311,7 @@ const EventSpeakers = () => {
     {
       name: 'Punit Babbar',
       designation: ['GM - Liaisoning & Head Complaint Management - Tide'],
-      image: './images/event-speakers/punit-babbar.jpg',
+      image: './images/event-speakers/punit-babbar.webp',
       linkedin: 'https://www.linkedin.com/in/punit-babbar-6b963738/',
       youtube: '#',
       website:
@@ -323,7 +323,7 @@ const EventSpeakers = () => {
       designation: [
         'Senior Corporate Counse Management - Voltas Ltd. - A Tata Enterprise',
       ],
-      image: './images/event-speakers/richa-pathak.jpg',
+      image: './images/event-speakers/richa-pathak.webp',
       linkedin: 'https://www.linkedin.com/in/richapathak1989/',
       youtube: '#',
       website: 'https://www.voltas.com/collections/ac',
@@ -332,7 +332,7 @@ const EventSpeakers = () => {
     {
       name: 'Ananya Gupta',
       designation: ['Legal Counsel - UPC Solar India Private Limited'],
-      image: './images/event-speakers/ananya-gupta.jpg',
+      image: './images/event-speakers/ananya-gupta.webp',
       linkedin: 'https://www.linkedin.com/in/lawyerananya/',
       youtube: '#',
       website: 'https://upcrenewables.com/',
@@ -343,7 +343,7 @@ const EventSpeakers = () => {
       designation: [
         'Advocate, Member TAC, Dept of Telecommunication, Ministry of Communication, Govt of India',
       ],
-      image: './images/event-speakers/moksha-kalyanram.png',
+      image: './images/event-speakers/moksha-kalyanram.webp',
       linkedin: 'https://www.linkedin.com/in/drmoksha-advocate/',
       youtube: '#',
       website: '#',
@@ -352,7 +352,7 @@ const EventSpeakers = () => {
     {
       name: 'Adv. Saurabh Sharma',
       designation: ['Managing Director - JSSB Legal'],
-      image: './images/event-speakers/saurabh-sharma.jpg',
+      image: './images/event-speakers/saurabh-sharma.webp',
       linkedin: 'https://www.linkedin.com/in/saurabh-sharma-3169167/',
       youtube: '#',
       website: 'https://www.jssblegal.com/',
@@ -361,7 +361,7 @@ const EventSpeakers = () => {
     {
       name: 'Adv. CS Avdhesh Kr. Varshney',
       designation: ['Founder & Mentor Justicewings Lexedge Solutions LLP'],
-      image: './images/event-speakers/c-s-avdhesh-kr-varshney.png',
+      image: './images/event-speakers/c-s-avdhesh-kr-varshney.webp',
       linkedin: 'https://www.linkedin.com/in/avdheshvarshney/',
       youtube: '#',
       website: 'https://jwlexedge.com/',
@@ -370,7 +370,7 @@ const EventSpeakers = () => {
     {
       name: 'Manushi Shah',
       designation: ['Partner - La Mintage Legal Llp'],
-      image: './images/event-speakers/manushi-shah.jpg',
+      image: './images/event-speakers/manushi-shah.webp',
       linkedin: 'https://www.linkedin.com/in/manushishah/',
       youtube: '#',
       website: 'https://lamintage.com/',
@@ -379,7 +379,7 @@ const EventSpeakers = () => {
     {
       name: 'Anurag Goyal',
       designation: ['Head of Cyber Security RedDoorz'],
-      image: './images/event-speakers/anurag-goyal.jpg',
+      image: './images/event-speakers/anurag-goyal.webp',
       linkedin:
         'https://www.linkedin.com/in/anuraggoyal2021/?originalSubdomain=in',
       youtube: '#',
@@ -389,7 +389,7 @@ const EventSpeakers = () => {
     {
       name: 'Shweta Bansal',
       designation: ['Managing Partner - SB Tech Associates'],
-      image: './images/event-speakers/shweta-bansal.jpg',
+      image: './images/event-speakers/shweta-bansal.webp',
       linkedin: 'http://linkedin.com/in/shwetabansal-tl',
       youtube: '#',
       website: '#',
@@ -398,7 +398,7 @@ const EventSpeakers = () => {
     {
       name: 'Akshar K Biyani',
       designation: ['Sr. DGM, Secretarial, Compliance, Legal - Adventz Group'],
-      image: './images/event-speakers/akshar-k-biyani.png',
+      image: './images/event-speakers/akshar-k-biyani.webp',
       linkedin:
         'https://www.linkedin.com/in/akshar-biyani-67890a57?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BkqcOtkt5QwO382qZ2TNG%2Bw%3D%3D',
       youtube: '#',

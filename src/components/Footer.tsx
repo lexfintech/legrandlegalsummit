@@ -11,9 +11,9 @@ import {
 const Footer = () => {
   const socialLinks = [
     { icon: Youtube, href: '#', color: 'hover:text-red-500' },
-    { icon: Instagram, href: '#', color: 'hover:text-pink-500' },
-    { icon: Linkedin, href: '#', color: 'hover:text-blue-600' },
-    { icon: MessageCircle, href: '#', color: 'hover:text-green-500' },
+    { icon: Instagram, href: 'https://www.instagram.com/legrandlegalsummit/', color: 'hover:text-pink-500' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/le-grand-legal-summit/', color: 'hover:text-blue-600' },
+    // { icon: MessageCircle, href: 'sms:+919582723995', color: 'hover:text-green-500' },
   ];
 
   return (

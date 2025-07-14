@@ -5,8 +5,8 @@ const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const delhiImages = [
-    './images/misc/itcdwarka.png',
-    './images/misc/indiagate.jpeg',
+    './images/misc/itcdwarka.webp',
+    './images/misc/indiagate.webp',
   ];
 
   useEffect(() => {
@@ -46,7 +46,7 @@ const Hero = () => {
           {/* Logo Section */}
           <div className="mb-4 animate-fadeInUp">
             <img
-              src="./images/logos/legrandlegalsummit.png"
+              src="./images/logos/legrandlegalsummit.webp"
               alt="Le Grand Legal Summit"
               className="h-48 mx-auto object-contain"
             />
@@ -77,14 +77,14 @@ const Hero = () => {
             <div className="flex justify-center gap-8">
               <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
                 <img
-                  src="./images/logos/GOI-MOSJAE.jpg"
+                  src="./images/logos/GOI-MOSJAE.webp"
                   alt="Support Partner 1"
                   className="w-18 h-32 object-cover rounded"
                 />
               </div>
               <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
                 <img
-                  src="./images/logos/DOC-MOFCAI-GOI.jpg"
+                  src="./images/logos/DOC-MOFCAI-GOI.webp"
                   alt="Support Partner 2"
                   className="w-18 h-32 object-cover rounded"
                 />
@@ -95,11 +95,15 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 md:bottom-2 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse"></div>
+      <a
+        href="#key-highlights"
+        className="absolute bottom-8 md:bottom-2 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer group z-10"
+        aria-label="Scroll to Key Highlights"
+      >
+        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center group-hover:border-white transition-colors duration-200">
+          <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse group-hover:bg-white transition-colors duration-200"></div>
         </div>
-      </div>
+      </a>
     </section>
   );
 };
