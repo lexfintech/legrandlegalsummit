@@ -424,7 +424,7 @@ const EventSpeakers = () => {
           {speakers.map((speaker, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 group"
+              className="w-[70%] md:w-full mx-auto bg-white cursor-pointer rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 group"
             >
               <div className="relative overflow-hidden">
                 <img

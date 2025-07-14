@@ -56,6 +56,8 @@ const Footer = () => {
                 <a
                   key={index}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`w-10 h-10 bg-[#4A4A4A] rounded-lg flex items-center justify-center text-[#C0C0C0] ${social.color} transition-all duration-300 hover:transform hover:scale-110`}
                 >
                   <social.icon size={20} />

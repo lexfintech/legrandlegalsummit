@@ -214,7 +214,7 @@ const EventAgenda = () => {
           <div className="bg-[#F7F7F7] p-2 rounded-lg">
             <button
               onClick={() => setActiveDay(1)}
-              className={`px-8 py-3 rounded-lg font-semibold transition-all duration-300 ${
+              className={`px-4 md:px-8 py-3 rounded-lg font-semibold transition-all duration-300 ${
                 activeDay === 1
                   ? 'bg-[#1B263B] text-white shadow-lg'
                   : 'text-[#4A4A4A] hover:bg-white hover:shadow-md'
@@ -224,7 +224,7 @@ const EventAgenda = () => {
             </button>
             <button
               onClick={() => setActiveDay(2)}
-              className={`px-8 py-3 rounded-lg font-semibold transition-all duration-300 ${
+              className={`px-4 md:px-8 py-3 rounded-lg font-semibold transition-all duration-300 ${
                 activeDay === 2
                   ? 'bg-[#1B263B] text-white shadow-lg'
                   : 'text-[#4A4A4A] hover:bg-white hover:shadow-md'
