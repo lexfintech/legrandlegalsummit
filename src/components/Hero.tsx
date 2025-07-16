@@ -11,11 +11,11 @@ const Hero = () => {
   });
 
   const delhiImages = [
+    './images/misc/parliament.webp',
     './images/misc/itcdwarka.webp',
-    './images/misc/parliament.jpg',
+    './images/misc/parliament2.webp',
     './images/misc/indiagate.webp',
-    './images/misc/parliament2.jpg',
-    './images/misc/parliament3.jpg',
+    './images/misc/parliament3.webp',
   ];
 
   // Event date: July 19, 2025
