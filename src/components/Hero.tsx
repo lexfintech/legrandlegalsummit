@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Calendar, MapPin, Clock } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -184,15 +185,15 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <a
-        href="#key-highlights"
+      <Link
+        to="#key-highlights"
         className="absolute bottom-3 md:bottom-2 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer group z-10"
         aria-label="Scroll to Key Highlights"
       >
         <div className="w-5 h-8 md:w-6 md:h-10 border-2 border-white/50 rounded-full flex justify-center group-hover:border-white transition-colors duration-200">
           <div className="w-1 h-2 md:h-3 bg-white/50 rounded-full mt-1 md:mt-2 animate-pulse group-hover:bg-white transition-colors duration-200"></div>
         </div>
-      </a>
+      </Link>
     </section>
   );
 };
