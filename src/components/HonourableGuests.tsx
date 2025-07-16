@@ -35,7 +35,9 @@ const HonourableGuests = () => {
             key={index}
             className="bg-white cursor-pointer rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 group"
           >
-            <div className="bg-[#2E86AB]/10 text-[#2E86AB] font-bold text-center py-2 text-xl uppercase tracking-wide">
+            <div
+              className={`bg-secondary-main/10 text-secondary-main font-bold text-center py-2 text-xl uppercase tracking-wide`}
+            >
               {guest.type}
             </div>
             <div className="relative overflow-hidden">
@@ -46,10 +48,12 @@ const HonourableGuests = () => {
               />
             </div>
             <div className="p-6">
-              <h3 className="text-xl font-bold text-[#1B263B] mb-2 group-hover:text-[#2E86AB] transition-colors duration-300">
+              <h3
+                className={`text-xl font-bold text-primary-main mb-2 group-hover:text-secondary-main transition-colors duration-300`}
+              >
                 {guest.name}
               </h3>
-              <div className="text-[#4A4A4A] mb-4">
+              <div className="text-text-secondary mb-4">
                 {Array.isArray(guest.designation)
                   ? guest.designation.map((d, i) => <div key={i}>{d}</div>)
                   : guest.designation}
@@ -60,11 +64,11 @@ const HonourableGuests = () => {
                     href={guest.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center w-10 h-10 bg-[#2E86AB]/10 rounded-lg group-hover:bg-[#2E86AB] transition-all duration-300"
+                    className={`flex items-center justify-center w-10 h-10 bg-secondary-main/10 rounded-lg group-hover:bg-secondary-main transition-all duration-300`}
                   >
                     <ExternalLink
                       size={16}
-                      className="text-[#2E86AB] group-hover:text-white"
+                      className={`text-secondary-main group-hover:text-white`}
                     />
                   </a>
                 )}
@@ -73,11 +77,11 @@ const HonourableGuests = () => {
                     href={guest.youtube}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center w-10 h-10 bg-[#2E86AB]/10 rounded-lg group-hover:bg-red-600 transition-all duration-300"
+                    className={`flex items-center justify-center w-10 h-10 bg-secondary-main/10 rounded-lg group-hover:bg-red-600 transition-all duration-300`}
                   >
                     <Youtube
                       size={16}
-                      className="text-[#2E86AB] group-hover:text-white"
+                      className={`text-secondary-main group-hover:text-white`}
                     />
                   </a>
                 )}
@@ -86,11 +90,11 @@ const HonourableGuests = () => {
                     href={guest.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center w-10 h-10 bg-[#2E86AB]/10 rounded-lg group-hover:bg-[linear-gradient(45deg,_#405de6,_#5851db,_#833ab4,_#c13584,_#e1306c,_#fd1d1d)] transition-all duration-300"
+                    className={`flex items-center justify-center w-10 h-10 bg-secondary-main/10 rounded-lg group-hover:bg-[linear-gradient(45deg,_#405de6,_#5851db,_#833ab4,_#c13584,_#e1306c,_#fd1d1d)] transition-all duration-300`}
                   >
                     <Instagram
                       size={16}
-                      className="text-[#2E86AB] group-hover:text-white"
+                      className={`text-secondary-main group-hover:text-white`}
                     />
                   </a>
                 )}
@@ -99,11 +103,11 @@ const HonourableGuests = () => {
                     href={guest.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center w-10 h-10 bg-[#2E86AB]/10 rounded-lg group-hover:bg-blue-600 transition-all duration-300"
+                    className={`flex items-center justify-center w-10 h-10 bg-secondary-main/10 rounded-lg group-hover:bg-blue-600 transition-all duration-300`}
                   >
                     <Linkedin
                       size={16}
-                      className="text-[#2E86AB] group-hover:text-white"
+                      className={`text-secondary-main group-hover:text-white`}
                     />
                   </a>
                 )}

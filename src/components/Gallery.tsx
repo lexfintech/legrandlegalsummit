@@ -59,7 +59,9 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
               {/* Hide preloader if loaded */}
               {!loaded[idx] && (
                 <div className="absolute inset-0 flex items-center justify-center bg-white/30 z-10">
-                  <span className="loader border-4 border-[#2E86AB] border-t-transparent rounded-full w-8 h-8 animate-spin"></span>
+                  <span
+                    className={`loader border-4 border-secondary-main border-t-transparent rounded-full w-8 h-8 animate-spin`}
+                  ></span>
                 </div>
               )}
             </div>

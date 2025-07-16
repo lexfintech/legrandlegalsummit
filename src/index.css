@@ -33,12 +33,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2e86ab;
+  background: #bc9c22;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #1b263b;
+  background: #201918;
 }
 
 /* Focus styles */

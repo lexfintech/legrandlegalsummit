@@ -35,11 +35,13 @@ const UpcomingEvents = () => {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1B263B] mb-6">
+          <h2
+            className={`text-4xl md:text-5xl font-bold text-primary-main mb-6`}
+          >
             All Upcoming Events
           </h2>
-          <div className="w-24 h-1 bg-[#2E86AB] mx-auto mb-6"></div>
-          <p className="text-xl text-[#4A4A4A] max-w-3xl mx-auto">
+          <div className={`w-24 h-1 bg-secondary-main mx-auto mb-6`}></div>
+          <p className="text-xl text-text-secondary max-w-3xl mx-auto">
             Stay ahead with our series of specialized legal conferences and
             professional development events
           </p>
@@ -49,7 +51,7 @@ const UpcomingEvents = () => {
           {upcomingEvents.map((event, index) => (
             <div
               key={index}
-              className="bg-[#F7F7F7] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 group"
+              className="bg-background-primary rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 group"
             >
               <div className="relative overflow-hidden">
                 <img
@@ -59,26 +61,30 @@ const UpcomingEvents = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-[#1B263B] mb-3 group-hover:text-[#2E86AB] transition-colors duration-300">
+                <h3
+                  className={`text-xl font-bold text-primary-main mb-3 group-hover:text-secondary-main transition-colors duration-300`}
+                >
                   {event.title}
                 </h3>
 
                 <div className="space-y-2 mb-4">
-                  <div className="flex items-center gap-2 text-[#4A4A4A]">
-                    <Calendar size={16} className="text-[#2E86AB]" />
+                  <div className="flex items-center gap-2 text-text-secondary">
+                    <Calendar size={16} className={`text-secondary-main`} />
                     <span className="text-sm">{event.date}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-[#4A4A4A]">
-                    <MapPin size={16} className="text-[#2E86AB]" />
+                  <div className="flex items-center gap-2 text-text-secondary">
+                    <MapPin size={16} className={`text-secondary-main`} />
                     <span className="text-sm">{event.location}</span>
                   </div>
                 </div>
 
-                <p className="text-[#4A4A4A] leading-relaxed mb-6">
+                <p className="text-text-secondary leading-relaxed mb-6">
                   {event.description}
                 </p>
 
-                <button className="bg-[#2E86AB] hover:bg-[#2E86AB]/80 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 hover:transform hover:scale-105 flex items-center gap-2 group">
+                <button
+                  className={`bg-secondary-main hover:bg-secondary-main/80 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 hover:transform hover:scale-105 flex items-center gap-2 group`}
+                >
                   More Details
                   <ArrowRight
                     size={16}

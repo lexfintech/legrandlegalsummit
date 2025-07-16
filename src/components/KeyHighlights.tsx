@@ -14,28 +14,28 @@ const KeyHighlights = () => {
       icon: Users,
       number: 500,
       label: 'Attendees',
-      color: 'text-[#2E86AB]',
+      color: 'text-secondary-main',
       key: 'attendees',
     },
     {
       icon: Calendar,
       number: 30,
       label: 'Sessions',
-      color: 'text-[#2E86AB]',
+      color: 'text-secondary-main',
       key: 'sessions',
     },
     {
       icon: Mic,
       number: 60,
       label: 'Speakers',
-      color: 'text-[#2E86AB]',
+      color: 'text-secondary-main',
       key: 'speakers',
     },
     {
       icon: Award,
       number: 50,
       label: 'Awardees',
-      color: 'text-[#2E86AB]',
+      color: 'text-secondary-main',
       key: 'awardees',
     },
   ];
@@ -82,13 +82,13 @@ const KeyHighlights = () => {
   }, []);
 
   return (
-    <section id="key-highlights" className="py-20 bg-[#F7F7F7]">
+    <section id="key-highlights" className="py-20 bg-background-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1B263B] mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary-main mb-4">
             Key Highlights
           </h2>
-          <div className="w-24 h-1 bg-[#2E86AB] mx-auto"></div>
+          <div className="w-24 h-1 bg-secondary-main mx-auto"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
@@ -102,10 +102,10 @@ const KeyHighlights = () => {
               >
                 <highlight.icon size={32} className="md:w-12 md:h-12" />
               </div>
-              <h3 className="text-2xl md:text-4xl font-bold text-[#1B263B] mb-1 md:mb-2">
+              <h3 className="text-2xl md:text-4xl font-bold text-primary-main mb-1 md:mb-2">
                 {counts[highlight.key as keyof typeof counts]}+
               </h3>
-              <p className="text-[#4A4A4A] font-semibold text-sm md:text-lg">
+              <p className="text-primary-main font-semibold text-sm md:text-lg">
                 {highlight.label}
               </p>
             </div>

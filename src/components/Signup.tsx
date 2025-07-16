@@ -27,14 +27,14 @@ const Signup = () => {
   };
 
   return (
-    <section className="py-20 bg-[#1B263B]">
+    <section className={`py-20 bg-primary-main`}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Stay Connected
           </h2>
-          <div className="w-24 h-1 bg-[#2E86AB] mx-auto mb-6"></div>
-          <p className="text-xl text-[#C0C0C0] max-w-3xl mx-auto">
+          <div className={`w-24 h-1 bg-secondary-main mx-auto mb-6`}></div>
+          <p className="text-xl text-text-muted max-w-3xl mx-auto">
             Subscribe to our newsletter for updates on Le Confluence and
             upcoming legal events
           </p>
@@ -48,13 +48,13 @@ const Signup = () => {
             <div>
               <label
                 htmlFor="fullName"
-                className="block text-sm font-semibold text-[#1B263B] mb-2"
+                className={`block text-sm font-semibold text-primary-main mb-2`}
               >
                 Full Name *
               </label>
               <div className="relative">
                 <User
-                  className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#4A4A4A]"
+                  className="absolute left-3 top-1/2 transform -translate-y-1/2 text-text-secondary"
                   size={20}
                 />
                 <input
@@ -63,7 +63,7 @@ const Signup = () => {
                   name="fullName"
                   value={formData.fullName}
                   onChange={handleInputChange}
-                  className="w-full pl-10 pr-4 py-3 border border-[#C0C0C0] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2E86AB] focus:border-transparent transition-all duration-300"
+                  className={`w-full pl-10 pr-4 py-3 border border-text-muted rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary-main focus:border-transparent transition-all duration-300`}
                   placeholder="Enter your full name"
                   required
                 />
@@ -73,13 +73,13 @@ const Signup = () => {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-semibold text-[#1B263B] mb-2"
+                className={`block text-sm font-semibold text-primary-main mb-2`}
               >
                 Email Address *
               </label>
               <div className="relative">
                 <Mail
-                  className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#4A4A4A]"
+                  className="absolute left-3 top-1/2 transform -translate-y-1/2 text-text-secondary"
                   size={20}
                 />
                 <input
@@ -88,7 +88,7 @@ const Signup = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full pl-10 pr-4 py-3 border border-[#C0C0C0] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2E86AB] focus:border-transparent transition-all duration-300"
+                  className={`w-full pl-10 pr-4 py-3 border border-text-muted rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary-main focus:border-transparent transition-all duration-300`}
                   placeholder="Enter your email address"
                   required
                 />
@@ -98,13 +98,13 @@ const Signup = () => {
             <div>
               <label
                 htmlFor="phone"
-                className="block text-sm font-semibold text-[#1B263B] mb-2"
+                className={`block text-sm font-semibold text-primary-main mb-2`}
               >
                 Phone Number
               </label>
               <div className="relative">
                 <Phone
-                  className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#4A4A4A]"
+                  className="absolute left-3 top-1/2 transform -translate-y-1/2 text-text-secondary"
                   size={20}
                 />
                 <input
@@ -113,7 +113,7 @@ const Signup = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleInputChange}
-                  className="w-full pl-10 pr-4 py-3 border border-[#C0C0C0] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2E86AB] focus:border-transparent transition-all duration-300"
+                  className={`w-full pl-10 pr-4 py-3 border border-text-muted rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary-main focus:border-transparent transition-all duration-300`}
                   placeholder="Enter your phone number"
                 />
               </div>
@@ -122,13 +122,13 @@ const Signup = () => {
             <div>
               <label
                 htmlFor="organization"
-                className="block text-sm font-semibold text-[#1B263B] mb-2"
+                className={`block text-sm font-semibold text-primary-main mb-2`}
               >
                 Organization
               </label>
               <div className="relative">
                 <Building
-                  className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#4A4A4A]"
+                  className="absolute left-3 top-1/2 transform -translate-y-1/2 text-text-secondary"
                   size={20}
                 />
                 <input
@@ -137,7 +137,7 @@ const Signup = () => {
                   name="organization"
                   value={formData.organization}
                   onChange={handleInputChange}
-                  className="w-full pl-10 pr-4 py-3 border border-[#C0C0C0] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2E86AB] focus:border-transparent transition-all duration-300"
+                  className={`w-full pl-10 pr-4 py-3 border border-text-muted rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary-main focus:border-transparent transition-all duration-300`}
                   placeholder="Enter your organization"
                 />
               </div>
@@ -147,7 +147,7 @@ const Signup = () => {
           <div className="mt-6">
             <label
               htmlFor="interests"
-              className="block text-sm font-semibold text-[#1B263B] mb-2"
+              className={`block text-sm font-semibold text-primary-main mb-2`}
             >
               Areas of Interest
             </label>
@@ -157,7 +157,7 @@ const Signup = () => {
               value={formData.interests}
               onChange={handleInputChange}
               rows={4}
-              className="w-full px-4 py-3 border border-[#C0C0C0] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2E86AB] focus:border-transparent transition-all duration-300 resize-none"
+              className={`w-full px-4 py-3 border border-text-muted rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary-main focus:border-transparent transition-all duration-300 resize-none`}
               placeholder="Tell us about your legal interests and practice areas"
             />
           </div>
@@ -165,7 +165,7 @@ const Signup = () => {
           <div className="mt-8 text-center">
             <button
               type="submit"
-              className="bg-[#2E86AB] hover:bg-[#2E86AB]/80 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 hover:transform hover:scale-105 shadow-lg"
+              className={`bg-secondary-main hover:bg-secondary-main/80 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 hover:transform hover:scale-105 shadow-lg`}
             >
               Subscribe to Newsletter
             </button>
