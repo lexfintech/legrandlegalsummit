@@ -3,6 +3,15 @@ import { ExternalLink, Instagram, Linkedin, Youtube } from 'lucide-react';
 const AdvisoryBoard = () => {
   const boardMembers = [
     {
+      name: 'Dr. Moksha Kalyanram',
+      designation: ['Advocate'],
+      image: './images/advisory-board/moksha-kalyanram.webp',
+      linkedin: 'https://www.linkedin.com/in/drmoksha-advocate/',
+      youtube: 'https://youtu.be/TdDa7Q-P_r4?si=2BouZGhcsrFuJshb',
+      website: '#',
+      instagram: '#',
+    },
+    {
       name: 'Honourable Sri Justice B.Prakash Rao (Retd.)',
       designation: ['Former High Court Judge'],
       image: './images/advisory-board/prakash-rao.webp',
@@ -29,15 +38,6 @@ const AdvisoryBoard = () => {
       image: './images/advisory-board/ashok-ram-kumar.webp',
       linkedin: 'https://www.linkedin.com/in/ashok-ram-kumar-2505b423/',
       youtube: 'https://youtu.be/zBUSYNJDjvA?si=oEETMOebAQKonVck',
-      website: '#',
-      instagram: '#',
-    },
-    {
-      name: 'Dr. Moksha Kalyanram',
-      designation: ['Advocate'],
-      image: './images/advisory-board/moksha-kalyanram.webp',
-      linkedin: 'https://www.linkedin.com/in/drmoksha-advocate/',
-      youtube: 'https://youtu.be/TdDa7Q-P_r4?si=2BouZGhcsrFuJshb',
       website: '#',
       instagram: '#',
     },

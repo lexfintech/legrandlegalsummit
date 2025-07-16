@@ -3,6 +3,17 @@ import { ExternalLink, Linkedin, Youtube, Instagram } from 'lucide-react';
 const EventSpeakers = () => {
   const speakers = [
     {
+      name: 'Dr. Moksha Kalyanram',
+      designation: [
+        'Advocate, Member TAC, Dept of Telecommunication, Ministry of Communication, Govt of India',
+      ],
+      image: './images/event-speakers/moksha-kalyanram.webp',
+      linkedin: 'https://www.linkedin.com/in/drmoksha-advocate/',
+      youtube: '#',
+      website: '#',
+      instagram: 'https://www.instagram.com/drmoksha.advocate/?hl=en',
+    },
+    {
       name: 'Rajiv Malik',
       designation: ['Legal Leader - LG Electronics'],
       image: './images/event-speakers/rajiv-malik.webp',
@@ -337,17 +348,6 @@ const EventSpeakers = () => {
       youtube: '#',
       website: 'https://upcrenewables.com/',
       instagram: '#',
-    },
-    {
-      name: 'Dr. Moksha Kalyanram',
-      designation: [
-        'Advocate, Member TAC, Dept of Telecommunication, Ministry of Communication, Govt of India',
-      ],
-      image: './images/event-speakers/moksha-kalyanram.webp',
-      linkedin: 'https://www.linkedin.com/in/drmoksha-advocate/',
-      youtube: '#',
-      website: '#',
-      instagram: 'https://www.instagram.com/drmoksha.advocate/?hl=en',
     },
     {
       name: 'Adv. Saurabh Sharma',
