@@ -3,31 +3,31 @@ import { Calendar, MapPin, ArrowRight } from 'lucide-react';
 const UpcomingEvents = () => {
   const upcomingEvents = [
     {
-      title: 'Legal Tech Summit 2025',
-      date: 'March 15-16, 2025',
-      location: 'Mumbai, Maharashtra',
+      title: 'Le Grand Legal Summit - Dubai',
+      date: 'February, 2026',
+      location: 'Dubai, UAE',
       description:
         'Exploring the intersection of artificial intelligence and legal practice with focus on automation, ethics, and future trends.',
       image:
-        'https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg',
+        './images/misc/dubai.webp',
     },
     {
-      title: 'Constitutional Law Conference',
-      date: 'June 8-9, 2025',
-      location: 'Bengaluru, Karnataka',
+      title: 'Le Grand Legal Summit - UK',
+      date: 'March, 2026',
+      location: 'United Kingdom',
       description:
         'Deep dive into recent constitutional amendments, fundamental rights evolution, and judicial interpretation of constitutional principles.',
       image:
-        'https://images.pexels.com/photos/5669602/pexels-photo-5669602.jpeg',
+        './images/misc/uk.webp',
     },
     {
-      title: 'Corporate Governance Forum',
-      date: 'September 22-23, 2025',
-      location: 'Chennai, Tamil Nadu',
+      title: 'Le Grand Legal Summit - New York',
+      date: 'October, 2026',
+      location: 'New York, USA',
       description:
         'Comprehensive discussion on corporate compliance, ESG frameworks, and emerging challenges in corporate governance.',
       image:
-        'https://images.pexels.com/photos/5668772/pexels-photo-5668772.jpeg',
+        './images/misc/nyc.webp',
     },
   ];
 
@@ -78,11 +78,11 @@ const UpcomingEvents = () => {
                   </div>
                 </div>
 
-                <p className="text-text-secondary leading-relaxed mb-6">
+                {/* <p className="text-text-secondary leading-relaxed mb-6">
                   {event.description}
-                </p>
+                </p> */}
 
-                <button
+                {/* <button
                   className={`bg-secondary-main hover:bg-secondary-main/80 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 hover:transform hover:scale-105 flex items-center gap-2 group`}
                 >
                   More Details
@@ -90,7 +90,7 @@ const UpcomingEvents = () => {
                     size={16}
                     className="group-hover:translate-x-1 transition-transform duration-300"
                   />
-                </button>
+                </button> */}
               </div>
             </div>
           ))}

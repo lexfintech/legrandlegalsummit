@@ -10,7 +10,7 @@ import AdvisoryBoard from '../components/AdvisoryBoard';
 import EventSpeakers from '../components/EventSpeakers';
 import EventPartners from '../components/EventPartners';
 import MediaPartners from '../components/MediaPartners';
-// import UpcomingEvents from './components/UpcomingEvents';
+import UpcomingEvents from '../components/UpcomingEvents';
 // import Signup from './components/Signup';
 import Footer from '../components/Footer';
 import HonourableGuests from '../components/HonourableGuests';
@@ -32,7 +32,7 @@ function LGLSDelhi() {
       <EventSpeakers />
       <EventPartners />
       <MediaPartners />
-      {/* <UpcomingEvents /> */}
+      <UpcomingEvents />
       {/* <Signup /> */}
       <VideoHighlight />
       <Footer />
