@@ -10,13 +10,13 @@ const navItems = [
     href: 'https://drive.google.com/drive/folders/1HQbUUUk4mrA9VjAseh30r91Sz6YEuAq0?usp=drive_link',
     type: 'external',
   },
-  { name: 'Speakers', href: '/#speakers', type: 'section' },
+  { name: 'Speakers', href: '#speakers', type: 'section' },
   {
     name: 'Awards',
     href: 'https://bharatnyayapuraskar.com/',
     type: 'external',
   },
-  { name: 'Agenda', href: '/#agenda', type: 'section' },
+  { name: 'Agenda', href: '#agenda', type: 'section' },
 ];
 
 const Navbar = () => {
@@ -35,7 +35,7 @@ const Navbar = () => {
   // Handle hash navigation when coming from other pages
   useEffect(() => {
     window.scrollTo(0, 0);
-    if (location.pathname === '/' && location.hash) {
+    if (location.hash) {
       const sectionId = location.hash.substring(1); // Remove '#' to get section id
       const element = document.getElementById(sectionId);
       if (element) {
