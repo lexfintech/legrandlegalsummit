@@ -14,7 +14,8 @@ import UpcomingEvents from '../components/UpcomingEvents';
 import Footer from '../components/Footer';
 import HonourableGuests from '../components/HonourableGuests';
 import VideoHighlight from '../components/VideoHighlight';
-import { agendaDetails, boardMembers, descriptionDetails, eventPartners, eventSpeakers, galleryImages, guestsOfHonour, heroSection, honourableGuests, keyHighlights, mediaPartners, supportLetterSection, videoHighlight, whatToExpect, upcomingEvents } from '../data/nyc';
+import { agendaDetails, boardMembers, descriptionDetails, eventPartners, eventSpeakers, galleryImages, guestsOfHonour, heroSection, honourableGuests, keyHighlights, mediaPartners, supportLetterSection, videoHighlight, whatToExpect, upcomingEvents, previousEvents } from '../data/nyc';
+import PastEvents from '../components/PastEvents';
 
 function LGLSNyc() {
   return (
@@ -33,6 +34,7 @@ function LGLSNyc() {
       <EventPartners partners={eventPartners} />
       <MediaPartners mediaPartners={mediaPartners} />
       <UpcomingEvents upcomingEvents={upcomingEvents} />
+      <PastEvents pastEvents={previousEvents} />
       <VideoHighlight videoHighlight={videoHighlight} />
       <Footer />
     </div>

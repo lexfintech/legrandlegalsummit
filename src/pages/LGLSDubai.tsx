@@ -14,7 +14,8 @@ import UpcomingEvents from '../components/UpcomingEvents';
 import Footer from '../components/Footer';
 import HonourableGuests from '../components/HonourableGuests';
 import VideoHighlight from '../components/VideoHighlight';
-import { agendaDetails, boardMembers, descriptionDetails, eventPartners, eventSpeakers, galleryImages, guestsOfHonour, heroSection, honourableGuests, keyHighlights, mediaPartners, supportLetterSection, videoHighlight, whatToExpect, upcomingEvents } from '../data/dubai';
+import { agendaDetails, boardMembers, descriptionDetails, eventPartners, eventSpeakers, galleryImages, guestsOfHonour, heroSection, honourableGuests, keyHighlights, mediaPartners, supportLetterSection, videoHighlight, whatToExpect, upcomingEvents, previousEvents } from '../data/dubai';
+import PastEvents from '../components/PastEvents';
 
 function LGLSDubai() {
   return (
@@ -33,6 +34,7 @@ function LGLSDubai() {
       <EventPartners partners={eventPartners} />
       <MediaPartners mediaPartners={mediaPartners} />
       <UpcomingEvents upcomingEvents={upcomingEvents} />
+      <PastEvents pastEvents={previousEvents} />
       <VideoHighlight videoHighlight={videoHighlight} />
       <Footer />
     </div>

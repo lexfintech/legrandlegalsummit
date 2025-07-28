@@ -2,7 +2,7 @@ import { Calendar, MapPin } from 'lucide-react';
 import { type Event } from '../types';
 import { Link } from 'react-router-dom';
 
-const UpcomingEvents = ({ upcomingEvents }: { upcomingEvents: Event[] }) => {
+const PastEvents = ({ pastEvents }: { pastEvents: Event[] }) => {
 
   return (
     <section className="py-20 bg-white">
@@ -11,17 +11,16 @@ const UpcomingEvents = ({ upcomingEvents }: { upcomingEvents: Event[] }) => {
           <h2
             className={`text-4xl md:text-5xl font-bold text-primary-main mb-6`}
           >
-            All Upcoming Events
+            Relive Our Past Events
           </h2>
           <div className={`w-24 h-1 bg-secondary-main mx-auto mb-6`}></div>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto">
-            Stay ahead with our series of specialized legal conferences and
-            professional development events
+            We've hosted a series of specialized legal conferences and professional development events designed to keep you at the forefront of the legal field.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {upcomingEvents.map((event, index) => (
+          {pastEvents.map((event, index) => (
             <Link
               key={index}
               to={event.route}
@@ -74,4 +73,4 @@ const UpcomingEvents = ({ upcomingEvents }: { upcomingEvents: Event[] }) => {
   );
 };
 
-export default UpcomingEvents;
+export default PastEvents;

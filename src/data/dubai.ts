@@ -1,6 +1,6 @@
 import { Award, BookOpen, Calendar, Camera, Coffee, FileText, Globe, Laptop, Lightbulb, Mic, Star, Users } from 'lucide-react';
-import { dubai, newYork, uk } from './upcomingEvents';
-import { type Agenda, DescriptionDetails, HeroSection, KeyHighlight, Member, Partner, UpcomingEvent, VideoHighlight, WhatToExpect } from '../types';
+import { delhi, newYork, uk } from './events';
+import { type Agenda, DescriptionDetails, HeroSection, KeyHighlight, Member, Partner, Event, VideoHighlight, WhatToExpect } from '../types';
 
 export const boardMembers: Member[] = [
     {
@@ -174,9 +174,9 @@ export const galleryImages: string[] = [
 ];
 
 export const title = 'Le Grand Legal Summit'
-export const date = 'July 19th - 20th, 2025'
-export const timerCountdownEndDateTimeStamp = '2025-07-19T09:00:00';
-export const location = 'Welcomhotel by ITC, Dwarka, New Delhi'
+export const date = 'February 9th - 10th, 2026'
+export const timerCountdownEndDateTimeStamp = '2026-02-09T09:00:00';
+export const location = 'Dubai'
 export const contactNumber = '+91 95827 23995'
 export const ticketPrice = '₹10,000'
 export const ticketLink = 'https://allevents.in/new-delhi/le-grand-legal-summit-tickets/80003171334744?aff=u1gjbz'
@@ -208,11 +208,11 @@ export const supportedBy: string[] = [
 ]
 
 export const backgroundImages: string[] = [
-    './images/misc/parliament.webp',
-    './images/misc/itcdwarka.webp',
-    './images/misc/parliament2.webp',
-    './images/misc/indiagate.webp',
-    './images/misc/parliament3.webp',
+    './images/misc/burj-ai-arab.webp',
+    './images/misc/burj-khalifa.webp',
+    './images/misc/museum-of-the-future.webp',
+    './images/misc/palm-jumeriah.webp',
+   
 ]
 
 export const videoHighlight: VideoHighlight = {
@@ -316,166 +316,148 @@ export const heroSection: HeroSection = {
 }
 
 export const agendaDetails: Agenda[] = [{
-    title: 'Day 1 - July 19th',
+    title: 'Day 1 - February 09th',
     sessions: [
         {
-            time: '9:00 AM - 9:45 AM',
-            title: 'Registrations & Hi-Tea',
+            time: '08:00 AM - Onwards ',
+            title: 'Conference Registration & Networking Refreshments',
             description:
-                'Begin your day by collecting your exclusive event kit at the registration desk, followed by a refreshing hi-tea break with snacks and engaging conversations with fellow legal professionals.',
+                '#',
         },
         {
-            time: '9:45 AM - 10:45 AM',
-            title: 'Lighting of the Lamp & Opening Ceremony',
+            time: '08:00 AM - 09:00 AM ',
+            title: 'Introductions & Speed Networking',
             description:
-                'Lighting of the lamp and opening ceremony to mark the auspicious beginning of the summit with wisdom, purpose, and unity.',
+                'Kickstart the conference with high-energy networking designed to maximize connections in a short time.',
         },
         {
-            time: '10:45 AM - 11:00 AM',
+            time: '09:00 AM - 09:40 AM ',
             title:
-                "Keynote: India's Legal Future: Balancing Tradition, Technology, and Justice in the New Era",
+                "Collaborative Round Table Discussions",
             description:
-                "A powerful exploration of how India's legal system must evolve by integrating tradition with innovation to deliver faster, fairer, and more accessible justice.",
+                "Converging Forces: Building Trusted, Resilient, and Compliant Organizations in the Age of AI, Cyber Threats & Global Regulation",
         },
         {
-            time: '11:00 AM - 12:00 AM',
+            time: '09:40 AM - 10:00 AM ',
             title:
-                'Panel Discussion: The Future of Litigation in India: Reform, Technology & Access',
+                'Keynote Address',
             description:
-                'Experts explore how evolving legal reforms, digital innovation, and inclusive practices are reshaping the litigation landscape in India.',
+                'Ethical Data Use and Privacy: Striking the balance between Innovation and Compliance',
         },
         {
-            time: '12:00 AM - 12:30 PM',
-            title: 'Netwoking-Tea & Refreshments',
-            description:
-                'Refreshing hi-tea break with snacks and engaging conversations with felow legal professionals.',
-        },
-        {
-            time: '12:30 AM - 1:30 PM',
+            time: '10:00 AM - 10:20 AM ',
             title:
-                'Panel Discussion: Data Privacy and Cybersecurity Legal Challenges and Strategic Safeguards in the Age of Innovation.',
+                'Keynote Address',
             description:
-                'This panel explores the evolving legal landscape of data privacy and cybersecurity, offering strategic insights to safeguard innovation in the digital era.',
+                'AI-Powered GRC: Transforming Business Success',
         },
         {
-            time: '1:30 PM - 2:30 PM',
+            time: '10:20 AM - 11:00 AM ',
             title:
-                'Panel Discussion: Driving Corporate Sustainability: Legal Strategies for ESG and Long-Term Business Impact.',
+                'Collaborative Round Table Discussions',
             description:
-                'Ensuring compliance with evolving ESG frameworks and reporting standards.',
+                'Smart Governance for Emerging Tech: Risk Management in AI, Blockchain & IP-Driven Innovation',
         },
         {
-            time: '2:30 PM - 2:50 PM',
+            time: '11:00 AM - 11:10 AM ',
             title:
-                'Case Study Presentation: Connecting Law and Business: How LegalTech Enables Process-Driven Legal Frameworks',
-            description: "#"
+                'Exclusive Case Study Presentation',
+            description: "Automating DSARs: Efficiency, Compliance, and Innovation"
         },
         {
-            time: '2:50 PM - 3:50 PM',
-            title: 'Networking Over Lunch',
+            time: '11:10 AM - 11:20 AM',
+            title: 'Refreshments',
             description:
-                'Refreshing lunch break and engaging conversations with fellow legal professionals.',
+                'Enjoy a tea break while networking and engaging in peer-to-peer discussions',
         },
         {
-            time: '3:50 PM - 4:50 PM',
+            time: '11:20 AM - 11:50 AM ',
             title:
-                'Panel Discussion: Is the Indian Legal System Ready for War-Time Law?',
+                'Peer Connect: One-on-One Conversations',
             description:
-                "Exploring the preparedness of India's legal framework to address challenges and complexities arising in times of armed conflict and national emergency.",
+                "No panels. No slides. Just real conversations that matter.",
         },
         {
-            time: '4:50 PM - 5:50 PM',
+            time: '11:50 AM - 12:10 PM ',
             title:
-                'Panel Discussion: The Evolving Role Of In-House Counsels in Strategic Decision Making',
+                'Keynote Address',
             description:
-                'Exploring how in-house counsels are increasingly shaping strategic business decisions and driving organizational value beyond traditional legal roles.',
+                'Trademark Enforcement in the Digital Era: Balancing Brand protection with LegalTech',
         },
         {
-            time: '5:50 PM - 6:20 PM',
-            title: 'Fireside Chat by Influence Talk',
-            description: "#"
+            time: '12:10 PM - 12:30 PM ',
+            title: 'Keynote Address',
+            description: "Why is it important to have an IP-savvy workforce?"
         },
         {
-            time: '6:20 PM - 6:30 PM',
+            time: '12:30 PM - 12:40 PM',
             title:
-                'Closing Ceremony of Day 1 of the Event followed by Networking-Tea & Refreshments',
+                'Exclusive Case Study Presentation',
             description:
-                'Closing of Day 1 of the event followed by Refreshing networking-tea break with snacks & engaging conversations with fellow legal professionals.',
-        },
-    ]
-}, {
-    title: 'Day 2 - July 20th',
-    sessions: [
-        {
-            time: '9:00 AM - 9:45 AM',
-            title: 'Registrations & Hi-Tea',
-            description:
-                'Begin your day by collecting your exclusive event kit at the registration desk, followed by a refreshing hi-tea break with snacks and engaging conversations with fellow legal professionals.',
+                'From Insight to Action: Driving Trademark Value Through Strategy and Operations',
         },
         {
-            time: '9:45 AM - 10:50 AM',
-            title: 'Keynote Speeches',
-            description: "#"
-        },
-        {
-            time: '10:50 AM - 11:10 AM',
-            title: 'Case Study Presentation',
-            description: "#"
-        },
-        {
-            time: '11:10 AM - 12:10 PM',
-            title: 'Panel Discussion : Navigating Legal Risk in a Globalized Economy',
-            description:
-                'Examining strategies for managing legal risks and ensuring compliance amid the complexities of a fast-evolving global economy',
-        },
-        {
-            time: '12:10 PM - 12:30 PM',
-            title: 'Case Study Presentation',
-            description: "#"
-        },
-        {
-            time: '12:30 PM - 1:00 PM',
-            title: ' Netwoking-Tea & Refreshment',
-            description:
-                'Refreshing hi-tea break with snacks and engaging conversations with felow legal professionals.',
-        },
-        {
-            time: '1:00 PM - 2:00 PM',
+            time: '12:40 PM - 01:20 PM',
             title:
-                'Panel Discussion: Intellectual Property in India: Protecting Innovation – Key strategies to secure and enforce IP rights in Indi',
+                'Collaborative Round Table Discussions',
             description:
-                'Exploring how in-house counsels are increasingly shaping strategic business decisions and driving organizational value beyond traditional legal roles.',
+                'AI, Trade Secrets & Data Privacy: Navigating the Grey Zones',
         },
         {
-            time: '2:00 PM - 3:00 PM',
-            title: 'Networking Over Lunch',
-            description:
-                'Refreshing lunch break and engaging conversations with felow legal professionals.',
-        },
-        {
-            time: '3:00 PM - 4:00 PM',
+            time: '01:20 PM - 02:00 PM',
             title:
-                'Panel Discussion: The Transformative Role of AI in Revolutionizing Legal Practice, Compliance, and Governance.',
+                'Lunch Break & Informal Networking',
             description:
-                'Exploring how AI is reshaping legal practice, enhancing compliance, and driving smarter governance in the digital age.',
+                'Enjoy a networking lunch with speakers, sponsors, and fellow delegatesa ',
+        },
+         {
+            time: '02:00 PM - 02:40 PM  ',
+            title:
+                'Live, Interactive Group Discussion',
+            description:
+                'Real Talk: Intellectual Property Challenges Unplugged',
+        },
+         {
+            time: '02:40 PM - 03:20 PM ',
+            title:
+                'Collaborative Round Table Discussions',
+            description:
+                'Global Regulation Crossfire: IP, Data & Cyber Laws Collide',
         },
         {
-            time: '4:00 PM - 5:00 PM',
-            title: 'Panel Discussion: Tech & Law - The Rise of Legal Innovation',
+            time: '03:20 PM - 04:00 PM ',
+            title:
+                'Collaborative Round Table Discussions',
             description:
-                'Exploring how technology is transforming the legal landscape through innovation, efficiency, and access to justice.',
+                'Navigating the Privacy, Security & IP Convergence: Unified Compliance in a Fragmented World',
         },
         {
-            time: '5:00 PM - 6:00PM',
-            title: 'Bharat Nyaya Puraskar Awards Ceremony.',
+            time: '04:00 PM - 04:20 PM ',
+            title:
+                'Refreshments',
             description:
-                'Awardees will be honoured in with the Bharat Nyaya Purasakar',
+                'Enjoy a tea break while networking and engaging in peer-to-peer discussions ',
         },
         {
-            time: '6:00 PM - 6:10 PM',
-            title: ' Closing Ceremony followed by Networking-Tea & Refreshment',
+            time: '04:20 PM - 05:00 PM  ',
+            title:
+                'Collaborative Round Table Discussions',
             description:
-                'Closing of the event of the event followed by Refreshing networking-tea break with snacks & engaging conversations with fellow legal professionals.',
+                'Managing Regulations: Relationship Between GCs, GRC Heads, DPOs, CISOs, Risk Managers & IP Leaders',
+        },
+        {
+            time: '05:00 PM - 05:30 PM  ',
+            title:
+                'Awards ceremony',
+            description:
+                '#',
+        },
+        {
+            time: '5:30PM - 6:00 PM',
+            title:
+                'Thank you and Closing Remarks!',
+            description:
+                'A heartfelt thanks to all the speakers and delegates for their invaluable support and participation.',
         },
     ]
 }]
@@ -520,6 +502,42 @@ export const eventPartners: Partner[] = [
         name: 'LawyerInsta - Official Legal Directory Partner',
         logo: './images/event-partners/lawyerinsta.webp',
         website: 'https://lawyerinsta.com/',
+    },
+    {
+        name: 'Spondulix - Business Law Innovation Partner',
+        logo: './images/event-partners/spondulix.webp',
+        website:'#',
+    },
+    {
+        name: 'Compage Consulting - Legal PR Partner',
+        logo: './images/event-partners/compage-consulting.webp',
+        website: '#',
+    },
+    {
+        name: 'BMR Legal Advocates - Law Firm Partner',
+        logo: './images/event-partners/BMR-Legal-Advocates.webp',
+        website: '#',
+    },
+    {
+        name: 'DreamLegal - Legal Tech Adoption Partner',
+        logo: './images/event-partners/dreamlegal.webp',
+        website: '#',
+    },
+    
+    {
+        name: 'Shreyans Singhvi & Associates - Law Firm Partner',
+        logo: './images/event-partners/shreyans-singhvi.webp',
+        website: '#',
+    },
+    {
+        name: 'D&T Juris - Law Firm Partner',
+        logo: './images/event-partners/D&T-juris.webp',
+        website: '#',
+    },
+    {
+        name: 'S. K. Singhi & Partners - Law Firm Partner',
+        logo: './images/event-partners/s-k-singhi&partners.webp',
+        website: '#',
     },
 ]
 
@@ -963,6 +981,66 @@ export const eventSpeakers: Member[] = [{
     youtube: '#',
     website: 'https://www.adventz.com/',
     instagram: '#',
+},
+{
+    name: 'Srijit Mukherjee',
+    designation: ['Group General Counsel, Node4'],
+    image: './images/event-speakers/srijit.webp',
+    linkedin:
+        'https://www.linkedin.com/in/srijitmukherjee/',
+    youtube: '#',
+    website: 'https://node4.co.uk/',
+    instagram: '#',
+},
+{
+    name: 'CA Sudheendra Rao',
+    designation: ['CEO-Spondulix'],
+    image: './images/event-speakers/sudheendra.webp',
+    linkedin:
+        '#',
+    youtube: '#',
+    website: '#',
+    instagram: '#',
+},
+{
+    name: 'Subham Khamar',
+    designation: ['Assistant Manager - Corporate IPR Gujarat Fluorochemicals Limited'],
+    image: './images/event-speakers/Subham.webp',
+    linkedin:
+        'https://www.linkedin.com/in/subham-khamar/?originalSubdomain=in',
+    youtube: '#',
+    website: '#',
+    instagram: '#',
+},
+{
+    name: 'Prof. A V Narsimharao',
+    designation: ['Accredited Mediator'],
+    image: './images/event-speakers/narsimharao.webp',
+    linkedin:
+        '#',
+    youtube: '#',
+    website: 'http://avnrao.com/',
+    instagram: '#',
+},
+{
+    name: 'Ranjan Singhania',
+    designation: ['Founder-Dreamlegal'],
+    image: './images/event-speakers/ranjan.webp',
+    linkedin:
+        'https://www.linkedin.com/in/ranjan-singhania-2b99ab212/',
+    youtube: '#',
+    website: 'https://dreamlegal.in/',
+    instagram: '#',
+},
+{
+    name: 'Dhawal Suryawanshi',
+    designation: ['In-house Counsel - Gujarat Fluorochemicals Limited'],
+    image: './images/event-speakers/dhawal.webp',
+    linkedin:
+        'https://www.linkedin.com/in/dhawal-suryawanshi-4b6572222/?originalSubdomain=in',
+    youtube: '#',
+    website: '#',
+    instagram: '#',
 }]
 
 export const guestsOfHonour: Member[] = [
@@ -1133,8 +1211,11 @@ export const keyHighlights: KeyHighlight[] = [
     },
 ];
 
-export const upcomingEvents: UpcomingEvent[] = [
-    dubai,
+export const upcomingEvents: Event[] = [
     uk,
     newYork,
 ];
+
+export const previousEvents : Event[] = [
+    delhi
+]

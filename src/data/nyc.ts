@@ -1,6 +1,6 @@
 import { Award, BookOpen, Calendar, Camera, Coffee, FileText, Globe, Laptop, Lightbulb, Mic, Star, Users } from 'lucide-react';
-import { dubai, newYork, uk } from './upcomingEvents';
-import { type Agenda, DescriptionDetails, HeroSection, KeyHighlight, Member, Partner, UpcomingEvent, VideoHighlight, WhatToExpect } from '../types';
+import { delhi, dubai, uk } from './events';
+import { type Agenda, DescriptionDetails, HeroSection, KeyHighlight, Member, Partner, Event, VideoHighlight, WhatToExpect } from '../types';
 
 export const boardMembers: Member[] = [
     {
@@ -174,9 +174,9 @@ export const galleryImages: string[] = [
 ];
 
 export const title = 'Le Grand Legal Summit'
-export const date = 'July 19th - 20th, 2025'
-export const timerCountdownEndDateTimeStamp = '2025-07-19T09:00:00';
-export const location = 'Welcomhotel by ITC, Dwarka, New Delhi'
+export const date = 'October 2026'
+export const timerCountdownEndDateTimeStamp = '2026-10-01T09:00:00';
+export const location = 'New Work, USA'
 export const contactNumber = '+91 95827 23995'
 export const ticketPrice = '₹10,000'
 export const ticketLink = 'https://allevents.in/new-delhi/le-grand-legal-summit-tickets/80003171334744?aff=u1gjbz'
@@ -208,11 +208,11 @@ export const supportedBy: string[] = [
 ]
 
 export const backgroundImages: string[] = [
-    './images/misc/parliament.webp',
-    './images/misc/itcdwarka.webp',
-    './images/misc/parliament2.webp',
-    './images/misc/indiagate.webp',
-    './images/misc/parliament3.webp',
+    './images/misc/newyork1.webp',
+    './images/misc/newyork2.webp',
+    './images/misc/statue-newyork.webp',
+    './images/misc/nyc.webp',
+    
 ]
 
 export const videoHighlight: VideoHighlight = {
@@ -1133,8 +1133,11 @@ export const keyHighlights: KeyHighlight[] = [
     },
 ];
 
-export const upcomingEvents: UpcomingEvent[] = [
+export const upcomingEvents: Event[] = [
     dubai,
     uk,
-    newYork,
 ];
+
+export const previousEvents : Event[] = [
+    delhi
+]

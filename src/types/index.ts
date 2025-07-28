@@ -77,7 +77,7 @@ export type WhatToExpect = {
   icon: React.ElementType;
 }
 
-export type UpcomingEvent = {
+export type Event = {
   title: string;
   date: string;
   location: string;

@@ -1,7 +1,16 @@
-import { UpcomingEvent } from "../types";
+import { Event } from "../types";
 
+export const delhi : Event = {
+    title: 'Le Grand Legal Summit - Delhi',
+    date: '19th & 20th July, 2025',
+    location: 'Welcomhotel by ITC, Dwarka, New Delhi',
+    description:
+        'Exploring the intersection of artificial intelligence and legal practice with focus on automation, ethics, and future trends.',
+    image: './images/misc/indiagate.webp',
+    route: '/delhi',
+}
 
-export const dubai: UpcomingEvent = {
+export const dubai: Event = {
     title: 'Le Grand Legal Summit - Dubai',
     date: 'February, 2026',
     location: 'Dubai, UAE',
@@ -11,7 +20,7 @@ export const dubai: UpcomingEvent = {
     route: '/',
 }
 
-export const uk: UpcomingEvent = {
+export const uk: Event = {
     title: 'Le Grand Legal Summit - UK',
     date: 'March, 2026',
     location: 'United Kingdom',
@@ -21,7 +30,7 @@ export const uk: UpcomingEvent = {
     route: '/uk',
 }
 
-export const newYork: UpcomingEvent = {
+export const newYork: Event = {
     title: 'Le Grand Legal Summit - New York',
     date: 'October, 2026',
     location: 'New York, USA',

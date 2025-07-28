@@ -34,6 +34,7 @@ const Navbar = () => {
 
   // Handle hash navigation when coming from other pages
   useEffect(() => {
+    window.scrollTo(0, 0);
     if (location.pathname === '/' && location.hash) {
       const sectionId = location.hash.substring(1); // Remove '#' to get section id
       const element = document.getElementById(sectionId);

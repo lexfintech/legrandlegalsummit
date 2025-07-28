@@ -23,7 +23,7 @@ const EventPartners = ({ partners }: { partners: Partner[] }) => {
             <a
               key={index}
               className="bg-background-primary cursor-pointer rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 group flex flex-col items-center"
-              href={partner.website}
+              href={partner.website!="#"?partner.website:undefined}
               target="_blank"
               rel="noopener noreferrer"
             >
