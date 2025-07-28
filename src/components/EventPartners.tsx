@@ -1,47 +1,7 @@
-const EventPartners = () => {
-  const partners = [
-    {
-      name: 'EY - Exclusive Partner',
-      logo: './images/event-partners/ey.webp',
-      website: 'https://www.ey.com/en_in',
-    },
-    {
-      name: 'La Mintage Legal - Strategic Legal Partner',
-      logo: './images/event-partners/lawmintage.webp',
-      website: 'https://lamintage.com/',
-    },
-    {
-      name: 'Dispute Resolution Hub - Resolution Partner',
-      logo: './images/event-partners/dispute-hub.webp',
-      website: 'https://resolutionhub.in/',
-    },
-    {
-      name: 'JSSB Legal - Legal Excellence Partner',
-      logo: './images/event-partners/jssb-legal.webp',
-      website: 'https://www.jssblegal.com/',
-    },
-    {
-      name: 'Gyanauka - Knowledge Partner',
-      logo: './images/event-partners/gyanauka.webp',
-      website: 'https://gyanauka.com/',
-    },
-    {
-      name: 'BGK Law Associates - Supporting Partner',
-      logo: './images/event-partners/bgk-law-associates.webp',
-      website: 'https://bgklawassociates.co.in/',
-    },
-    {
-      name: 'CaseDocker - Legal-Tech Partner',
-      logo: './images/event-partners/casedocker.webp',
-      website: 'https://www.casedocker.com/landing/',
-    },
-    {
-      name: 'LawyerInsta - Official Legal Directory Partner',
-      logo: './images/event-partners/lawyerinsta.webp',
-      website: 'https://lawyerinsta.com/',
-    },
-  ];
+import { Partner } from "../types";
 
+const EventPartners = ({ partners }: { partners: Partner[] }) => {
+  if (partners.length === 0) return null;
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

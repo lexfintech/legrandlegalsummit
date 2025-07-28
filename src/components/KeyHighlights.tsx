@@ -1,44 +1,9 @@
 import { useState, useEffect } from 'react';
-import { Users, Calendar, Mic, Award } from 'lucide-react';
+import { KeyHighlight } from '../types';
 
-const KeyHighlights = () => {
-  const [counts, setCounts] = useState({
-    attendees: 0,
-    sessions: 0,
-    speakers: 0,
-    awardees: 0,
-  });
+const KeyHighlights = ({ keyHighlights }: { keyHighlights: KeyHighlight[] }) => {
+  const [counts, setCounts] = useState<{ [key: string]: number }>({});
 
-  const highlights = [
-    {
-      icon: Users,
-      number: 500,
-      label: 'Attendees',
-      color: 'text-secondary-main',
-      key: 'attendees',
-    },
-    {
-      icon: Calendar,
-      number: 30,
-      label: 'Sessions',
-      color: 'text-secondary-main',
-      key: 'sessions',
-    },
-    {
-      icon: Mic,
-      number: 60,
-      label: 'Speakers',
-      color: 'text-secondary-main',
-      key: 'speakers',
-    },
-    {
-      icon: Award,
-      number: 50,
-      label: 'Awardees',
-      color: 'text-secondary-main',
-      key: 'awardees',
-    },
-  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -46,7 +11,7 @@ const KeyHighlights = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             // Start counting animation
-            highlights.forEach((highlight) => {
+            keyHighlights.forEach((highlight) => {
               const target = highlight.number;
               const duration = 2000; // 2 seconds
               const increment = target / (duration / 16); // 60fps
@@ -92,7 +57,7 @@ const KeyHighlights = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
-          {highlights.map((highlight, index) => (
+          {keyHighlights.map((highlight, index) => (
             <div
               key={index}
               className="bg-white rounded-xl p-4 md:p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 group"

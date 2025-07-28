@@ -14,9 +14,9 @@ import UpcomingEvents from '../components/UpcomingEvents';
 import Footer from '../components/Footer';
 import HonourableGuests from '../components/HonourableGuests';
 import VideoHighlight from '../components/VideoHighlight';
-import { agendaDetails, boardMembers, descriptionDetails, eventPartners, eventSpeakers, galleryImages, guestsOfHonour, heroSection, honourableGuests, keyHighlights, mediaPartners, supportLetterSection, videoHighlight, whatToExpect, upcomingEvents } from '../data/delhi';
+import { agendaDetails, boardMembers, descriptionDetails, eventPartners, eventSpeakers, galleryImages, guestsOfHonour, heroSection, honourableGuests, keyHighlights, mediaPartners, supportLetterSection, videoHighlight, whatToExpect, upcomingEvents } from '../data/nyc';
 
-function LGLSDelhi() {
+function LGLSNyc() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
@@ -39,4 +39,4 @@ function LGLSDelhi() {
   );
 }
 
-export default LGLSDelhi;
+export default LGLSNyc;

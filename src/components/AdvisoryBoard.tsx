@@ -1,75 +1,7 @@
 import { ExternalLink, Instagram, Linkedin, Youtube } from 'lucide-react';
+import { Member } from '../types';
 
-const AdvisoryBoard = () => {
-  const boardMembers = [
-    {
-      name: 'Dr. Moksha Kalyanram',
-      designation: ['Advocate'],
-      image: './images/advisory-board/moksha-kalyanram.webp',
-      linkedin: 'https://www.linkedin.com/in/drmoksha-advocate/',
-      youtube: 'https://youtu.be/TdDa7Q-P_r4?si=2BouZGhcsrFuJshb',
-      website: '#',
-      instagram: '#',
-    },
-    {
-      name: 'Honourable Sri Justice B.Prakash Rao (Retd.)',
-      designation: ['Former High Court Judge'],
-      image: './images/advisory-board/prakash-rao.webp',
-      linkedin: '#',
-      youtube: 'https://youtu.be/eb2Hh7-VknU?si=g-a2ZuhHlQgIsRhD',
-      website: 'https://tshc.gov.in/showFormerJudgeProfile?id=330',
-      instagram: '#',
-    },
-    {
-      name: 'Dr. CS Ahalada Rao',
-      designation: [
-        'Practicing Company Secretary & Former Vice President - ICSI',
-      ],
-      image: './images/advisory-board/cs-ahalada-rao.webp',
-      linkedin:
-        'https://www.linkedin.com/in/cs-dr-ahalada-rao-v-telangana-05a1781aa/',
-      youtube: 'https://youtu.be/OdyqRauH2pk?si=AnXqt80-pbE5iL5e',
-      website: '#',
-      instagram: '#',
-    },
-    {
-      name: 'Ashok Ram Kumar',
-      designation: ['Senior Advocate'],
-      image: './images/advisory-board/ashok-ram-kumar.webp',
-      linkedin: 'https://www.linkedin.com/in/ashok-ram-kumar-2505b423/',
-      youtube: 'https://youtu.be/zBUSYNJDjvA?si=oEETMOebAQKonVck',
-      website: '#',
-      instagram: '#',
-    },
-    {
-      name: 'Dr. A. V. Narasimha Rao',
-      designation: ['Accredited Mediator'],
-      image: './images/advisory-board/a-v-narasimha-rao.webp',
-      linkedin: 'https://insolvencylawacademy.com/prof-a-v-narsimha-rao/',
-      youtube: '#',
-      website: 'https://insolvencylawacademy.com/',
-      instagram: '#',
-    },
-    {
-      name: 'Adv. Saurabh Sharma',
-      designation: ['Senior Advocate'],
-      image: './images/advisory-board/saurabh-sharma.webp',
-      linkedin: 'https://www.linkedin.com/in/saurabh-sharma-3169167/',
-      youtube: 'https://youtu.be/rDiPD4tKE7Q?si=IYoWXr5c3yZQ6ds7',
-      website: '#',
-      instagram: '#',
-    },
-    {
-      name: 'Balakrishna Gopalakrishnan',
-      designation: ['Senior Advocate'],
-      image: './images/advisory-board/balakrishna-gopalakrishnan.webp',
-      linkedin:
-        'https://www.linkedin.com/in/balakrishna-gopalakrishnan-015b7014/',
-      youtube: 'https://youtu.be/dbZ_LXRlFYA?si=RZ2EIjbgAGQmCU_B',
-      website: '#',
-      instagram: '#',
-    },
-  ];
+const AdvisoryBoard = ({ members }: { members: Member[] }) => {
 
   return (
     <section className="py-20 bg-white">
@@ -86,7 +18,7 @@ const AdvisoryBoard = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {boardMembers.map((member, index) => (
+          {members.map((member, index) => (
             <div
               key={index}
               className="w-[70%] md:w-full mx-auto bg-background-primary cursor-pointer rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 group"

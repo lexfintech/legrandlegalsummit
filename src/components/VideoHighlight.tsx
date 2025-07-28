@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Play, X } from 'lucide-react';
+import { type VideoHighlight } from '../types';
 
-const VideoHighlight = () => {
+const VideoHighlight = ({ videoHighlight }: { videoHighlight: VideoHighlight }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -19,7 +20,7 @@ const VideoHighlight = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('./images/misc/DSC01629.webp')`,
+            backgroundImage: `url('${videoHighlight.backgroundImage}')`,
           }}
         >
           <div className="absolute inset-0 bg-black/60"></div>
@@ -44,13 +45,12 @@ const VideoHighlight = () => {
 
           {/* Heading */}
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            View the Past Event Highlight
+            {videoHighlight.title}
           </h2>
 
           {/* Description */}
           <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-            The Panel Discussion on Turning Notes into Rights: Protecting
-            Creativity in the Music Industry
+            {videoHighlight.description}
           </p>
         </div>
       </section>
@@ -77,8 +77,8 @@ const VideoHighlight = () => {
             {/* Video Container */}
             <div className="relative w-full aspect-video bg-black rounded-lg shadow-2xl overflow-hidden">
               <iframe
-                src="https://www.youtube.com/embed/fL-52NajvGw?si=NLOohSlOLpi3JcFh&autoplay=1"
-                title="Past Event Highlight"
+                src={videoHighlight.videoLink}
+                title={videoHighlight.title}
                 className="w-full h-full"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

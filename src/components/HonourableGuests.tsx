@@ -1,32 +1,8 @@
 import { ExternalLink, Instagram, Linkedin, Youtube } from 'lucide-react';
-const honourableGuests = [
-  {
-    name: 'Justice Hima Kohli (Retd.)',
-    designation: ['Former Supreme Court Judge'],
-    image: './images/honourable-guests/hima-kohli.webp',
-    type: 'Honourable Guest',
-    website: 'https://www.sci.gov.in/judge/justice-hima-kohli/',
-    youtube: 'https://youtu.be/-KTgTaihOAI?si=xROCy3nDkrBcIZbT',
-    instagram: '#',
-    linkedin: '#',
-  },
-  {
-    name: 'Dr. Adish C Aggarwala, Sr. Adv',
-    designation: [
-      'President, International Council of Jurists',
-      'Former President, Supreme Court Bar Association',
-      'Chairman, All India Bar Association',
-      'Ex. VC- BCI',
-    ],
-    image: './images/honourable-guests/adish-c-aggarwala.webp',
-    type: 'Eminent Guest',
-    website: '#',
-    youtube: 'https://www.youtube.com/watch?v=6b4blcWZnE4',
-    instagram: 'https://www.instagram.com/adishaggarwala/',
-    linkedin: '#',
-  },
-];
-const HonourableGuests = () => {
+import { Member } from '../types';
+
+const HonourableGuests = ({ honourableGuests }: { honourableGuests: Member[] }) => {
+
   return (
     <div className="py-16 px-2 md:px-8 rounded-2xl bg-white">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">

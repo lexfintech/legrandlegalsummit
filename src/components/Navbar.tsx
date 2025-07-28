@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import { ticketLink } from '../data/dubai';
 
-const eventLink =
-  'https://allevents.in/new-delhi/le-grand-legal-summit-tickets/80003171334744?aff=u1gjbz';
 const navItems = [
   { name: 'Home', href: '/', type: 'internal' },
   {
     name: 'Past Events Pictures',
-    href: 'https://drive.google.com/drive/folders/1FyAlJl2LwuJ45RXMLBAGFueGZ8tS_zc-?usp=sharing',
+    href: 'https://drive.google.com/drive/folders/1HQbUUUk4mrA9VjAseh30r91Sz6YEuAq0?usp=drive_link',
     type: 'external',
   },
   { name: 'Speakers', href: '/#speakers', type: 'section' },
@@ -62,11 +61,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-primary-main shadow-lg'
-          : 'bg-primary-main/90 backdrop-blur-sm'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+        ? 'bg-primary-main shadow-lg'
+        : 'bg-primary-main/90 backdrop-blur-sm'
+        }`}
     >
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -107,15 +105,17 @@ const Navbar = () => {
                   </Link>
                 ),
               )}
-              <a
-                href={eventLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-secondary-main hover:bg-secondary-main/80 text-white px-6 py-2 rounded-lg font-semibold flex items-center gap-2 transition-all duration-200 hover:transform hover:scale-105"
-              >
-                Buy Ticket
-                <ArrowRight size={16} />
-              </a>
+              {location.pathname === '/' && (
+                <a
+                  href={ticketLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-secondary-main hover:bg-secondary-main/80 text-white px-6 py-2 rounded-lg font-semibold flex items-center gap-2 transition-all duration-200 hover:transform hover:scale-105"
+                >
+                  Buy Ticket
+                  <ArrowRight size={16} />
+                </a>
+              )}
             </div>
           </div>
 
@@ -157,16 +157,18 @@ const Navbar = () => {
                   </Link>
                 ),
               )}
-              <a
-                href={eventLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`bg-secondary-main hover:bg-secondary-main/80 text-white px-6 py-2 rounded-lg font-semibold flex items-center gap-2 transition-all duration-200 mt-4`}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Buy Ticket
-                <ArrowRight size={16} />
-              </a>
+              {location.pathname === '/' && (
+                <a
+                  href={ticketLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`bg-secondary-main hover:bg-secondary-main/80 text-white px-6 py-2 rounded-lg font-semibold flex items-center gap-2 transition-all duration-200 mt-4`}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Buy Ticket
+                  <ArrowRight size={16} />
+                </a>
+              )}
             </div>
           </div>
         )}
@@ -176,4 +178,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-export { eventLink };
