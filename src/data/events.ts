@@ -49,4 +49,13 @@ export const southEastAsia: Event = {
     image: './images/misc/southeastasia.jpg',
     route: '/southeastasia',
 }
+export const bharatNyayaPuraskar: Event = {
+    title: 'Bharat Nyaya Puraskar - 2024',
+    date: '22 August, 2024',
+    location: 'Delhi',
+    description:
+        'Comprehensive discussion on corporate compliance, ESG frameworks, and emerging challenges in corporate governance.',
+    image: './images/misc/bharat-nyaya-puraskar.webp',
+    route: 'https://bharatnyayapuraskar.com/',
+}
 

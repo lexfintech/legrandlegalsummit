@@ -1,5 +1,5 @@
 import { Award, BookOpen, Calendar, Camera, Coffee, FileText, Globe, Laptop, Lightbulb, Mic, Star, Users } from 'lucide-react';
-import { delhi, newYork, southEastAsia, uk } from './events';
+import { bharatNyayaPuraskar, delhi, newYork, southEastAsia, uk } from './events';
 import { type Agenda, DescriptionDetails, HeroSection, KeyHighlight, Member, Partner, Event, VideoHighlight, WhatToExpect } from '../types';
 
 export const boardMembers: Member[] = [
@@ -174,7 +174,7 @@ export const galleryImages: string[] = [
 ];
 
 export const title = 'Le Grand Legal Summit'
-export const date = 'February 9th - 10th, 2026'
+export const date = 'February 9, 2026'
 export const timerCountdownEndDateTimeStamp = '2026-02-09T09:00:00';
 export const location = 'Dubai'
 export const contactNumber = '+91 95827 23995'
@@ -316,7 +316,7 @@ export const heroSection: HeroSection = {
 }
 
 export const agendaDetails: Agenda[] = [{
-    title: 'Day 1 - February 09th',
+    title: 'February 9, 8:00AM - 6:00PM',
     sessions: [
         {
             time: '08:00 AM - Onwards ',
@@ -328,41 +328,42 @@ export const agendaDetails: Agenda[] = [{
             time: '08:00 AM - 09:00 AM ',
             title: 'Introductions & Speed Networking',
             description:
-                'Kickstart the conference with high-energy networking designed to maximize connections in a short time.',
+                'Kickstart the conference with high-energy networking designed to maximize connections in a short time. Quick introductions to set the tone for the day. Fast-paced, informal exchanges to meet a variety of peers in minutes. Identify attendees with shared interests in IP, Patent, Trademark, Privacy, Compliance & Security. Meet key stakeholders, industry experts, and service providers.',
+                
         },
         {
             time: '09:00 AM - 09:40 AM ',
             title:
                 "Collaborative Round Table Discussions",
             description:
-                "Converging Forces: Building Trusted, Resilient, and Compliant Organizations in the Age of AI, Cyber Threats & Global Regulation",
+                "Converging Forces: Building Trusted, Resilient, and Compliant Organizations in the Age of AI, Cyber Threats & Global Regulation. 	Balancing agility with accountability in a fast-paced regulatory environment. Connecting data privacy, cybersecurity, and IP for enterprise resilience. How AI is reshaping risk, compliance, and innovation governance. Legal-tech-business collaboration for unified strategic outcomes. Future-proofing organizations in high-risk, high-opportunity markets",
         },
         {
             time: '09:40 AM - 10:00 AM ',
             title:
                 'Keynote Address',
             description:
-                'Ethical Data Use and Privacy: Striking the balance between Innovation and Compliance',
+                'Ethical Data Use and Privacy: Striking the balance between Innovation and Compliance. A leading service provider delivers a powerful, insight-rich keynote that offers exceptional value, helping the audience learn, reflect, and apply practical solutions',
         },
         {
             time: '10:00 AM - 10:20 AM ',
             title:
                 'Keynote Address',
             description:
-                'AI-Powered GRC: Transforming Business Success',
+                'AI-Powered GRC: Transforming Business Success. A leading service provider delivers a powerful, insight-rich keynote that offers exceptional value, helping the audience learn, reflect, and apply practical solutions',
         },
         {
             time: '10:20 AM - 11:00 AM ',
             title:
                 'Collaborative Round Table Discussions',
             description:
-                'Smart Governance for Emerging Tech: Risk Management in AI, Blockchain & IP-Driven Innovation',
+                'Smart Governance for Emerging Tech: Risk Management in AI, Blockchain & IP-Driven Innovation. Frameworks for governing high-impact, high-risk emerging technologies. IP risk in decentralized, open-source, and AI-generated innovation. Balancing innovation incentives with regulatory accountability. Sector-specific insights: Healthtech, fintech, smart cities, and beyond. Building trust across autonomous systems and global tech platforms. From Invention to Regulation: A CxO View on Innovation & Governance',
         },
         {
             time: '11:00 AM - 11:10 AM ',
             title:
                 'Exclusive Case Study Presentation',
-            description: "Automating DSARs: Efficiency, Compliance, and Innovation"
+            description: "Automating DSARs: Efficiency, Compliance, and Innovation. A service provider showcases innovative solutions addressing key industry challenges aligned with the conference theme"
         },
         {
             time: '11:10 AM - 11:20 AM',
@@ -375,33 +376,33 @@ export const agendaDetails: Agenda[] = [{
             title:
                 'Peer Connect: One-on-One Conversations',
             description:
-                "No panels. No slides. Just real conversations that matter.",
+                "No panels. No slides. Just real conversations that matter. Sit with peers based on your focus area. Engage in rapid, meaningful exchanges with professionals facing similar issues. : After each chat, connect with others at your table - then rotate to another for fresh perspectives. Share real-world experiences, pain points, and proven solutions. Explore how leaders manage regulatory shifts, patent/IP protection, and compliance. Build trust-based connections in a fast-paced, energizing environment",
         },
         {
             time: '11:50 AM - 12:10 PM ',
             title:
                 'Keynote Address',
             description:
-                'Trademark Enforcement in the Digital Era: Balancing Brand protection with LegalTech',
+                'Trademark Enforcement in the Digital Era: Balancing Brand protection with LegalTech.A leading service provider delivers a powerful, insight-rich keynote that offers exceptional value, helping the audience learn, reflect, and apply practical solutions',
         },
         {
             time: '12:10 PM - 12:30 PM ',
             title: 'Keynote Address',
-            description: "Why is it important to have an IP-savvy workforce?"
+            description: "Why is it important to have an IP-savvy workforce? A leading service provider delivers a powerful, insight-rich keynote that offers exceptional value, helping the audience learn, reflect, and apply practical solutions"
         },
         {
             time: '12:30 PM - 12:40 PM',
             title:
                 'Exclusive Case Study Presentation',
             description:
-                'From Insight to Action: Driving Trademark Value Through Strategy and Operations',
+                'From Insight to Action: Driving Trademark Value Through Strategy and Operations. A service provider showcases innovative solutions addressing key industry challenges aligned with the conference theme',
         },
         {
             time: '12:40 PM - 01:20 PM',
             title:
                 'Collaborative Round Table Discussions',
             description:
-                'AI, Trade Secrets & Data Privacy: Navigating the Grey Zones',
+                'AI, Trade Secrets & Data Privacy: Navigating the Grey Zones. Legal uncertainty in generative AI, proprietary algorithms, and training data. Trade secret risks when AI models ingest sensitive or third-party IP. Privacy-by-design vs. innovation velocity in AI system development. What regulators, courts, and governments are signaling around AI+IP. Building internal governance for emerging AI legal risks and ethics',
         },
         {
             time: '01:20 PM - 02:00 PM',
@@ -415,21 +416,21 @@ export const agendaDetails: Agenda[] = [{
             title:
                 'Live, Interactive Group Discussion',
             description:
-                'Real Talk: Intellectual Property Challenges Unplugged',
+                'Real Talk: Intellectual Property Challenges Unplugged. Break away from the traditional panel format and engage in a dynamic, peer-led group discussion focused on the real-world challenges of managing intellectual property in a fast-evolving global landscape.Attendees will self-select into three focus areas - Patents, Trademarks, and IP Strategy & Enforcement - to share experiences, explore cross-industry approaches, and collaboratively surface practical solutions.Why You Should Join:. Participate in candid, topic-driven conversations with fellow IP professionals. Gain insight into how leading companies are managing IP protection, litigation, and cross-border enforcement. Interact directly with experts and senior IP counsels seated at each table, offering real-time perspectives. Walk away with actionable ideas, new connections, and strategic insights you can apply immediately.',
         },
          {
             time: '02:40 PM - 03:20 PM ',
             title:
                 'Collaborative Round Table Discussions',
             description:
-                'Global Regulation Crossfire: IP, Data & Cyber Laws Collide',
+                'Global Regulation Crossfire: IP, Data & Cyber Laws Collide. Managing multi-jurisdictional compliance for global enterprises. Cross-border complexities in IP transfer, data sovereignty, and cyber laws. Responding to conflicts between national security and digital trade. Strategies for global legal harmonization and operational scalability. Navigating upcoming regulatory shifts (EU AI Act, Digital India, etc.)',
         },
         {
             time: '03:20 PM - 04:00 PM ',
             title:
                 'Collaborative Round Table Discussions',
             description:
-                'Navigating the Privacy, Security & IP Convergence: Unified Compliance in a Fragmented World',
+                'Navigating the Privacy, Security & IP Convergence: Unified Compliance in a Fragmented World. Key overlaps and friction points between data privacy, IP law, and cybersecurity. Designing integrated, scalable compliance programs for global operations. Risk-based prioritization amid conflicting regulatory demands. Operational collaboration between IT, legal, and risk functions. Role clarity: CISOs, DPOs, and IP heads in governance ecosystems',
         },
         {
             time: '04:00 PM - 04:20 PM ',
@@ -443,7 +444,7 @@ export const agendaDetails: Agenda[] = [{
             title:
                 'Collaborative Round Table Discussions',
             description:
-                'Managing Regulations: Relationship Between GCs, GRC Heads, DPOs, CISOs, Risk Managers & IP Leaders',
+                'Managing Regulations: Relationship Between GCs, GRC Heads, DPOs, CISOs, Risk Managers & IP Leaders. Evolving regulatory roles and how senior leaders collaborate to reduce silos. Managing compliance overlap across legal, privacy, and security domains. Unified risk and incident response frameworks post-regulatory breach. Governance models for shared accountability and strategic alignment. Practical examples of board-level coordination on compliance and risk',
         },
         {
             time: '05:00 PM - 05:30 PM  ',
@@ -1218,5 +1219,6 @@ export const upcomingEvents: Event[] = [
 ];
 
 export const previousEvents : Event[] = [
+    bharatNyayaPuraskar,
     delhi
 ]
