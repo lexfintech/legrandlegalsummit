@@ -40,3 +40,13 @@ export const newYork: Event = {
     route: '/nyc',
 }
 
+export const southEastAsia: Event = {
+    title: 'Le Grand Legal Summit - South East Asia',
+    date: 'December, 2026',
+    location: 'South East Asia',
+    description:
+        'Comprehensive discussion on corporate compliance, ESG frameworks, and emerging challenges in corporate governance.',
+    image: './images/misc/southeastasia.jpg',
+    route: '/southeastasia',
+}
+

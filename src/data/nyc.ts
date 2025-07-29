@@ -1,5 +1,5 @@
 import { Award, BookOpen, Calendar, Camera, Coffee, FileText, Globe, Laptop, Lightbulb, Mic, Star, Users } from 'lucide-react';
-import { delhi, dubai, uk } from './events';
+import { delhi, dubai, southEastAsia, uk } from './events';
 import { type Agenda, DescriptionDetails, HeroSection, KeyHighlight, Member, Partner, Event, VideoHighlight, WhatToExpect } from '../types';
 
 export const boardMembers: Member[] = [
@@ -1136,6 +1136,7 @@ export const keyHighlights: KeyHighlight[] = [
 export const upcomingEvents: Event[] = [
     dubai,
     uk,
+    southEastAsia
 ];
 
 export const previousEvents : Event[] = [

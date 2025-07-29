@@ -1,5 +1,5 @@
 import { Award, BookOpen, Calendar, Camera, Coffee, FileText, Globe, Laptop, Lightbulb, Mic, Star, Users } from 'lucide-react';
-import { dubai, newYork, southEastAsia, uk } from './events';
+import { delhi, dubai, southEastAsia, uk } from './events';
 import { type Agenda, DescriptionDetails, HeroSection, KeyHighlight, Member, Partner, Event, VideoHighlight, WhatToExpect } from '../types';
 
 export const boardMembers: Member[] = [
@@ -174,9 +174,9 @@ export const galleryImages: string[] = [
 ];
 
 export const title = 'Le Grand Legal Summit'
-export const date = 'July 19th - 20th, 2025'
-export const timerCountdownEndDateTimeStamp = '#';
-export const location = 'Welcomhotel by ITC, Dwarka, New Delhi'
+export const date = 'December 2026'
+export const timerCountdownEndDateTimeStamp = '2026-12-01T09:00:00';
+export const location = 'South East Asia'
 export const contactNumber = '+91 95827 23995'
 export const ticketPrice = '₹10,000'
 export const ticketLink = '#'
@@ -208,11 +208,11 @@ export const supportedBy: string[] = [
 ]
 
 export const backgroundImages: string[] = [
-    './images/misc/parliament.webp',
-    './images/misc/itcdwarka.webp',
-    './images/misc/parliament2.webp',
-    './images/misc/indiagate.webp',
-    './images/misc/parliament3.webp',
+    './images/misc/newyork1.webp',
+    './images/misc/newyork2.webp',
+    './images/misc/statue-newyork.webp',
+    './images/misc/nyc.webp',
+    
 ]
 
 export const videoHighlight: VideoHighlight = {
@@ -520,42 +520,6 @@ export const eventPartners: Partner[] = [
         name: 'LawyerInsta - Official Legal Directory Partner',
         logo: './images/event-partners/lawyerinsta.webp',
         website: 'https://lawyerinsta.com/',
-    },
-    {
-        name: 'Spondulix - Business Law Innovation Partner',
-        logo: './images/event-partners/spondulix.webp',
-        website: '#',
-    },
-    {
-        name: 'Compage Consulting - Legal PR Partner',
-        logo: './images/event-partners/compage-consulting.webp',
-        website: '#',
-    },
-    {
-        name: 'BMR Legal Advocates - Law Firm Partner',
-        logo: './images/event-partners/BMR-Legal-Advocates.webp',
-        website: '#',
-    },
-    {
-        name: 'DreamLegal - Legal Tech Adoption Partner',
-        logo: './images/event-partners/dreamlegal.webp',
-        website: '#',
-    },
-
-    {
-        name: 'Shreyans Singhvi & Associates - Law Firm Partner',
-        logo: './images/event-partners/shreyans-singhvi.webp',
-        website: '#',
-    },
-    {
-        name: 'D&T Juris - Law Firm Partner',
-        logo: './images/event-partners/D&T-juris.webp',
-        website: '#',
-    },
-    {
-        name: 'S. K. Singhi & Partners - Law Firm Partner',
-        logo: './images/event-partners/s-k-singhi&partners.webp',
-        website: '#',
     },
 ]
 
@@ -999,66 +963,6 @@ export const eventSpeakers: Member[] = [{
     youtube: '#',
     website: 'https://www.adventz.com/',
     instagram: '#',
-},
-{
-    name: 'Srijit Mukherjee',
-    designation: ['Group General Counsel, Node4'],
-    image: './images/event-speakers/srijit.webp',
-    linkedin:
-        'https://www.linkedin.com/in/srijitmukherjee/',
-    youtube: '#',
-    website: 'https://node4.co.uk/',
-    instagram: '#',
-},
-{
-    name: 'CA Sudheendra Rao',
-    designation: ['CEO-Spondulix'],
-    image: './images/event-speakers/sudheendra.webp',
-    linkedin:
-        '#',
-    youtube: '#',
-    website: '#',
-    instagram: '#',
-},
-{
-    name: 'Subham Khamar',
-    designation: ['Assistant Manager - Corporate IPR Gujarat Fluorochemicals Limited'],
-    image: './images/event-speakers/Subham.webp',
-    linkedin:
-        'https://www.linkedin.com/in/subham-khamar/?originalSubdomain=in',
-    youtube: '#',
-    website: '#',
-    instagram: '#',
-},
-{
-    name: 'Prof. A V Narsimharao',
-    designation: ['Accredited Mediator'],
-    image: './images/event-speakers/narsimharao.webp',
-    linkedin:
-        '#',
-    youtube: '#',
-    website: 'http://avnrao.com/',
-    instagram: '#',
-},
-{
-    name: 'Ranjan Singhania',
-    designation: ['Founder-Dreamlegal'],
-    image: './images/event-speakers/ranjan.webp',
-    linkedin:
-        'https://www.linkedin.com/in/ranjan-singhania-2b99ab212/',
-    youtube: '#',
-    website: 'https://dreamlegal.in/',
-    instagram: '#',
-},
-{
-    name: 'Dhawal Suryawanshi',
-    designation: ['In-house Counsel - Gujarat Fluorochemicals Limited'],
-    image: './images/event-speakers/dhawal.webp',
-    linkedin:
-        'https://www.linkedin.com/in/dhawal-suryawanshi-4b6572222/?originalSubdomain=in',
-    youtube: '#',
-    website: '#',
-    instagram: '#',
 }]
 
 export const guestsOfHonour: Member[] = [
@@ -1232,6 +1136,9 @@ export const keyHighlights: KeyHighlight[] = [
 export const upcomingEvents: Event[] = [
     dubai,
     uk,
-    newYork,
-    southEastAsia,
+    southEastAsia
 ];
+
+export const previousEvents : Event[] = [
+    delhi
+]
