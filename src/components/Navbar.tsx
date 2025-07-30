@@ -6,7 +6,7 @@ import { ticketLink } from '../data/dubai';
 const navItems = [
   { name: 'Home', href: '/', type: 'internal' },
   {
-    name: 'Past Events Pictures',
+    name: 'Past Events',
     href: 'https://drive.google.com/drive/folders/1HQbUUUk4mrA9VjAseh30r91Sz6YEuAq0?usp=drive_link',
     type: 'external',
   },

@@ -14,15 +14,16 @@ import UpcomingEvents from '../components/UpcomingEvents';
 import Footer from '../components/Footer';
 import HonourableGuests from '../components/HonourableGuests';
 import VideoHighlight from '../components/VideoHighlight';
-import { agendaDetails, boardMembers, descriptionDetails, eventPartners, eventSpeakers, galleryImages, guestsOfHonour, heroSection, honourableGuests, keyHighlights, mediaPartners, supportLetterSection, videoHighlight, whatToExpect, upcomingEvents, previousEvents } from '../data/uk';
+import { agendaDetails, boardMembers, descriptionDetails, eventPartners, eventSpeakers, galleryImages, guestsOfHonour, heroSection, honourableGuests, keyHighlights, mediaPartners, supportLetterSection, videoHighlight, whatToExpect, upcomingEvents } from '../data/delhi2026';
 import PastEvents from '../components/PastEvents';
+import { previousEvents } from '../data/delhi2026';
 
-function LGLSUk() {
+function LGLSDelhi2026() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
       <Hero heroSection={heroSection} />
-            <UpcomingEvents upcomingEvents={upcomingEvents} />
+      <UpcomingEvents upcomingEvents={upcomingEvents} />
 
       <KeyHighlights keyHighlights={keyHighlights} />
       <EventAgenda agendaDetails={agendaDetails} date={descriptionDetails.date} location={descriptionDetails.location} />
@@ -36,10 +37,11 @@ function LGLSUk() {
       <EventPartners partners={eventPartners} />
       <MediaPartners mediaPartners={mediaPartners} />
       <PastEvents pastEvents={previousEvents} />
+
       <VideoHighlight videoHighlight={videoHighlight} />
       <Footer />
     </div>
   );
 }
 
-export default LGLSUk;
+export default LGLSDelhi2026;

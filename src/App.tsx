@@ -6,6 +6,7 @@ import LGLSDubai from './pages/LGLSDubai';
 import LGLSNyc from './pages/LGLSNyc';
 import LGLSUk from './pages/LGLSUk';
 import LGLSSouthEastAsia from './pages/LGLSSouthEastAsia';
+import LGLSDelhi2026 from './pages/LGLSDelhi2026';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LGLSDubai />} />
         <Route path="/delhi" element={<LGLSDelhi />} />
+        <Route path="/delhi-26" element={<LGLSDelhi2026 />} />
         <Route path="/nyc" element={<LGLSNyc />} />
         <Route path="/uk" element={<LGLSUk />} />
         <Route path="/southeastasia" element={<LGLSSouthEastAsia />} />

@@ -22,7 +22,7 @@ const WhatToExpect = ({ expectations }: { expectations: WhatToExpect[] }) => {
           {expectations.map((item, index) => (
             <div
               key={index}
-              className={`bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 group${index === expectations.length - 1 ? ' lg:col-start-2' : ''}`}
+              className={`bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 group`}
             >
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">

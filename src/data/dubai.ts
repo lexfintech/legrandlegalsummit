@@ -1,5 +1,5 @@
-import { Award, BookOpen, Calendar, Camera, Coffee, FileText, Globe, Laptop, Lightbulb, Mic, Star, Users } from 'lucide-react';
-import { bharatNyayaPuraskar, delhi, newYork, southEastAsia, uk } from './events';
+import { Award, BookOpen, Calendar, Camera, Coffee, FileText, Globe, Laptop, Lightbulb, Mic, Users } from 'lucide-react';
+import { bharatNyayaPuraskar, delhi, delhi2026, newYork, southEastAsia, uk } from './events';
 import { type Agenda, DescriptionDetails, HeroSection, KeyHighlight, Member, Partner, Event, VideoHighlight, WhatToExpect } from '../types';
 
 export const boardMembers: Member[] = [
@@ -203,8 +203,7 @@ export const description = [
 ]
 
 export const supportedBy: string[] = [
-    './images/logos/GOI-MOSJAE.webp',
-    './images/logos/DOC-MOFCAI-GOI.webp',
+    
 ]
 
 export const backgroundImages: string[] = [
@@ -230,18 +229,14 @@ export const whatToExpect: WhatToExpect[] = [
     },
     {
         icon: Award,
-        title: 'Bharat Nyaya Puraskar',
+        title: 'Global Jurist Awards',
         description: 'Ceremony with 50+ Legal Awards',
     },
-    {
-        icon: Star,
-        title: 'Celebrity Presence',
-        description: ' Actor Saurabh Raj Jain as Chief Guest',
-    },
+    
     {
         icon: Users,
         title: '500+ Legal Professionals',
-        description: 'from across India',
+        description: 'from across Globe',
     },
     {
         icon: Laptop,
@@ -277,7 +272,7 @@ export const whatToExpect: WhatToExpect[] = [
 ];
 
 export const supportLetterSection = {
-    title: 'Recommendation Letters from Ministry',
+    title: 'Recommendation Letters from Ministry, GoI',
     supportLetters: [
         {
             title:
@@ -465,11 +460,6 @@ export const agendaDetails: Agenda[] = [{
 
 export const eventPartners: Partner[] = [
     {
-        name: 'EY - Exclusive Partner',
-        logo: './images/event-partners/ey.webp',
-        website: 'https://www.ey.com/en_in',
-    },
-    {
         name: 'La Mintage Legal - Strategic Legal Partner',
         logo: './images/event-partners/lawmintage.webp',
         website: 'https://lamintage.com/',
@@ -480,24 +470,9 @@ export const eventPartners: Partner[] = [
         website: 'https://resolutionhub.in/',
     },
     {
-        name: 'JSSB Legal - Legal Excellence Partner',
-        logo: './images/event-partners/jssb-legal.webp',
-        website: 'https://www.jssblegal.com/',
-    },
-    {
         name: 'Gyanauka - Knowledge Partner',
         logo: './images/event-partners/gyanauka.webp',
         website: 'https://gyanauka.com/',
-    },
-    {
-        name: 'BGK Law Associates - Supporting Partner',
-        logo: './images/event-partners/bgk-law-associates.webp',
-        website: 'https://bgklawassociates.co.in/',
-    },
-    {
-        name: 'CaseDocker - Legal-Tech Partner',
-        logo: './images/event-partners/casedocker.webp',
-        website: 'https://www.casedocker.com/landing/',
     },
     {
         name: 'LawyerInsta - Official Legal Directory Partner',
@@ -508,37 +483,6 @@ export const eventPartners: Partner[] = [
         name: 'Spondulix - Business Law Innovation Partner',
         logo: './images/event-partners/spondulix.webp',
         website:'#',
-    },
-    {
-        name: 'Compage Consulting - Legal PR Partner',
-        logo: './images/event-partners/compage-consulting.webp',
-        website: '#',
-    },
-    {
-        name: 'BMR Legal Advocates - Law Firm Partner',
-        logo: './images/event-partners/BMR-Legal-Advocates.webp',
-        website: '#',
-    },
-    {
-        name: 'DreamLegal - Legal Tech Adoption Partner',
-        logo: './images/event-partners/dreamlegal.webp',
-        website: '#',
-    },
-    
-    {
-        name: 'Shreyans Singhvi & Associates - Law Firm Partner',
-        logo: './images/event-partners/shreyans-singhvi.webp',
-        website: '#',
-    },
-    {
-        name: 'D&T Juris - Law Firm Partner',
-        logo: './images/event-partners/D&T-juris.webp',
-        website: '#',
-    },
-    {
-        name: 'S. K. Singhi & Partners - Law Firm Partner',
-        logo: './images/event-partners/s-k-singhi&partners.webp',
-        website: '#',
     },
 ]
 
@@ -590,595 +534,13 @@ export const eventSpeakers: Member[] = [{
     youtube: '#',
     website: '#',
     instagram: 'https://www.instagram.com/drmoksha.advocate/?hl=en',
-},
-{
-    name: 'Rajiv Malik',
-    designation: ['Legal Leader - LG Electronics'],
-    image: './images/event-speakers/rajiv-malik.webp',
-    linkedin: 'https://www.linkedin.com/in/rajiv-m-02890b1a/',
-    youtube: '#',
-    website: 'https://www.lg.com/in',
-    instagram: '#',
-},
-{
-    name: 'Anurag Pareek',
-    designation: ['Vice President Legal - OYO'],
-    image: './images/event-speakers/anurag-pareek.webp',
-    linkedin: 'https://www.linkedin.com/in/anurag-pareek-b8380063/',
-    youtube: '#',
-    website: 'https://www.oyorooms.com/',
-    instagram: '#',
-},
-{
-    name: 'Susheel Jad',
-    designation: ['President and General Counsel - Think Gas'],
-    image: './images/event-speakers/susheel-jad.webp',
-    linkedin: 'https://www.linkedin.com/in/susheel-jad-7170a2122/',
-    youtube: '#',
-    website: 'https://www.think-gas.com/',
-    instagram: '#',
-},
-{
-    name: 'Balakrishna Gopalakrishnan',
-    designation: ['Founder - BKG Law Associate, Advocates & Legal Advisors'],
-    image: './images/event-speakers/balakrishna-gopalakrishnan.webp',
-    linkedin:
-        'https://www.linkedin.com/in/balakrishna-gopalakrishnan-015b7014/',
-    youtube: '#',
-    website: 'https://bgklawassociates.co.in/',
-    instagram: '#',
-},
-{
-    name: 'Niti Mittal',
-    designation: ['Global General Counsel - Coforge'],
-    image: './images/event-speakers/niti-mittal.webp',
-    linkedin: 'https://www.linkedin.com/in/niti-mittal-a3358518/',
-    youtube: '#',
-    website: 'https://www.coforge.com/',
-    instagram: '#',
-},
-{
-    name: 'Attorney. Ms. Vasundhra Prasad',
-    designation: [
-        "B.S.L., LL.B., LL.M. (IPR) Dean's Scholar, New York (NY), USA Supreme Court of India and Delhi High Court",
-    ],
-    image: './images/event-speakers/vasundhra-prasad.webp',
-    linkedin:
-        'https://www.linkedin.com/in/vasundhraprasad/?originalSubdomain=in',
-    youtube: 'https://www.youtube.com/watch?v=OywFoOcQEZo',
-    website: '#',
-    instagram: '#',
-},
-{
-    name: 'Sushma Shankar',
-    designation: ['Vice President Legal Accenture'],
-    image: './images/event-speakers/sushma-shankar.webp',
-    linkedin: 'https://www.linkedin.com/in/sushma-shankar-8bba8a39/',
-    youtube: '#',
-    website: 'https://www.accenture.com/in-en',
-    instagram: '#',
-},
-{
-    name: 'Saguna Sodhi',
-    designation: ['Partner - EY Forensic & Integrity Services.'],
-    image: './images/event-speakers/saguna-sodhi.webp',
-    linkedin: 'https://www.linkedin.com/in/sagunasodhi/?originalSubdomain=in',
-    youtube: '#',
-    website: 'https://www.ey.com/en_in/people/saguna-sodhi',
-    instagram: '#',
-},
-{
-    name: 'Amar Sundram',
-    designation: [
-        'General Counsel - Sr. Vice President (Legal) and Chief Compliance Officer - NEC Corporation India Pvt. Ltd',
-    ],
-    image: './images/event-speakers/amar-sundram.webp',
-    linkedin: 'https://www.linkedin.com/in/amar-sundram-a7833618/',
-    youtube: '#',
-    website: 'https://in.nec.com/',
-    instagram: '#',
-},
-{
-    name: 'Rajeev Tripathi',
-    designation: [
-        'Vice President Legal & FAA - Goods And Services Tax Network',
-    ],
-    image: './images/event-speakers/rajeev-tripathi.webp',
-    linkedin: 'https://www.linkedin.com/in/rajeevtripathi2807/',
-    youtube: '#',
-    website: 'https://www.gstn.org.in/',
-    instagram: '#',
-},
-{
-    name: 'Ashish Kumar Pandey',
-    designation: [
-        'General Counsel and Company Secretary -Luminous Power Technologies (P) Ltd.',
-    ],
-    image: './images/event-speakers/ashish-kumar-pandey.webp',
-    linkedin: 'https://www.linkedin.com/in/ashish-kumar-p-60592037/',
-    youtube: '#',
-    website: 'https://www.luminousindia.com/',
-    instagram: '#',
-},
-{
-    name: 'Amit Goyal',
-    designation: ['Partner - EY Forensic & Integrity Services'],
-    image: './images/event-speakers/amit-goyal.webp',
-    linkedin:
-        'https://www.linkedin.com/in/amit-goyal-97994b17/?originalSubdomain=in',
-    youtube: '#',
-    website: 'https://www.ey.com/en_in/people/amit-goyal',
-    instagram: '#',
-},
-{
-    name: 'Manish Mittal',
-    designation: [
-        'Assistant Vice President -Legal and FCU - India first Life Insurance',
-    ],
-    image: './images/event-speakers/manish-mittal.webp',
-    linkedin: 'https://www.linkedin.com/in/manish-mittal-601239136/',
-    youtube: '#',
-    website: 'https://www.indiafirstlife.com/',
-    instagram: '#',
-},
-{
-    name: 'Shweta Prasad',
-    designation: ['Associate Director Accenture'],
-    image: './images/event-speakers/shewta-prasad.webp',
-    linkedin: 'https://www.linkedin.com/in/shweta-prasad-80378034/',
-    youtube: '#',
-    website: 'https://www.accenture.com/in-en',
-    instagram: '#',
-},
-{
-    name: 'Rajeev Goswami',
-    designation: ['VP Legal - Indus Towers Limited'],
-    image: './images/event-speakers/rajeev-goswami.webp',
-    linkedin: 'https://www.linkedin.com/in/rajeevgoswami/',
-    youtube: '#',
-    website: 'https://www.industowers.com/',
-    instagram: '#',
-},
-{
-    name: 'Meeru Gupta',
-    designation: ['General Counsel (VP) - Bata Limited'],
-    image: './images/event-speakers/meeru-gupta.webp',
-    linkedin: 'https://www.linkedin.com/in/meeru-gupta-596a0213/',
-    youtube: '#',
-    website:
-        'https://www.bata.com/in/new/?utm_source=GoogleAdsNeon&utm_medium=Search&utm_campaign=Brand_Bata_Search_TopStates_MxC&gad_source=1&gad_campaignid=18004442840&gbraid=0AAAAACdrUVrlEqryxOlDE5f-ARKoihrsz&gclid=Cj0KCQjwjJrCBhCXARIsAI5x66WbUZrum1AqgIjlyCrDVqPNw3G4vMQU5rMXdE864J4ZxWlV13EVpwwaApO2EALw_wcB',
-    instagram: '#',
-},
-{
-    name: 'Jyothi VK',
-    designation: [
-        'General Counsel, Senior Vice President (VP) - Aditya Birla Fashion and Retail Limited',
-    ],
-    image: './images/event-speakers/jyothi-vk.webp',
-    linkedin: 'https://www.linkedin.com/in/jyothi-v-k/',
-    youtube: '#',
-    website:
-        'https://www.adityabirla.com/businesses/companies/aditya-birla-fashion-and-retail-limited-abfrl/',
-    instagram: '#',
-},
-{
-    name: 'Ankita Sharma',
-    designation: [
-        'General Counsel (VP) Legal & Regulatory - Honasa Consumer Ltd.',
-    ],
-    image: './images/event-speakers/ankita-sharma.webp',
-    linkedin:
-        'https://www.linkedin.com/in/ankita-sharma-a7871715b/?originalSubdomain=in',
-    youtube: '#',
-    website: 'https://honasa.in/',
-    instagram: '#',
-},
-{
-    name: 'Kapil Singhal',
-    designation: ['CEO & Founder - CaseDocker'],
-    image: './images/event-speakers/kapil-singhal.webp',
-    linkedin: 'https://www.linkedin.com/in/singhalkapil/',
-    youtube: '#',
-    website: 'https://www.casedocker.com/landing/',
-    instagram: '#',
-},
-{
-    name: 'Preet Sethi',
-    designation: ['Deputy General Counsel - Vedanta Resources Ltd.'],
-    image: './images/event-speakers/preet-sethi.webp',
-    linkedin: 'https://www.linkedin.com/in/preetsethi/',
-    youtube: '#',
-    website: 'https://www.vedantalimited.com/eng/',
-    instagram: '#',
-},
-{
-    name: 'Mehak Oberoi',
-    designation: ['Legal Head - Hydro (APAC) - GE Vernova'],
-    image: './images/event-speakers/mehak-oberoi.webp',
-    linkedin: 'https://www.linkedin.com/in/oberoimehak/',
-    youtube: '#',
-    website: 'https://www.gevernova.com/',
-    instagram: '#',
-},
-{
-    name: 'Vidhi Thukral',
-    designation: ['Chief Manager: ESG - Axis Max Life Insurance'],
-    image: './images/event-speakers/vidhi-thukral.webp',
-    linkedin: 'https://www.linkedin.com/in/vidhi-thukral-b5952962/',
-    youtube: '#',
-    website: 'https://www.axisbank.com/retail/insurance/max-life-insurance',
-    instagram: '#',
-},
-{
-    name: 'Raveena Rani',
-    designation: ['Solicitor - Solicitors Regulation Authority'],
-    image: './images/event-speakers/raveena-rani.webp',
-    linkedin: 'http://linkedin.com/in/raveena-rani-458766116',
-    youtube: '#',
-    website: 'https://www.sra.org.uk/',
-    instagram: '#',
-},
-{
-    name: 'Babita Kumari',
-    designation: ['Sr. Legal Counsel - Malomatia India Technology Services'],
-    image: './images/event-speakers/babita-kumari.webp',
-    linkedin: 'https://www.linkedin.com/in/csbabitarajput/',
-    youtube: '#',
-    website: 'https://www.malomatia.com/',
-    instagram: '#',
-},
-{
-    name: 'Anjali Sheoran',
-    designation: ['Legal Counsel - Atlan'],
-    image: './images/event-speakers/anjali-sheoran.webp',
-    linkedin: 'https://www.linkedin.com/in/anjalisheoran/',
-    youtube: '#',
-    website: 'https://atlan.com/',
-    instagram: '#',
-},
-{
-    name: 'Dr. Akshay Kant Chaturvedi',
-    designation: ['Corporate Head - IPR - Gujarat Fluorochemicals Limited'],
-    image: './images/event-speakers/akshay-kant-chaturvedi.webp',
-    linkedin:
-        'https://www.linkedin.com/in/dr-akshay-kant-chaturvedi-38797b1/',
-    youtube: '#',
-    website: 'https://gfl.co.in/',
-    instagram: '#',
-},
-{
-    name: 'Shuchita Singhal',
-    designation: ['COO - CaseDocker'],
-    image: './images/event-speakers/shuchita-singhal.webp',
-    linkedin: 'https://www.linkedin.com/in/shuchita-singhal/',
-    youtube: '#',
-    website: 'https://www.casedocker.com/landing/',
-    instagram: '#',
-},
-{
-    name: 'Manoj Gujaran',
-    designation: [
-        'Legal Strategist and Compliance Thought Leader in BFSI & Strategic Advisor - Pashyanti Ventures LLP',
-    ],
-    image: './images/event-speakers/manoj-gujaran.webp',
-    linkedin: 'https://www.linkedin.com/in/manoj-gujaran-a8030014/',
-    youtube: '#',
-    website: '#',
-    instagram: '#',
-},
-{
-    name: 'Adv. Aditya Goenka',
-    designation: [
-        'Chief Legal & Compliance Officer - YES Securities (India) Limited',
-    ],
-    image: './images/event-speakers/aditya-goenka.webp',
-    linkedin:
-        'https://www.linkedin.com/in/adv-aditya-goenka/?originalSubdomain=in',
-    youtube: '#',
-    website: 'https://yesinvest.in/',
-    instagram: '#',
-},
-{
-    name: 'Hitendra Palia',
-    designation: ['Legal Coundel - PhonePe'],
-    image: './images/event-speakers/hitendra-palia.webp',
-    linkedin: 'https://www.linkedin.com/in/hitendra-palia-3a39b045/',
-    youtube: '#',
-    website: 'https://www.phonepe.com/',
-    instagram: '#',
-},
-{
-    name: 'Raunak Singh',
-    designation: ['Legal Counsel & Company Secretary Amway'],
-    image: './images/event-speakers/raunak-singh.webp',
-    linkedin:
-        'https://www.linkedin.com/in/raunak-singh-9461463a/?originalSubdomain=in',
-    youtube: '#',
-    website: 'https://www.amway.in/',
-    instagram: '#',
-},
-{
-    name: 'Punit Babbar',
-    designation: ['GM - Liaisoning & Head Complaint Management - Tide'],
-    image: './images/event-speakers/punit-babbar.webp',
-    linkedin: 'https://www.linkedin.com/in/punit-babbar-6b963738/',
-    youtube: '#',
-    website:
-        'https://www.tide.co/en-IN/?srsltid=AfmBOop4_U-h6D3LzPtCR30Dn-r8AhEEWFZX1hljjf61Jdb4ejyjX8e0',
-    instagram: '#',
-},
-{
-    name: 'Dr. Richa Pathak',
-    designation: [
-        'Senior Corporate Counse Management - Voltas Ltd. - A Tata Enterprise',
-    ],
-    image: './images/event-speakers/richa-pathak.webp',
-    linkedin: 'https://www.linkedin.com/in/richapathak1989/',
-    youtube: '#',
-    website: 'https://www.voltas.com/collections/ac',
-    instagram: '#',
-},
-{
-    name: 'Ananya Gupta',
-    designation: ['Legal Counsel - UPC Solar India Private Limited'],
-    image: './images/event-speakers/ananya-gupta.webp',
-    linkedin: 'https://www.linkedin.com/in/lawyerananya/',
-    youtube: '#',
-    website: 'https://upcrenewables.com/',
-    instagram: '#',
-},
-{
-    name: 'Adv. Saurabh Sharma',
-    designation: ['Managing Director - JSSB Legal'],
-    image: './images/event-speakers/saurabh-sharma.webp',
-    linkedin: 'https://www.linkedin.com/in/saurabh-sharma-3169167/',
-    youtube: '#',
-    website: 'https://www.jssblegal.com/',
-    instagram: '#',
-},
-{
-    name: 'Adv. CS Avdhesh Kr. Varshney',
-    designation: ['Founder & Mentor Justicewings Lexedge Solutions LLP'],
-    image: './images/event-speakers/c-s-avdhesh-kr-varshney.webp',
-    linkedin: 'https://www.linkedin.com/in/avdheshvarshney/',
-    youtube: '#',
-    website: 'https://jwlexedge.com/',
-    instagram: '#',
-},
-{
-    name: 'Manushi Shah',
-    designation: ['Partner - La Mintage Legal Llp'],
-    image: './images/event-speakers/manushi-shah.webp',
-    linkedin: 'https://www.linkedin.com/in/manushishah/',
-    youtube: '#',
-    website: 'https://lamintage.com/',
-    instagram: '#',
-},
-{
-    name: 'Anurag Goyal',
-    designation: ['Head of Cyber Security RedDoorz'],
-    image: './images/event-speakers/anurag-goyal.webp',
-    linkedin:
-        'https://www.linkedin.com/in/anuraggoyal2021/?originalSubdomain=in',
-    youtube: '#',
-    website: 'https://www.reddoorz.com/',
-    instagram: '#',
-},
-{
-    name: 'Shweta Bansal',
-    designation: ['Managing Partner - SB Tech Associates'],
-    image: './images/event-speakers/shweta-bansal.webp',
-    linkedin: 'http://linkedin.com/in/shwetabansal-tl',
-    youtube: '#',
-    website: '#',
-    instagram: 'https://www.instagram.com/advshwetabansal/',
-},
-{
-    name: 'Akshar K Biyani',
-    designation: ['Sr. DGM, Secretarial, Compliance, Legal - Adventz Group'],
-    image: './images/event-speakers/akshar-k-biyani.webp',
-    linkedin:
-        'https://www.linkedin.com/in/akshar-biyani-67890a57?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BkqcOtkt5QwO382qZ2TNG%2Bw%3D%3D',
-    youtube: '#',
-    website: 'https://www.adventz.com/',
-    instagram: '#',
-},
-{
-    name: 'Srijit Mukherjee',
-    designation: ['Group General Counsel, Node4'],
-    image: './images/event-speakers/srijit.webp',
-    linkedin:
-        'https://www.linkedin.com/in/srijitmukherjee/',
-    youtube: '#',
-    website: 'https://node4.co.uk/',
-    instagram: '#',
-},
-{
-    name: 'CA Sudheendra Rao',
-    designation: ['CEO-Spondulix'],
-    image: './images/event-speakers/sudheendra.webp',
-    linkedin:
-        '#',
-    youtube: '#',
-    website: '#',
-    instagram: '#',
-},
-{
-    name: 'Subham Khamar',
-    designation: ['Assistant Manager - Corporate IPR Gujarat Fluorochemicals Limited'],
-    image: './images/event-speakers/Subham.webp',
-    linkedin:
-        'https://www.linkedin.com/in/subham-khamar/?originalSubdomain=in',
-    youtube: '#',
-    website: '#',
-    instagram: '#',
-},
-{
-    name: 'Prof. A V Narsimharao',
-    designation: ['Accredited Mediator'],
-    image: './images/event-speakers/narsimharao.webp',
-    linkedin:
-        '#',
-    youtube: '#',
-    website: 'http://avnrao.com/',
-    instagram: '#',
-},
-{
-    name: 'Ranjan Singhania',
-    designation: ['Founder-Dreamlegal'],
-    image: './images/event-speakers/ranjan.webp',
-    linkedin:
-        'https://www.linkedin.com/in/ranjan-singhania-2b99ab212/',
-    youtube: '#',
-    website: 'https://dreamlegal.in/',
-    instagram: '#',
-},
-{
-    name: 'Dhawal Suryawanshi',
-    designation: ['In-house Counsel - Gujarat Fluorochemicals Limited'],
-    image: './images/event-speakers/dhawal.webp',
-    linkedin:
-        'https://www.linkedin.com/in/dhawal-suryawanshi-4b6572222/?originalSubdomain=in',
-    youtube: '#',
-    website: '#',
-    instagram: '#',
 }]
 
 export const guestsOfHonour: Member[] = [
-    {
-        name: 'Dr. Ramdas Bandu Athawale',
-        designation: [
-            'Union Minister of State, India: Social Justice & Empowerment',
-        ],
-        image: './images/guest-of-honours/ramdas-athawale.webp',
-        website: 'https://en.wikipedia.org/wiki/Ramdas_Athawale',
-        youtube: 'https://youtu.be/v_aAwVWnAd8?feature=shared',
-        instagram: '#',
-        linkedin: '#',
-    },
-    {
-        name: 'Smt. Himadri Singh',
-        designation: [
-            'Member of Parliament, Lok Sabha',
-        ],
-        image: './images/guest-of-honours/himdri-singh.webp',
-        website: '#',
-        youtube: 'https://youtu.be/FIN9wP2t6uc?si=WhZ5Pi4Dex9V-03y',
-        instagram: 'https://www.instagram.com/himadri4bjp/',
-        linkedin: '#',
-    },
-    {
-        name: 'Faggan Singh Kulaste',
-        designation: [
-            'Former Minister of State in the Ministry of Steel; Minister of State in the Ministry of Rural Development, Government of India',
-        ],
-        image: './images/guest-of-honours/faggan-singh.webp',
-        website: '#',
-        youtube: 'https://youtu.be/GPMYw9q0Ew0?si=C1yzRN-pkLS_sT0i',
-        instagram:
-            'https://www.instagram.com/fskulaste?igsh=MWltZm1pbnhoenB0Mg%3D%3D',
-        linkedin: '#',
-    },
-    {
-        name: 'Shri Kapil Mishra',
-        designation: [
-            'Cabinet Minister, Govt of Delhi Vice President BJP Delhi',
-        ],
-        image: './images/guest-of-honours/kapil-mishra.webp',
-        website: '#',
-        youtube: 'https://youtu.be/INYozth43wc?si=wD3GlxMdRRaRylio',
-        instagram: 'https://www.instagram.com/kapilmishra_ind/?hl=en',
-        linkedin: '#',
-    },
-    {
-        name: 'Shri Satish Upadhyay',
-        designation: [
-            'MLA - Malviya Nagar, Delhi',
-        ],
-        image: './images/guest-of-honours/satish-upadhyay.webp',
-        website:
-            'https://en.wikipedia.org/wiki/Satish_Upadhyay#:~:text=Upadhyay%20joined%20the%20Rashtriya%20Swayamsevak,Nagar%20Assembly%20constituency%20in%202025.',
-        youtube: 'https://www.youtube.com/watch?v=fT1w7Xh274Q',
-        instagram: '#',
-        linkedin: '#',
-    },
-    {
-        name: 'Adv. Shikha Rai',
-        designation: [
-            'MLA - Greater Kailash, Delhi',
-            '1st Woman Chairperson Standing Committee',
-            '1st Woman Leader of the House',
-            'Advocate at Supreme Court of India',
-        ],
-        image: './images/guest-of-honours/shikha-rai.webp',
-        website: '#',
-        youtube: 'https://youtu.be/AFi990nGCQg?feature=shared',
-        instagram:
-            'https://www.instagram.com/shikharaibjp?utm_source=ig_web_button_share_sheet&igsh=c2phYzE3ZGd3MHln',
-        linkedin: '#',
-    },
-    {
-        name: 'Raghuraj Singh',
-        designation: [
-            'MLA, Uttar Pradesh',
-        ],
-        image: './images/guest-of-honours/raghuraj-singh.webp',
-        website: '#',
-        youtube: 'https://www.youtube.com/watch?v=rfPV5SPQJMU',
-        instagram: 'https://www.instagram.com/raghurajsinghbjp/?hl=en',
-        linkedin: '#',
-    },
-    {
-        name: 'Pravesh Ratn',
-        designation: [
-            'MLA, Patel Nagar, Delhi',
-        ],
-        image: './images/guest-of-honours/pravesh-ratn.webp',
-        website: '#',
-        youtube: 'https://youtu.be/-4UFmKuxPLg?si=RRzyFXiz3PTldMOE',
-        instagram: 'https://www.instagram.com/praveshratn/?hl=en',
-        linkedin: '#',
-    },
-    {
-        name: 'Shri Vinay Choudhary',
-        designation: [
-            'National Co-Incharge Research & Policy - BJP',
-        ],
-        image: './images/guest-of-honours/shri-vinay-choudhary.webp',
-        website: '#',
-        youtube: 'https://www.youtube.com/watch?v=rfPV5SPQJMU',
-        instagram:
-            'https://www.instagram.com/vinaybjpvoice?igsh=aDJ3NDZvMW1tZGoy',
-        linkedin: '#',
-    },
 ]
 
 export const honourableGuests: Member[] = [
-    {
-        name: 'Justice Hima Kohli (Retd.)',
-        designation: ['Former Supreme Court Judge'],
-        image: './images/honourable-guests/hima-kohli.webp',
-        type: 'Honourable Guest',
-        website: 'https://www.sci.gov.in/judge/justice-hima-kohli/',
-        youtube: 'https://youtu.be/-KTgTaihOAI?si=xROCy3nDkrBcIZbT',
-        instagram: '#',
-        linkedin: '#',
-    },
-    {
-        name: 'Dr. Adish C Aggarwala, Sr. Adv',
-        designation: [
-            'President, International Council of Jurists',
-            'Former President, Supreme Court Bar Association',
-            'Chairman, All India Bar Association',
-            'Ex. VC- BCI',
-        ],
-        image: './images/honourable-guests/adish-c-aggarwala.webp',
-        type: 'Eminent Guest',
-        website: '#',
-        youtube: 'https://www.youtube.com/watch?v=6b4blcWZnE4',
-        instagram: 'https://www.instagram.com/adishaggarwala/',
-        linkedin: '#',
-    },
+
 ];
 
 export const keyHighlights: KeyHighlight[] = [
@@ -1214,6 +576,7 @@ export const keyHighlights: KeyHighlight[] = [
 
 export const upcomingEvents: Event[] = [
     uk,
+    delhi2026,
     newYork,
     southEastAsia,
 ];

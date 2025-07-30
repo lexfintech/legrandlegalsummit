@@ -151,23 +151,25 @@ const Hero = ({ heroSection }: { heroSection: HeroSection }) => {
             </div>)}
 
           {/* Supported By */}
-          <div
-            className="mt-6 animate-fadeInUp"
-            style={{ animationDelay: '1s' }}
-          >
-            <p className="text-md md:text-lg mb-3">Supported By</p>
-            <div className="flex justify-center gap-4 md:gap-8">
-              {heroSection.supportedBy.map((partner, index) => (
-                <div className="bg-white/10 backdrop-blur-sm p-3 md:p-4 rounded-lg">
-                  <img
-                    src={partner}
-                    alt={`Support Partner ${index + 1}`}
-                    className="w-18 h-24 md:w-18 md:h-28 object-cover rounded"
-                  />
-                </div>
-              ))}
+          {heroSection.supportedBy.length > 0 &&
+            <div
+              className="mt-6 animate-fadeInUp"
+              style={{ animationDelay: '1s' }}
+            >
+              <p className="text-md md:text-lg mb-3">Supported By</p>
+              <div className="flex justify-center gap-4 md:gap-8">
+                {heroSection.supportedBy.map((partner, index) => (
+                  <div className="bg-white/10 backdrop-blur-sm p-3 md:p-4 rounded-lg">
+                    <img
+                      src={partner}
+                      alt={`Support Partner ${index + 1}`}
+                      className="w-18 h-24 md:w-18 md:h-28 object-cover rounded"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+          }
         </div>
       </div>
 

@@ -22,6 +22,8 @@ function LGLSNyc() {
     <div className="min-h-screen bg-gray-50">
       <Navbar />
       <Hero heroSection={heroSection} />
+            <UpcomingEvents upcomingEvents={upcomingEvents} />
+
       <KeyHighlights keyHighlights={keyHighlights} />
       <EventAgenda agendaDetails={agendaDetails} date={descriptionDetails.date} location={descriptionDetails.location} />
       <Description images={galleryImages} descriptionDetails={descriptionDetails} />
@@ -33,7 +35,6 @@ function LGLSNyc() {
       <EventSpeakers speakers={eventSpeakers} />
       <EventPartners partners={eventPartners} />
       <MediaPartners mediaPartners={mediaPartners} />
-      <UpcomingEvents upcomingEvents={upcomingEvents} />
       <PastEvents pastEvents={previousEvents} />
       <VideoHighlight videoHighlight={videoHighlight} />
       <Footer />

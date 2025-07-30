@@ -10,6 +10,17 @@ export const delhi : Event = {
     route: '/delhi',
 }
 
+export const delhi2026 : Event = {
+    title: 'Le Grand Legal Summit - Delhi',
+    date: '2026',
+    location: 'TBA - Delhi',
+    description:
+        'Exploring the intersection of artificial intelligence and legal practice with focus on automation, ethics, and future trends.',
+    image: './images/misc/indiagate.webp',
+    route: '/delhi-26',
+}
+
+
 export const dubai: Event = {
     title: 'Le Grand Legal Summit - Dubai',
     date: 'February, 2026',
