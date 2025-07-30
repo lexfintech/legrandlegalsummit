@@ -6,36 +6,57 @@ import { HeroSection } from '../types';
 const Hero = ({ heroSection }: { heroSection: HeroSection }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [countdown, setCountdown] = useState({
+    months: 0,
     days: 0,
     hours: 0,
     minutes: 0,
     seconds: 0,
+    totalDays: 0,
   });
 
-  const eventDate = new Date(heroSection.timerCountdownEndDateTimeStamp !== '#' ? heroSection.timerCountdownEndDateTimeStamp : new Date().getTime()).getTime();
+  const eventDate = new Date(
+    heroSection.timerCountdownEndDateTimeStamp !== '#'
+      ? heroSection.timerCountdownEndDateTimeStamp
+      : new Date().getTime(),
+  ).getTime();
 
   const calculateTimeLeft = () => {
     const now = new Date().getTime();
     const difference = eventDate - now;
 
     if (difference > 0) {
+      const totalDays = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const months = Math.floor(totalDays / 30);
+      const days = totalDays % 30;
+
       return {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        months,
+        days: months > 0 ? days : totalDays,
         hours: Math.floor(
           (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
         ),
         minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
         seconds: Math.floor((difference % (1000 * 60)) / 1000),
+        totalDays,
       };
     }
 
-    return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+    return {
+      months: 0,
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0,
+      totalDays: 0,
+    };
   };
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) =>
-        prevIndex === heroSection.backgroundImages.length - 1 ? 0 : prevIndex + 1,
+        prevIndex === heroSection.backgroundImages.length - 1
+          ? 0
+          : prevIndex + 1,
       );
     }, 5000);
 
@@ -61,8 +82,9 @@ const Hero = ({ heroSection }: { heroSection: HeroSection }) => {
         {heroSection.backgroundImages.map((image, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-              }`}
+            className={`absolute inset-0 transition-opacity duration-1000 ${
+              index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+            }`}
           >
             <img
               src={image}
@@ -115,6 +137,16 @@ const Hero = ({ heroSection }: { heroSection: HeroSection }) => {
                 </span>
               </div>
               <div className="flex justify-center gap-2 md:gap-4 flex-wrap max-w-sm md:max-w-none mx-auto">
+                {countdown.months > 0 && (
+                  <div className="bg-white/10 backdrop-blur-sm p-2 md:p-4 rounded-lg border border-white/20 min-w-[60px] md:min-w-[80px] text-center">
+                    <div className="text-lg md:text-2xl lg:text-3xl font-bold text-secondary-main">
+                      {countdown.months}
+                    </div>
+                    <div className="text-xs md:text-sm text-white/80 mt-1">
+                      Months
+                    </div>
+                  </div>
+                )}
                 <div className="bg-white/10 backdrop-blur-sm p-2 md:p-4 rounded-lg border border-white/20 min-w-[60px] md:min-w-[80px] text-center">
                   <div className="text-lg md:text-2xl lg:text-3xl font-bold text-secondary-main">
                     {countdown.days}
@@ -148,10 +180,11 @@ const Hero = ({ heroSection }: { heroSection: HeroSection }) => {
                   </div>
                 </div>
               </div>
-            </div>)}
+            </div>
+          )}
 
           {/* Supported By */}
-          {heroSection.supportedBy.length > 0 &&
+          {heroSection.supportedBy.length > 0 && (
             <div
               className="mt-6 animate-fadeInUp"
               style={{ animationDelay: '1s' }}
@@ -169,7 +202,7 @@ const Hero = ({ heroSection }: { heroSection: HeroSection }) => {
                 ))}
               </div>
             </div>
-          }
+          )}
         </div>
       </div>
 

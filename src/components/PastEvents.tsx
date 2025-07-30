@@ -1,11 +1,11 @@
 import { Calendar, MapPin } from 'lucide-react';
 import { type Event } from '../types';
 import { Link } from 'react-router-dom';
+import { identityURLType } from '../utils';
 
 const PastEvents = ({ pastEvents }: { pastEvents: Event[] }) => {
-
   return (
-    <section className="py-20 bg-white">
+    <section id="past-events" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2
@@ -15,7 +15,9 @@ const PastEvents = ({ pastEvents }: { pastEvents: Event[] }) => {
           </h2>
           <div className={`w-24 h-1 bg-secondary-main mx-auto mb-6`}></div>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto">
-            We've hosted a series of specialized legal conferences and professional development events designed to keep you at the forefront of the legal field.
+            We've hosted a series of specialized legal conferences and
+            professional development events designed to keep you at the
+            forefront of the legal field.
           </p>
         </div>
 
@@ -23,6 +25,9 @@ const PastEvents = ({ pastEvents }: { pastEvents: Event[] }) => {
           {pastEvents.map((event, index) => (
             <Link
               key={index}
+              target={
+                identityURLType(event.route) === 'external' ? '_blank' : '_self'
+              }
               to={event.route}
               className="bg-background-primary rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 group"
             >

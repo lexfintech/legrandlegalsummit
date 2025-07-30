@@ -2,6 +2,7 @@ import { ExternalLink, Instagram, Youtube, Linkedin } from 'lucide-react';
 import { Member } from '../types';
 
 const GuestsOfHonour = ({ guestsOfHonour }: { guestsOfHonour: Member[] }) => {
+  if (guestsOfHonour.length === 0) return null;
   return (
     <section className="py-10 bg-background-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

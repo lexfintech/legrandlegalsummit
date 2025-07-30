@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
 import { KeyHighlight } from '../types';
 
-const KeyHighlights = ({ keyHighlights }: { keyHighlights: KeyHighlight[] }) => {
+const KeyHighlights = ({
+  keyHighlights,
+}: {
+  keyHighlights: KeyHighlight[];
+}) => {
   const [counts, setCounts] = useState<{ [key: string]: number }>({});
-
 
   useEffect(() => {
     const observer = new IntersectionObserver(

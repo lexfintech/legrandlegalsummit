@@ -1,27 +1,22 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, ArrowRight } from 'lucide-react';
+import { Menu, X, ArrowRight, ChevronDown } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-import { ticketLink } from '../data/dubai';
+import { NavItem } from '../types';
+import { identityURLType } from '../utils';
 
-const navItems = [
-  { name: 'Home', href: '/', type: 'internal' },
-  {
-    name: 'Past Events',
-    href: 'https://drive.google.com/drive/folders/1HQbUUUk4mrA9VjAseh30r91Sz6YEuAq0?usp=drive_link',
-    type: 'external',
-  },
-  { name: 'Speakers', href: '#speakers', type: 'section' },
-  {
-    name: 'Awards',
-    href: 'https://bharatnyayapuraskar.com/',
-    type: 'external',
-  },
-  { name: 'Agenda', href: '#agenda', type: 'section' },
-];
-
-const Navbar = () => {
+const Navbar = ({
+  navItems,
+  ticketLink,
+}: {
+  navItems: NavItem[];
+  ticketLink: string;
+}) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [mobileOpenDropdown, setMobileOpenDropdown] = useState<string | null>(
+    null,
+  );
   const location = useLocation();
 
   useEffect(() => {
@@ -47,25 +42,38 @@ const Navbar = () => {
     }
   }, [location]);
 
-  const handleSectionClick = (href: string) => {
-    setIsMobileMenuOpen(false);
-
-    // If we're already on the home page and clicking a section link
-    if (location.pathname === '/' && href.startsWith('/#')) {
-      const sectionId = href.substring(2); // Remove '/#' to get section id
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
+  // Handle dropdown interactions
+  const handleDropdownToggle = (itemName: string) => {
+    setOpenDropdown(openDropdown === itemName ? null : itemName);
   };
+
+  const handleMobileDropdownToggle = (itemName: string) => {
+    setMobileOpenDropdown(mobileOpenDropdown === itemName ? null : itemName);
+  };
+
+  const handleDropdownClose = () => {
+    setOpenDropdown(null);
+  };
+
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = () => {
+      setOpenDropdown(null);
+    };
+
+    if (openDropdown) {
+      document.addEventListener('click', handleClickOutside);
+      return () => document.removeEventListener('click', handleClickOutside);
+    }
+  }, [openDropdown]);
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-        ? 'bg-primary-main shadow-lg'
-        : 'bg-primary-main/90 backdrop-blur-sm'
-        }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? 'bg-primary-main shadow-lg'
+          : 'bg-primary-main/90 backdrop-blur-sm'
+      }`}
     >
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -83,30 +91,102 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
-              {navItems.map((item) =>
-                item.type === 'external' ? (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`text-white hover:text-secondary-main px-3 py-2 text-sm font-medium transition-colors duration-200`}
-                  >
-                    {item.name}
-                  </a>
-                ) : (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    onClick={() => handleSectionClick(item.href)}
-                    className={`text-white hover:text-secondary-main px-3 py-2 text-sm font-medium transition-colors duration-200`}
-                  >
-                    {item.name}
-                  </Link>
-                ),
-              )}
-              {location.pathname === '/' && (
+            <div className="ml-10 flex items-baseline space-x-4">
+              {navItems.map((item) => (
+                <div key={item.name} className="relative">
+                  {item.dropdownItems ? (
+                    // Dropdown item
+                    <div
+                      className="relative"
+                      onMouseEnter={() => setOpenDropdown(item.name)}
+                      onMouseLeave={handleDropdownClose}
+                    >
+                      <div className="flex items-center">
+                        {identityURLType(item.href) === 'external' ? (
+                          <a
+                            href={item.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-white hover:text-secondary-main px-3 py-2 text-sm font-medium transition-colors duration-200"
+                          >
+                            {item.name}
+                          </a>
+                        ) : (
+                          <Link
+                            to={item.href}
+                            className="text-white hover:text-secondary-main px-3 py-2 text-sm font-medium transition-colors duration-200"
+                          >
+                            {item.name}
+                          </Link>
+                        )}
+                        <button
+                          className="text-white hover:text-secondary-main p-1 text-sm font-medium transition-colors duration-200"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            handleDropdownToggle(item.name);
+                          }}
+                        >
+                          <ChevronDown
+                            size={16}
+                            className={`transition-transform duration-200 ${
+                              openDropdown === item.name ? 'rotate-180' : ''
+                            }`}
+                          />
+                        </button>
+                      </div>
+                      {openDropdown === item.name && (
+                        <div className="absolute top-8 left-0 mt-1 bg-white rounded-md shadow-lg py-1 z-50">
+                          {item.dropdownItems.map((dropdownItem) =>
+                            identityURLType(dropdownItem.href) ===
+                            'external' ? (
+                              <a
+                                key={dropdownItem.name}
+                                href={dropdownItem.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block whitespace-nowrap px-4 py-2 text-sm text-gray-700 hover:bg-secondary-main/30 hover:text-primary-main transition-colors duration-200"
+                                onClick={handleDropdownClose}
+                              >
+                                {dropdownItem.name}
+                              </a>
+                            ) : (
+                              <Link
+                                key={dropdownItem.name}
+                                to={dropdownItem.href}
+                                className="block whitespace-nowrap px-4 py-2 text-sm text-gray-700 hover:bg-secondary-main/30 hover:text-primary-main transition-colors duration-200"
+                                onClick={handleDropdownClose}
+                              >
+                                {dropdownItem.name}
+                              </Link>
+                            ),
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  ) : // Regular item
+                  identityURLType(item.href) === 'external' ? (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white hover:text-secondary-main px-3 py-2 text-sm font-medium transition-colors duration-200"
+                    >
+                      {item.name}
+                    </a>
+                  ) : (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      className="text-white whitespace-nowrap hover:text-secondary-main px-3 py-2 text-sm font-medium transition-colors duration-200"
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
+              ))}
+              {ticketLink !== '#' && (
                 <a
                   href={ticketLink}
                   target="_blank"
@@ -135,30 +215,99 @@ const Navbar = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden">
             <div className={`px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-primary-main`}>
-              {navItems.map((item) =>
-                item.type === 'external' ? (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`text-white hover:text-secondary-main block px-3 py-2 text-base font-medium transition-colors duration-200`}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </a>
-                ) : (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    onClick={() => handleSectionClick(item.href)}
-                    className={`text-white hover:text-secondary-main block px-3 py-2 text-base font-medium transition-colors duration-200`}
-                  >
-                    {item.name}
-                  </Link>
-                ),
-              )}
-              {location.pathname === '/' && (
+              {navItems.map((item) => (
+                <div key={item.name}>
+                  {item.dropdownItems ? (
+                    // Mobile dropdown item
+                    <div>
+                      <div className="flex items-center justify-between">
+                        {identityURLType(item.href) === 'external' ? (
+                          <a
+                            href={item.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-white hover:text-secondary-main block px-3 py-2 text-base font-medium transition-colors duration-200 flex-1"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {item.name}
+                          </a>
+                        ) : (
+                          <Link
+                            to={item.href}
+                            className="text-white hover:text-secondary-main block px-3 py-2 text-base font-medium transition-colors duration-200 flex-1"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {item.name}
+                          </Link>
+                        )}
+                        <button
+                          className="text-white hover:text-secondary-main p-3 text-base font-medium transition-colors duration-200"
+                          onClick={() => handleMobileDropdownToggle(item.name)}
+                        >
+                          <ChevronDown
+                            size={16}
+                            className={`transition-transform duration-200 ${
+                              mobileOpenDropdown === item.name
+                                ? 'rotate-180'
+                                : ''
+                            }`}
+                          />
+                        </button>
+                      </div>
+                      {mobileOpenDropdown === item.name && (
+                        <div className="ml-4 mt-1 space-y-1">
+                          {item.dropdownItems.map((dropdownItem) =>
+                            identityURLType(dropdownItem.href) ===
+                            'external' ? (
+                              <a
+                                key={dropdownItem.name}
+                                href={dropdownItem.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-white/80 hover:text-secondary-main block px-3 py-2 text-sm font-medium transition-colors duration-200"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                              >
+                                {dropdownItem.name}
+                              </a>
+                            ) : (
+                              <Link
+                                key={dropdownItem.name}
+                                to={dropdownItem.href}
+                                className="text-white/80 hover:text-secondary-main block px-3 py-2 text-sm font-medium transition-colors duration-200"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                              >
+                                {dropdownItem.name}
+                              </Link>
+                            ),
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  ) : // Regular mobile item
+                  identityURLType(item.href) === 'external' ? (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white hover:text-secondary-main block px-3 py-2 text-base font-medium transition-colors duration-200"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {item.name}
+                    </a>
+                  ) : (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      className="text-white hover:text-secondary-main block px-3 py-2 text-base font-medium transition-colors duration-200"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
+              ))}
+              {ticketLink !== '#' && (
                 <a
                   href={ticketLink}
                   target="_blank"

@@ -20,21 +20,27 @@ export type DescriptionDetails = {
 };
 
 export type Session = {
-    time: string;
-    title: string;
-    description: string;
-}
+  time: string;
+  title: string;
+  description: string;
+};
 
 export type Agenda = {
-    title: string;
-    sessions: Session[];
-}
+  title: string;
+  sessions: Session[];
+};
+
+export type AgendaSection = {
+  date: string;
+  location: string;
+  agenda: Agenda[];
+};
 
 export type Partner = {
-    name: string;
-    logo: string;
-    website: string;
-}
+  name: string;
+  logo: string;
+  website: string;
+};
 
 export type HeroSection = {
   date: string;
@@ -42,7 +48,7 @@ export type HeroSection = {
   timerCountdownEndDateTimeStamp: string;
   supportedBy: string[];
   backgroundImages: string[];
-}
+};
 
 export type KeyHighlight = {
   icon: React.ElementType;
@@ -50,32 +56,32 @@ export type KeyHighlight = {
   label: string;
   color: string;
   key: string;
-}
+};
 
 export type SupportLetter = {
   title: string;
   image: string;
   description: string;
-}
+};
 
 export type SupportLetterSection = {
   title: string;
   supportLetters: SupportLetter[];
   endText: string;
-}
+};
 
 export type VideoHighlight = {
   title: string;
   description: string;
   videoLink: string;
   backgroundImage: string;
-}
+};
 
 export type WhatToExpect = {
   title: string;
   description: string;
   icon: React.ElementType;
-}
+};
 
 export type Event = {
   title: string;
@@ -84,4 +90,10 @@ export type Event = {
   description: string;
   image: string;
   route: string;
-}
+};
+
+export type NavItem = {
+  name: string;
+  href: string;
+  dropdownItems?: NavItem[];
+};

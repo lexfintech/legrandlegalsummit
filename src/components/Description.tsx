@@ -3,7 +3,13 @@ import leconfluenceLogo from '/images/logos/leconfluence.webp';
 import { Calendar, MapPin, Phone, IndianRupee, Ticket } from 'lucide-react';
 import { DescriptionDetails } from '../types';
 
-const Description = ({ images, descriptionDetails }: { images: string[], descriptionDetails: DescriptionDetails }) => {
+const Description = ({
+  images,
+  descriptionDetails,
+}: {
+  images: string[];
+  descriptionDetails: DescriptionDetails;
+}) => {
   return (
     <section className="pt-20 pb-10 bg-background-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,8 +24,11 @@ const Description = ({ images, descriptionDetails }: { images: string[], descrip
               </h2>
               <div className={`w-24 h-1 bg-secondary-main mb-6`}></div>
               {descriptionDetails.description.map((description, index) => (
-                <p dangerouslySetInnerHTML={{ __html: description }} key={index} className="text-lg text-text-secondary leading-relaxed">
-                </p>
+                <p
+                  dangerouslySetInnerHTML={{ __html: description }}
+                  key={index}
+                  className="text-lg text-text-secondary leading-relaxed"
+                ></p>
               ))}
             </div>
             <Gallery images={images} />
@@ -92,7 +101,9 @@ const Description = ({ images, descriptionDetails }: { images: string[], descrip
                   <Phone className={`text-secondary-main mt-1`} size={20} />
                   <div>
                     <p className="font-semibold">Call Us</p>
-                    <p className="text-text-muted">{descriptionDetails.contactNumber}</p>
+                    <p className="text-text-muted">
+                      {descriptionDetails.contactNumber}
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -102,7 +113,9 @@ const Description = ({ images, descriptionDetails }: { images: string[], descrip
                   />
                   <div>
                     <p className="font-semibold">Ticket Price</p>
-                    <p className="font-bold text-2xl text-white">{descriptionDetails.ticketPrice}</p>
+                    <p className="font-bold text-2xl text-white">
+                      {descriptionDetails.ticketPrice}
+                    </p>
                   </div>
                 </div>
                 {descriptionDetails.ticketLink !== '#' && (

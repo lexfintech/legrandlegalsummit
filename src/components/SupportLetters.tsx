@@ -1,10 +1,13 @@
 import { FileCheck, Shield } from 'lucide-react';
 import { SupportLetterSection } from '../types';
 
-const SupportLetters = ({ supportLetterSection }: { supportLetterSection: SupportLetterSection }) => {
-
+const SupportLetters = ({
+  supportLetterSection,
+}: {
+  supportLetterSection: SupportLetterSection;
+}) => {
   return (
-    <section className="py-20 bg-white">
+    <section id="recommendation-letters" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2

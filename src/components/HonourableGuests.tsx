@@ -1,8 +1,12 @@
 import { ExternalLink, Instagram, Linkedin, Youtube } from 'lucide-react';
 import { Member } from '../types';
 
-const HonourableGuests = ({ honourableGuests }: { honourableGuests: Member[] }) => {
-
+const HonourableGuests = ({
+  honourableGuests,
+}: {
+  honourableGuests: Member[];
+}) => {
+  if (honourableGuests.length === 0) return null;
   return (
     <div className="py-16 px-2 md:px-8 rounded-2xl bg-white">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">

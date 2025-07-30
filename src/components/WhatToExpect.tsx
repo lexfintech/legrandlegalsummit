@@ -1,7 +1,6 @@
 import { type WhatToExpect } from '../types';
 
 const WhatToExpect = ({ expectations }: { expectations: WhatToExpect[] }) => {
-
   return (
     <section className="pt-10 pb-20 bg-background-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

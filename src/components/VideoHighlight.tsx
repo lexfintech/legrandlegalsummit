@@ -2,7 +2,11 @@ import { useState } from 'react';
 import { Play, X } from 'lucide-react';
 import { type VideoHighlight } from '../types';
 
-const VideoHighlight = ({ videoHighlight }: { videoHighlight: VideoHighlight }) => {
+const VideoHighlight = ({
+  videoHighlight,
+}: {
+  videoHighlight: VideoHighlight;
+}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
