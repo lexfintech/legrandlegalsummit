@@ -2,6 +2,7 @@ import { FileCheck, Shield } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import { NavItem, SupportLetterSection } from '../types';
 import { upcomingEvents, pastEvents } from '../data/events';
+import Footer from '../components/Footer';
 
 const supportLetterSection: SupportLetterSection = {
   title: 'Recommendation Letters from Ministry, GoI',
@@ -108,6 +109,7 @@ const RecommendationLetters = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 };

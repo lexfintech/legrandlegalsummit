@@ -9,6 +9,7 @@ import LGLSDelhi2026 from './pages/LGLSDelhi2026';
 import About from './pages/About';
 import RecommendationLetters from './pages/RecommendationLetters';
 import GoToTop from './components/GoToTop';
+import NominationForm from './pages/NominationForm';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/nyc-26" element={<LGLSNyc2026 />} />
         <Route path="/uk-26" element={<LGLSUk2026 />} />
         <Route path="/about" element={<About />} />
+        <Route path="/nominate" element={<NominationForm />} />
         <Route
           path="/recommendation-letters"
           element={<RecommendationLetters />}

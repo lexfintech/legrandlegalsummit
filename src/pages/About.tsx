@@ -4,6 +4,7 @@ import { NavItem } from '../types';
 import leconfluenceLogo from '/images/logos/leconfluence.webp';
 import { Building, Users, Award, Target } from 'lucide-react';
 import { upcomingEvents, pastEvents } from '../data/events';
+import Footer from '../components/Footer';
 
 const aboutContent = [
   `<strong>Le Grand Legal Summit</strong> is India's premier legal conference series, bringing together the most influential minds in the legal profession. Our mission is to create a platform where legal excellence meets innovation, fostering collaboration and knowledge exchange among legal professionals across the globe.`,
@@ -259,6 +260,7 @@ export default function About() {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }

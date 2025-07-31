@@ -52,6 +52,7 @@ export const navItems: NavItem[] = [
   { name: 'Awards', href: 'https://bharatnyayapuraskar.com/' },
   { name: 'Recommendation Letters', href: '/recommendation-letters' },
   { name: 'About', href: '/about' },
+  { name: 'Nominate', href: '/nominate' },
 ];
 
 export const heroSection: HeroSection = {
