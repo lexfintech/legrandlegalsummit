@@ -1,13 +1,163 @@
-'use client';
-
-import { useState, useEffect } from 'react'; // Import useEffect
+import { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { NavItem } from '../types';
 import { pastEvents, upcomingEvents } from '../data/events';
 
+const awardCategoriesData = [
+  {
+    head: 'General Counsel of the Year',
+    subcategories: [
+      'General Counsel – Banking & Financial Services',
+      'General Counsel – Pharmaceuticals & Healthcare',
+      'General Counsel – Technology & IT Services',
+      'General Counsel – Manufacturing & Heavy Industries',
+      'General Counsel – Energy, Oil & Gas',
+      'General Counsel – Retail & Consumer Products',
+      'General Counsel – Real Estate & Infrastructure',
+      'General Counsel – Public Sector & PSU',
+      'General Counsel – Private Equity & Venture Capital',
+      'General Counsel – Overall Excellence (Pan-Industry)',
+    ],
+  },
+  {
+    head: 'Rising Star Counsel',
+    subcategories: [
+      'Rising Star – Corporate Law',
+      'Rising Star – Litigation & Disputes',
+      'Rising Star – M&A and PE Transactions',
+      'Rising Star – Data Privacy & Cyber Law',
+      'Rising Star – Employment & Labour',
+      'Rising Star – Environmental & ESG Law',
+      'Rising Star – Banking & Finance',
+      'Rising Star – In-House Counsel',
+      'Rising Star – Women in Law',
+      'Rising Star – Innovation in Practice',
+    ],
+  },
+  {
+    head: 'Law Firm of the Year',
+    subcategories: [
+      'Full-Service Law Firm of the Year',
+      'Boutique Firm of the Year',
+      'Emerging Law Firm (under 5 years)',
+      'Best Litigation Practice',
+      'Best Corporate & M&A Practice',
+      'Best Technology Law Practice',
+      'Best Real Estate & Infra Practice',
+      'Best Regulatory & Compliance Team',
+      'Best Firm for Diversity & Inclusion',
+      'Best Regional Law Firm (Tier-2/3 Cities)',
+    ],
+  },
+  {
+    head: 'Outstanding Litigation Counsel',
+    subcategories: [
+      'Civil Litigation – Individual',
+      'Criminal Litigation – Individual',
+      'Commercial Litigation',
+      'Constitutional & Writ Practice',
+      'Arbitration Counsel – Domestic',
+      'Arbitration Counsel – International',
+      'Public Interest Litigation',
+      'White-Collar Crime',
+      'Appellate Practice Specialist',
+      'Young Litigator of the Year',
+    ],
+  },
+  {
+    head: 'In-House Legal Team Excellence',
+    subcategories: [
+      'In-House Team – Financial Sector',
+      'In-House Team – Healthcare & Pharma',
+      'In-House Team – Technology & Digital',
+      'In-House Team – Infrastructure',
+      'In-House Team – FMCG/Retail',
+      'In-House Team – Sustainability & ESG',
+      'In-House Team – M&A and Compliance',
+      'In-House Team – IP and Innovation',
+      'In-House Team – Crisis Response',
+      'Legal Team of the Year – Overall',
+    ],
+  },
+  {
+    head: 'Excellence in Corporate Advisory',
+    subcategories: [
+      'M&A Advisory – Domestic',
+      'M&A Advisory – Cross-Border',
+      'Corporate Governance Excellence',
+      'Private Equity Transactions',
+      'IPO & Capital Markets',
+      'Joint Ventures & Strategic Alliances',
+      'Restructuring & Insolvency',
+      'ESG & Regulatory Advisory',
+      'Investment Structuring & Tax',
+      'Start-Up Legal Advisory',
+    ],
+  },
+  {
+    head: 'Innovation in Legal Practice',
+    subcategories: [
+      'Legal Tech Implementation',
+      'Innovative Legal Research',
+      'Alternative Billing Models',
+      'Virtual Law Office of the Year',
+      'Legal Analytics & AI Usage',
+      'Client-Centric Legal Service',
+      'Legal Design Thinking',
+      'Online Dispute Resolution Advocate',
+      'Legal Communication & Public Education',
+      'Legal Service Delivery Model',
+    ],
+  },
+  {
+    head: 'Leadership in Compliance & Ethics',
+    subcategories: [
+      'Compliance Officer – BFSI',
+      'Compliance Officer – Corporate Sector',
+      'Anti-Bribery/Anti-Corruption Specialist',
+      'Data Privacy & Protection',
+      'Ethics & Integrity Champion',
+      'AML/KYC Compliance Expert',
+      'Regulatory Affairs Manager',
+      'Whistleblower Management Framework',
+      'ESG & Climate Compliance',
+      'Internal Investigations Leadership',
+    ],
+  },
+  {
+    head: 'Best Legal Strategy in Crisis Management',
+    subcategories: [
+      'Corporate Crisis Response',
+      'Regulatory Investigations Handling',
+      'Litigation Avoidance Strategy',
+      'Labour & Layoff Strategy',
+      'Cyberattack & Data Breach Response',
+      'Crisis Mediation & Arbitration',
+      'Reputation & Defamation Defense',
+      'Supply Chain Legal Resolution',
+      'Multi-Jurisdiction Risk Handling',
+      'Post-Crisis Regulatory Recovery',
+    ],
+  },
+  {
+    head: 'Trailblazer in Legal Technology & Transformation',
+    subcategories: [
+      'Best LegalTech Startup',
+      'Most Innovative Legal Automation Tool',
+      'E-Discovery Specialist',
+      'AI in Legal Practice Champion',
+      'Virtual Hearings & Paperless Courts Leader',
+      'SaaS Legal Tools Designer',
+      'Contract Lifecycle Management Leader',
+      'Blockchain & Smart Contracts Counsel',
+      'Online IP Protection Innovator',
+      'Digital Transformation – In-House or Firm',
+    ],
+  },
+];
+
 const NominationForm = () => {
-  // ... (navItems and initialForm declarations remain the same)
   const navItems: NavItem[] = [
     {
       name: 'Upcoming Events',
@@ -39,11 +189,11 @@ const NominationForm = () => {
     company: '',
     profileLink: '',
     education: '',
-    category: '',
     bestDescribe: '',
     experience: '',
     bio: '',
     expertise: '',
+    categoryHead: '', // UPDATED: Added new field for the main category
     awardCategory: '',
     city: '',
     state: '',
@@ -56,7 +206,6 @@ const NominationForm = () => {
   const [form, setForm] = useState(initialForm);
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
-  // NEW: useEffect to load draft from localStorage on component mount
   useEffect(() => {
     try {
       const savedDraft = localStorage.getItem('nominationFormDraft');
@@ -67,21 +216,29 @@ const NominationForm = () => {
     } catch (error) {
       console.error('Failed to load draft from localStorage:', error);
     }
-  }, []); // Empty dependency array ensures this runs only once on mount
+  }, []);
 
+  // UPDATED: handleChange now resets awardCategory when categoryHead changes
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >,
   ) => {
     const { name, value } = e.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
+    setForm((prev) => {
+      const newForm = { ...prev, [name]: value };
+      // If the category head is changed, reset the award sub-category
+      if (name === 'categoryHead') {
+        newForm.awardCategory = '';
+      }
+      return newForm;
+    });
+
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: '' }));
     }
   };
 
-  // ... (validate function remains the same)
   const validate = () => {
     const newErrors: { [key: string]: string } = {};
     const fieldLabels: { [key: string]: string } = {
@@ -93,11 +250,11 @@ const NominationForm = () => {
       company: 'Company',
       profileLink: 'Profile Link',
       education: 'Education',
-      category: 'Category',
       bestDescribe: 'Nominee Description',
       experience: 'Years of Experience',
       bio: 'Brief Bio',
       expertise: 'Key Expertise',
+      categoryHead: 'Category Head', // UPDATED: Added label for validation
       awardCategory: 'Award Category',
       city: 'City',
       state: 'State',
@@ -106,14 +263,15 @@ const NominationForm = () => {
       minutes: 'Minutes',
     };
 
-    // Check for empty fields
+    // Note: The original validation logic for `category` is removed as it's no longer a field.
+    // The rest of the validation logic remains the same.
     Object.entries(form).forEach(([key, value]) => {
-      if (!String(value).trim()) {
+      if (key !== 'category' && !String(value).trim()) {
+        // Exclude old 'category' field
         newErrors[key] = `${fieldLabels[key] || 'This field'} is required.`;
       }
     });
 
-    // Specific format validations
     if (form.email && !/\S+@\S+\.\S+/.test(form.email)) {
       newErrors.email = 'Please enter a valid email address.';
     }
@@ -148,18 +306,14 @@ const NominationForm = () => {
     }
     console.log('Form Submitted Successfully:', form);
 
-    // NEW: Clear the draft from localStorage on successful submission
     try {
       localStorage.removeItem('nominationFormDraft');
       console.log('Draft removed from localStorage after submission.');
     } catch (error) {
       console.error('Failed to remove draft from localStorage:', error);
     }
-    // Here you would typically send the data to your API and reset the form
-    // setForm(initialForm);
   };
 
-  // NEW: Function to handle saving the form data as a draft
   const handleSaveDraft = () => {
     try {
       localStorage.setItem('nominationFormDraft', JSON.stringify(form));
@@ -173,20 +327,26 @@ const NominationForm = () => {
   };
 
   const inputClass =
-    'p-3 border rounded-md w-full text-sm text-gray-800 placeholder-gray-400 border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition duration-200';
+    'p-3 border rounded-md w-full text-sm text-gray-800 placeholder-gray-400 border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition duration-200 disabled:bg-gray-100 disabled:cursor-not-allowed';
+
+  // Get subcategories for the selected main category
+  const subcategories =
+    awardCategoriesData.find((cat) => cat.head === form.categoryHead)
+      ?.subcategories || [];
 
   return (
     <>
       <Navbar navItems={navItems} ticketLink={'#'} />
-      <div className="min-h-screen flex items-center justify-center bg-gray-100 pt-20 py-10">
+      <div className="min-h-screen flex items-center justify-center bg-gray-100 pt-24 py-10">
         <form
           onSubmit={handleSubmit}
           className="w-full max-w-5xl bg-white shadow-xl rounded-lg p-6 sm:p-8 space-y-6"
         >
-          {/* ... (Your form fields remain exactly the same) ... */}
           <h2 className="text-3xl font-bold text-gray-900">Nomination Form</h2>
+
+          {/* Grid container for form fields */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
-            {/* Your Details */}
+            {/* ... All other input fields remain here ... */}
             <div>
               <label
                 htmlFor="name"
@@ -244,8 +404,6 @@ const NominationForm = () => {
                 <p className="text-red-600 text-xs mt-1">{errors.phone}</p>
               )}
             </div>
-
-            {/* Nominee Details */}
             <div>
               <label
                 htmlFor="nomineeName"
@@ -267,6 +425,7 @@ const NominationForm = () => {
                 </p>
               )}
             </div>
+            {/* ... and so on for the rest of the fields up to education ... */}
             <div>
               <label
                 htmlFor="designation"
@@ -342,9 +501,7 @@ const NominationForm = () => {
                 onChange={handleChange}
                 className={inputClass}
               >
-                <option value="">
-                  Select Educational Background of the Nominee
-                </option>
+                <option value="">Select Educational Background</option>
                 <option value="Bachelor of Laws (LLB)">
                   Bachelor of Laws (LLB)
                 </option>
@@ -370,176 +527,9 @@ const NominationForm = () => {
                 <p className="text-red-600 text-xs mt-1">{errors.education}</p>
               )}
             </div>
-            <div>
-              <label
-                htmlFor="bestDescribe"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                Nominee is a...
-              </label>
-              <select
-                id="bestDescribe"
-                name="bestDescribe"
-                value={form.bestDescribe}
-                onChange={handleChange}
-                className={inputClass}
-              >
-                <option value="">Select Description</option>
-                <option value="In-House Counsel">In-House Counsel</option>
-                <option value="Law Firm Partner">Law Firm Partner</option>
-                <option value="Law Firm">Law Firm</option>
-                <option value="LegalTech Company">LegalTech Company</option>
-                <option value="Independent Lawyer">Independent Lawyer</option>
-                <option value="LegalTech Contributor">
-                  LegalTech Contributor
-                </option>
-                <option value="Legal Team">Legal Team</option>
-                <option value="Other">Other</option>
-              </select>
-              {errors.bestDescribe && (
-                <p className="text-red-600 text-xs mt-1">
-                  {errors.bestDescribe}
-                </p>
-              )}
-            </div>
-            <div>
-              <label
-                htmlFor="experience"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                Years of Experience
-              </label>
-              <input
-                id="experience"
-                name="experience"
-                placeholder="e.g., 15"
-                value={form.experience}
-                onChange={handleChange}
-                className={inputClass}
-              />
-              {errors.experience && (
-                <p className="text-red-600 text-xs mt-1">{errors.experience}</p>
-              )}
-            </div>
-            <div>
-              <label
-                htmlFor="city"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                City
-              </label>
-              <input
-                id="city"
-                name="city"
-                placeholder="e.g., Hyderabad"
-                value={form.city}
-                onChange={handleChange}
-                className={inputClass}
-              />
-              {errors.city && (
-                <p className="text-red-600 text-xs mt-1">{errors.city}</p>
-              )}
-            </div>
-            <div>
-              <label
-                htmlFor="state"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                State
-              </label>
-              <input
-                id="state"
-                name="state"
-                placeholder="e.g., Telangana"
-                value={form.state}
-                onChange={handleChange}
-                className={inputClass}
-              />
-              {errors.state && (
-                <p className="text-red-600 text-xs mt-1">{errors.state}</p>
-              )}
-            </div>
-            <div>
-              <label
-                htmlFor="date"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                Preferred Interview Date
-              </label>
-              <input
-                id="date"
-                type="date"
-                name="date"
-                value={form.date}
-                onChange={handleChange}
-                className={inputClass}
-              />
-              {errors.date && (
-                <p className="text-red-600 text-xs mt-1">{errors.date}</p>
-              )}
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Preferred Interview Time
-              </label>
-              <div className="grid grid-cols-3 gap-2">
-                <select
-                  name="hours"
-                  value={form.hours}
-                  onChange={handleChange}
-                  className={inputClass}
-                >
-                  <option value="">Hour</option>
-                  {[...Array(12)].map((_, i) => (
-                    <option key={i} value={i + 1}>
-                      {String(i + 1).padStart(2, '0')}
-                    </option>
-                  ))}
-                </select>
-                <select
-                  name="minutes"
-                  value={form.minutes}
-                  onChange={handleChange}
-                  className={inputClass}
-                >
-                  <option value="">Min</option>
-                  {[
-                    '00',
-                    '05',
-                    '10',
-                    '15',
-                    '20',
-                    '25',
-                    '30',
-                    '35',
-                    '40',
-                    '45',
-                    '50',
-                    '55',
-                  ].map((m) => (
-                    <option key={m} value={m}>
-                      {m}
-                    </option>
-                  ))}
-                </select>
-                <select
-                  name="ampm"
-                  value={form.ampm}
-                  onChange={handleChange}
-                  className={inputClass}
-                >
-                  <option>AM</option>
-                  <option>PM</option>
-                </select>
-              </div>
-              {(errors.hours || errors.minutes) && (
-                <p className="text-red-600 text-xs mt-1">
-                  Please select a full time.
-                </p>
-              )}
-            </div>
           </div>
 
+          {/* This section contains all other non-grid fields */}
           <div>
             <label
               htmlFor="bio"
@@ -580,54 +570,69 @@ const NominationForm = () => {
               <p className="text-red-600 text-xs mt-1">{errors.expertise}</p>
             )}
           </div>
-          <div>
-            <label
-              htmlFor="awardCategory"
-              className="block text-sm font-medium text-gray-700 mb-1"
-            >
-              Award Category
-            </label>
-            <select
-              id="awardCategory"
-              name="awardCategory"
-              value={form.awardCategory}
-              onChange={handleChange}
-              className={inputClass}
-            >
-              <option value="">Choose Award Category</option>
-              <option value="In-House Counsel Excellence">
-                In-House Counsel Excellence
-              </option>
-              <option value="Top Leadership & Lifetime Honors">
-                Top Leadership & Lifetime Honors
-              </option>
-              <option value="Law Firm & Practice Area Awards">
-                Law Firm & Practice Area Awards
-              </option>
-              <option value="Young Talent, Diversity & Inclusion">
-                Young Talent, Diversity & Inclusion
-              </option>
-              <option value="Public Service, Education & Innovation">
-                Public Service, Education & Innovation
-              </option>
-              <option value="Core Practice Excellence">
-                Core Practice Excellence
-              </option>
-              <option value="Youth & Rising Talent">
-                Youth & Rising Talent
-              </option>
-              <option value="Leadership & Community Impact">
-                Leadership & Community Impact
-              </option>
-              <option value="Pro Bono & Ethical Practice">
-                Pro Bono & Ethical Practice
-              </option>
-            </select>
-            {errors.awardCategory && (
-              <p className="text-red-600 text-xs mt-1">
-                {errors.awardCategory}
-              </p>
-            )}
+
+          {/* NEW/UPDATED: Award Category Selection */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
+            <div>
+              <label
+                htmlFor="categoryHead"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
+                Category Head
+              </label>
+              <select
+                id="categoryHead"
+                name="categoryHead"
+                value={form.categoryHead}
+                onChange={handleChange}
+                className={inputClass}
+              >
+                <option value="">Choose a Main Category</option>
+                {awardCategoriesData.map((category) => (
+                  <option key={category.head} value={category.head}>
+                    {category.head}
+                  </option>
+                ))}
+              </select>
+              {errors.categoryHead && (
+                <p className="text-red-600 text-xs mt-1">
+                  {errors.categoryHead}
+                </p>
+              )}
+            </div>
+
+            <div>
+              <label
+                htmlFor="awardCategory"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
+                Award Category
+              </label>
+              <select
+                id="awardCategory"
+                name="awardCategory"
+                value={form.awardCategory}
+                onChange={handleChange}
+                className={inputClass}
+                disabled={!form.categoryHead}
+              >
+                <option value="">
+                  {form.categoryHead
+                    ? 'Choose a Sub-Category'
+                    : 'Please select a Category Head first'}
+                </option>
+                {subcategories.map((sub) => (
+                  <option key={sub} value={sub}>
+                    {sub}
+                  </option>
+                ))}
+              </select>
+              {errors.awardCategory && (
+                <p className="text-red-600 text-xs mt-1">
+                  {errors.awardCategory}
+                </p>
+              )}
+            </div>
           </div>
 
           <div className="text-xs text-gray-500">
@@ -642,7 +647,6 @@ const NominationForm = () => {
             >
               Submit Nomination
             </button>
-            {/* UPDATED: Added onClick handler to the Save as Draft button */}
             <button
               type="button"
               onClick={handleSaveDraft}

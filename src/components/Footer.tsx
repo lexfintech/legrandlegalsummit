@@ -38,9 +38,9 @@ const Footer = () => {
               Le Grand Legal Summit
             </h3>
             <p className="text-text-muted leading-relaxed mb-6">
-              India's premier legal conference bringing together distinguished
+              Global premier legal conference bringing together distinguished
               legal minds, innovative solutions, and transformative discussions.
-              Join us in shaping the future of the Indian legal system.
+              Join us in shaping the future of the global legal system.
             </p>
             <div className="space-y-2">
               <div className="flex items-center gap-3">
