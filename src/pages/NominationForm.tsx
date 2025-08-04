@@ -296,7 +296,7 @@ const NominationForm = () => {
     return newErrors;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrors({});
     const validationErrors = validate();
@@ -304,13 +304,38 @@ const NominationForm = () => {
       setErrors(validationErrors);
       return;
     }
-    console.log('Form Submitted Successfully:', form);
 
     try {
-      localStorage.removeItem('nominationFormDraft');
-      console.log('Draft removed from localStorage after submission.');
+      const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
+      const response = await fetch(`${apiBaseUrl}/email.php`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(form),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        console.log('Form Submitted Successfully');
+        setForm(initialForm);
+        alert('Nomination submitted successfully!');
+        try {
+          localStorage.removeItem('nominationFormDraft');
+        } catch (error) {
+          console.error('Failed to remove draft:', error);
+        }
+      } else {
+        if (result.errors) {
+          setErrors(result.errors);
+        } else {
+          alert(result.message || 'Submission failed');
+        }
+      }
     } catch (error) {
-      console.error('Failed to remove draft from localStorage:', error);
+      console.error('Submission error:', error);
+      alert('An error occurred. Please try again.');
     }
   };
 
