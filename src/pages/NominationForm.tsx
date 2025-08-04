@@ -294,7 +294,10 @@ const NominationForm = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrors({});
+    console.log('Form', form);
+
     const validationErrors = validate();
+    console.log('Validation Errors', validationErrors);
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
