@@ -193,7 +193,7 @@ const NominationForm = () => {
     experience: '',
     bio: '',
     expertise: '',
-    categoryHead: '', // UPDATED: Added new field for the main category
+    categoryHead: '',
     awardCategory: '',
     city: '',
     state: '',
@@ -218,7 +218,6 @@ const NominationForm = () => {
     }
   }, []);
 
-  // UPDATED: handleChange now resets awardCategory when categoryHead changes
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -227,7 +226,6 @@ const NominationForm = () => {
     const { name, value } = e.target;
     setForm((prev) => {
       const newForm = { ...prev, [name]: value };
-      // If the category head is changed, reset the award sub-category
       if (name === 'categoryHead') {
         newForm.awardCategory = '';
       }
@@ -242,32 +240,29 @@ const NominationForm = () => {
   const validate = () => {
     const newErrors: { [key: string]: string } = {};
     const fieldLabels: { [key: string]: string } = {
-      name: 'Your Name',
-      email: 'Email',
-      phone: 'Phone Number',
-      nomineeName: 'Nominee Name',
-      designation: 'Designation',
-      company: 'Company',
-      profileLink: 'Profile Link',
-      education: 'Education',
-      bestDescribe: 'Nominee Description',
-      experience: 'Years of Experience',
-      bio: 'Brief Bio',
-      expertise: 'Key Expertise',
-      categoryHead: 'Category Head', // UPDATED: Added label for validation
-      awardCategory: 'Award Category',
-      city: 'City',
-      state: 'State',
-      date: 'Date',
-      hours: 'Hour',
-      minutes: 'Minutes',
+        name: 'Your Name',
+        email: 'Email',
+        phone: 'Phone Number',
+        nomineeName: 'Nominee Name',
+        designation: 'Designation',
+        company: 'Company',
+        profileLink: 'Profile Link',
+        education: 'Education',
+        bestDescribe: 'Nominee Description',
+        experience: 'Years of Experience',
+        bio: 'Brief Bio',
+        expertise: 'Key Expertise',
+        categoryHead: 'Category Head',
+        awardCategory: 'Award Category',
+        city: 'City',
+        state: 'State',
+        date: 'Date',
+        hours: 'Hour',
+        minutes: 'Minutes',
     };
 
-    // Note: The original validation logic for `category` is removed as it's no longer a field.
-    // The rest of the validation logic remains the same.
     Object.entries(form).forEach(([key, value]) => {
-      if (key !== 'category' && !String(value).trim()) {
-        // Exclude old 'category' field
+      if (key !== 'ampm' && !String(value).trim()) {
         newErrors[key] = `${fieldLabels[key] || 'This field'} is required.`;
       }
     });
@@ -354,7 +349,6 @@ const NominationForm = () => {
   const inputClass =
     'p-3 border rounded-md w-full text-sm text-gray-800 placeholder-gray-400 border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition duration-200 disabled:bg-gray-100 disabled:cursor-not-allowed';
 
-  // Get subcategories for the selected main category
   const subcategories =
     awardCategoriesData.find((cat) => cat.head === form.categoryHead)
       ?.subcategories || [];
@@ -371,7 +365,7 @@ const NominationForm = () => {
 
           {/* Grid container for form fields */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
-            {/* ... All other input fields remain here ... */}
+            {/* Your Name */}
             <div>
               <label
                 htmlFor="name"
@@ -391,6 +385,8 @@ const NominationForm = () => {
                 <p className="text-red-600 text-xs mt-1">{errors.name}</p>
               )}
             </div>
+
+            {/* Your Email */}
             <div>
               <label
                 htmlFor="email"
@@ -410,6 +406,8 @@ const NominationForm = () => {
                 <p className="text-red-600 text-xs mt-1">{errors.email}</p>
               )}
             </div>
+
+            {/* Your Phone */}
             <div>
               <label
                 htmlFor="phone"
@@ -429,6 +427,8 @@ const NominationForm = () => {
                 <p className="text-red-600 text-xs mt-1">{errors.phone}</p>
               )}
             </div>
+
+            {/* Nominee's Name */}
             <div>
               <label
                 htmlFor="nomineeName"
@@ -450,7 +450,8 @@ const NominationForm = () => {
                 </p>
               )}
             </div>
-            {/* ... and so on for the rest of the fields up to education ... */}
+            
+            {/* Designation */}
             <div>
               <label
                 htmlFor="designation"
@@ -472,6 +473,8 @@ const NominationForm = () => {
                 </p>
               )}
             </div>
+
+            {/* Company / Firm */}
             <div>
               <label
                 htmlFor="company"
@@ -491,6 +494,8 @@ const NominationForm = () => {
                 <p className="text-red-600 text-xs mt-1">{errors.company}</p>
               )}
             </div>
+
+            {/* LinkedIn Profile */}
             <div>
               <label
                 htmlFor="profileLink"
@@ -512,6 +517,8 @@ const NominationForm = () => {
                 </p>
               )}
             </div>
+
+            {/* Highest Education */}
             <div>
               <label
                 htmlFor="education"
@@ -552,9 +559,175 @@ const NominationForm = () => {
                 <p className="text-red-600 text-xs mt-1">{errors.education}</p>
               )}
             </div>
+
+            {/* Years of Experience - NEWLY ADDED */}
+            <div>
+              <label
+                htmlFor="experience"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
+                Years of Experience
+              </label>
+              <input
+                id="experience"
+                name="experience"
+                type="number"
+                placeholder="e.g., 10"
+                value={form.experience}
+                onChange={handleChange}
+                className={inputClass}
+              />
+              {errors.experience && (
+                <p className="text-red-600 text-xs mt-1">{errors.experience}</p>
+              )}
+            </div>
+
+            {/* City - NEWLY ADDED */}
+            <div>
+              <label
+                htmlFor="city"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
+                City
+              </label>
+              <input
+                id="city"
+                name="city"
+                type="text"
+                placeholder="e.g., Mumbai"
+                value={form.city}
+                onChange={handleChange}
+                className={inputClass}
+              />
+              {errors.city && (
+                <p className="text-red-600 text-xs mt-1">{errors.city}</p>
+              )}
+            </div>
+
+            {/* State - NEWLY ADDED */}
+            <div>
+              <label
+                htmlFor="state"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
+                State
+              </label>
+              <input
+                id="state"
+                name="state"
+                type="text"
+                placeholder="e.g., Maharashtra"
+                value={form.state}
+                onChange={handleChange}
+                className={inputClass}
+              />
+              {errors.state && (
+                <p className="text-red-600 text-xs mt-1">{errors.state}</p>
+              )}
+            </div>
+
+            {/* Date - NEWLY ADDED */}
+            <div>
+              <label
+                htmlFor="date"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
+                Date
+              </label>
+              <input
+                id="date"
+                name="date"
+                type="date"
+                value={form.date}
+                onChange={handleChange}
+                className={inputClass}
+              />
+              {errors.date && (
+                <p className="text-red-600 text-xs mt-1">{errors.date}</p>
+              )}
+            </div>
+
+            {/* Interview Time Slot - NEWLY ADDED */}
+            <div className="md:col-span-2">
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                 Time
+              </label>
+              <div className="flex items-center gap-2">
+                <div className="flex-1">
+                  <select
+                    name="hours"
+                    value={form.hours}
+                    onChange={handleChange}
+                    className={inputClass}
+                  >
+                    <option value="">Hour</option>
+                    {Array.from({ length: 12 }, (_, i) => (
+                      <option key={i} value={String(i + 1).padStart(2, '0')}>
+                        {String(i + 1).padStart(2, '0')}
+                      </option>
+                    ))}
+                  </select>
+                  {errors.hours && (
+                    <p className="text-red-600 text-xs mt-1">{errors.hours}</p>
+                  )}
+                </div>
+                <div className="flex-1">
+                  <select
+                    name="minutes"
+                    value={form.minutes}
+                    onChange={handleChange}
+                    className={inputClass}
+                  >
+                    <option value="">Minutes</option>
+                    {["00", "15", "30", "45"].map((min) => (
+                       <option key={min} value={min}>{min}</option>
+                    ))}
+                  </select>
+                   {errors.minutes && (
+                    <p className="text-red-600 text-xs mt-1">{errors.minutes}</p>
+                  )}
+                </div>
+                <div className="flex-1">
+                  <select
+                    name="ampm"
+                    value={form.ampm}
+                    onChange={handleChange}
+                    className={inputClass}
+                  >
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
           </div>
 
           {/* This section contains all other non-grid fields */}
+
+           {/* Nominee Description - NEWLY ADDED */}
+           <div>
+            <label
+              htmlFor="bestDescribe"
+              className="block text-sm font-medium text-gray-700 mb-1"
+            >
+              How would you best describe the nominee?
+            </label>
+            <textarea
+              id="bestDescribe"
+              name="bestDescribe"
+              placeholder="Provide a concise description of the nominee's qualities and suitability..."
+              value={form.bestDescribe}
+              onChange={handleChange}
+              rows={4}
+              className={inputClass}
+            />
+            {errors.bestDescribe && (
+              <p className="text-red-600 text-xs mt-1">{errors.bestDescribe}</p>
+            )}
+          </div>
+
+          {/* Brief Bio */}
           <div>
             <label
               htmlFor="bio"
@@ -575,6 +748,8 @@ const NominationForm = () => {
               <p className="text-red-600 text-xs mt-1">{errors.bio}</p>
             )}
           </div>
+
+          {/* Key Areas of Expertise */}
           <div>
             <label
               htmlFor="expertise"
@@ -596,7 +771,7 @@ const NominationForm = () => {
             )}
           </div>
 
-          {/* NEW/UPDATED: Award Category Selection */}
+          {/* Award Category Selection */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
             <div>
               <label
