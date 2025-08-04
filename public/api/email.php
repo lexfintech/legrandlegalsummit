@@ -28,7 +28,8 @@ if (json_last_error() !== JSON_ERROR_NONE) {
 $requiredFields = [
     'name', 'email', 'phone', 'nomineeName', 'designation', 'company',
     'profileLink', 'education', 'bestDescribe', 'experience', 'bio',
-    'expertise', 'categoryHead', 'awardCategory', 'city', 'state'
+    'expertise', 'categoryHead', 'awardCategory', 'city', 'state',
+    'date', 'hours', 'minutes'
 ];
 
 $errors = [];
@@ -62,12 +63,14 @@ $message .= "- Profile: {$data['profileLink']}\n";
 $message .= "- Education: {$data['education']}\n";
 $message .= "- Experience: {$data['experience']} years\n";
 $message .= "- Category: {$data['categoryHead']} > {$data['awardCategory']}\n\n";
-$message .= "Location: {$data['city']}, {$data['state']}\n\n";
+$message .= "Location: {$data['city']}, {$data['state']}\n";
+$message .= "Date: {$data['date']}\n"; // Add date
+$message .= "Time: {$data['hours']}:{$data['minutes']} {$data['ampm']}\n\n"; // Add time
 $message .= "Description:\n{$data['bestDescribe']}\n\n";
 $message .= "Bio:\n{$data['bio']}\n\n";
 $message .= "Expertise:\n{$data['expertise']}";
 
-$to = "satish.yadlapalli@lexfintech.io";
+$to = "nominate@lexfintech.io";
 $subject = "New Nomination: {$data['nomineeName']}";
 $headers = "From: {$data['email']}\r\n";
 $headers .= "Reply-To: {$data['email']}\r\n";
