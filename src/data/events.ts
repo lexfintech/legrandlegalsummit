@@ -22,7 +22,7 @@ export const delhi2026: Event = {
 
 export const dubai2026: Event = {
   title: 'Le Grand Legal Summit - Dubai',
-  date: 'February, 2026',
+  date: 'February 9, 2026',
   location: 'Dubai, UAE',
   description:
     'Exploring the intersection of artificial intelligence and legal practice with focus on automation, ethics, and future trends.',
@@ -57,7 +57,7 @@ export const bharatNyayaPuraskar2024: Event = {
   description:
     'Comprehensive discussion on corporate compliance, ESG frameworks, and emerging challenges in corporate governance.',
   image: './images/misc/bharat-nyaya-puraskar.webp',
-  route: 'https://bharatnyayapuraskar.com/',
+  route: 'https://bharatnyayapuraskar.com/gallery/',
 };
 
 export const bharatNyayaPuraskar2025: Event = {
@@ -67,7 +67,7 @@ export const bharatNyayaPuraskar2025: Event = {
   description:
     'Exploring the intersection of artificial intelligence and legal practice with focus on automation, ethics, and future trends.',
   image: './images/misc/parliament.webp',
-  route: 'https://bharatnyayapuraskar.com/',
+  route: 'https://bharatnyayapuraskar.com/awardees-2025/',
 };
 
 export const pastEvents: Event[] = [

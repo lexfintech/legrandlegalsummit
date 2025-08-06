@@ -122,11 +122,7 @@ export const whatToExpect: WhatToExpect[] = [
     title: 'Bharat Nyaya Puraskar',
     description: 'Ceremony with 50+ Legal Awards',
   },
-  {
-    icon: Star,
-    title: 'Celebrity Presence',
-    description: ' Actor Saurabh Raj Jain as Chief Guest',
-  },
+  
   {
     icon: Users,
     title: '500+ Legal Professionals',

@@ -27,7 +27,7 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
     <div>
       <style>{`
         .swiper-button-next, .swiper-button-prev {
-          color: #fff !important;
+          color: #000 !important;
           width: 28px !important;
           height: 28px !important;
         }
@@ -50,7 +50,7 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
             <div className="relative w-full max-h-64 md:max-h-96">
               <img
                 src={img}
-                className="w-full max-h-96 object-cover rounded-xl"
+                className="w-full max-h-96 object-contain rounded-xl"
                 alt={`Gallery ${idx + 1}`}
                 onLoad={() => handleImageLoad(idx)}
               />

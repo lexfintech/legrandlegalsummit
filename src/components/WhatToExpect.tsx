@@ -37,7 +37,7 @@ const WhatToExpect = ({ expectations }: { expectations: WhatToExpect[] }) => {
                   >
                     {item.title}
                   </h3>
-                  <p className="text-text-secondary text-sm leading-relaxed">
+                  <p className="text-text-secondary lowercase text-sm leading-relaxed">
                     {item.description}
                   </p>
                 </div>
