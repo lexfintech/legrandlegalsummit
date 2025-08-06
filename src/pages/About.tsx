@@ -2,17 +2,100 @@ import Gallery from '../components/Gallery';
 import Navbar from '../components/Navbar';
 import { NavItem } from '../types';
 import leconfluenceLogo from '/images/logos/leconfluence.webp';
-import { Building, Users, Award, Target } from 'lucide-react';
+import { Globe, Users, Award, Target, Trophy, Network } from 'lucide-react';
 import { upcomingEvents, pastEvents } from '../data/events';
 import Footer from '../components/Footer';
+import FAQ from '../components/FAQ';
+
 
 const aboutContent = [
-  `<strong>Le Grand Legal Summit</strong> is India's premier legal conference series, bringing together the most influential minds in the legal profession. Our mission is to create a platform where legal excellence meets innovation, fostering collaboration and knowledge exchange among legal professionals across the globe.`,
-  `Founded with the vision of elevating the legal profession in India, Le Grand Legal Summit has become the definitive gathering for General Counsels, Law Firm Partners, Judges, Senior Advocates, LegalTech innovators, and corporate legal teams. Each summit is meticulously designed to address the evolving challenges and opportunities in the legal landscape.`,
-  `Our events feature world-class keynote speakers, cutting-edge legal technology showcases, panel discussions on emerging legal trends, and the prestigious <strong>Bharat Nyaya Puraskar</strong> awards ceremony that recognizes outstanding contributions across 50+ legal categories.`,
-  `Beyond networking and recognition, Le Grand Legal Summit serves as a catalyst for legal transformation in India, promoting best practices, ethical standards, and innovation that shapes the future of law. We are committed to creating meaningful connections that drive the legal profession forward.`,
-];
+  `<strong>Le Grand Legal Summit</strong>  is one of the world’s most prestigious platforms celebrating excellence, innovation, and leadership in the legal and intellectual property domains. Hosted annually by Le Confluence, this landmark event convenes a global community of influential legal professionals, corporate counsel, policymakers, thought leaders and innovators for an immersive experience of ideas, dialogue and recognition.
+Designed as a crucible for visionary conversations and actionable strategies, the Summit is shaping the future of law, justice and governance across jurisdictions and continents.`,
+`<strong>Our Vision</strong> <br>To elevate the global legal landscape by fostering meaningful dialogue, showcasing transformative leadership and honouring those who drive impact across the legal, regulatory and policy spheres. `,
+`<strong>Why It Matters</strong> <br>In an increasingly complex and interconnected world, Le Grand Legal Summit serves as a beacon for ethical leadership, cross-border collaboration and transformational thinking. It’s more than just a conference- it’s a global movement for legal excellence, driving systemic change and collective progress across the international legal ecosystem.`,
+`<strong>Join the Movement</strong> <br>Whether you're a seasoned legal expert, a rising star, or an innovator at the intersection of law and technology, the Le Grand Legal Summit is your global platform to connect, contribute and lead.`,
+]
 
+const popularFAQs = [
+    {
+      question: "What is the Le Grand Legal Summit?",
+      answer: "Le Grand Legal Summit is a premier annual gathering that brings together over 300 of India’s most distinguished legal professionals—General Counsels, Law Firm Partners, Judges, Senior Advocates, and LegalTech innovators. The summit is a hub for knowledge-sharing, networking, innovation, and celebrating legal excellence."
+      },
+    {
+      question: "Who can attend?",
+      answer: `The summit is open to: 
+      <ul class="list-disc pl-6">
+      <li>Legal practitioners and law firm leaders</li>
+<li>In-house counsels and corporate legal teams</li>
+<li>Policymakers and regulatory professionals</li>
+<li>LegalTech professionals and startup founders</li>
+<li>Law students and academicians</li>
+<li>Anyone passionate about the future of legal practice</li>
+</ul>`
+      
+    },
+    {
+      question: " What are the main highlights of the event?",
+      answer: `<ul class="list-disc pl-6">
+      <li>Keynote addresses by India’s leading legal minds</li>
+<li>Bharat Nyaya Puraskar Awards – honoring Indian legal excellence across 50+ categories</li>
+<li>Global Jurist Awards – recognizing outstanding international legal achievers</li>
+<li>LegalTech Expo and startup showcase</li>
+<li>Exclusive roundtables and networking lounges</li>
+<li>Official Summit Magazine and media coverage</li>
+<li>Certificates of Participation for all attendees</li>
+</ul>`
+     },
+     {
+      question: "Will attendees receive certificates?",
+      answer: "Yes. All registered participants will receive an official Certificate of Participation."
+      },
+      {
+      question: "Are meals and refreshments provided?",
+      answer: "Yes. Complimentary lunch, high tea, and refreshments will be available to all registered attendees."
+      },
+      {
+      question: "Can I apply to speak at the summit?",
+      answer: "Yes. Legal professionals, thought leaders, and academics can apply via the official summit website. Speaking slots are limited and granted based on experience and proposal strength."
+      },
+      {
+      question: "What awards are presented at the summit?",
+      answer: "Bharat Nyaya Puraskar, Global Jurist Awards"
+      },
+      {
+      question: " Who organizes the summit?",
+      answer: "Le Grand Legal Summit is organized by Le Confluence, a thought leadership platform uniting legal, policy, and innovation leaders across the globe."
+      },
+      {
+      question: " What networking opportunities are available?",
+      answer:`<ul class="list-disc pl-6">
+      <li>GC Roundtables and leadership dialogues</li>
+<li>LegalTech exhibitions and startup showcases</li>
+<li>Curated networking lounges during lunch, tea breaks, and evening sessions</li>
+    </ul>`
+      },
+      {
+      question: " Are sponsorship opportunities available?",
+      answer:`Yes. Strategic sponsorship packages include options to:
+      <ul class="list-disc pl-6">
+      <li>Showcase your brand to key legal decision-makers</li>
+<li>Launch or demo LegalTech products/services</li>
+<li>Gain media exposure and placement in the official Summit Magazine</li>
+<li>Host branded sessions, lounges, or award categories</li>
+     </ul>`
+      },
+      {
+      question: "How can I contact the organizers?",
+      answer:`For queries, speaker applications, registration support, or sponsorship discussions:
+      <ul class="list-disc pl-6">
+      <li>Visit the official event website</li>
+<li>Follow Le Confluence on LinkedIn, Instagram, and other platforms for updates</li>
+
+     </ul>`
+      },
+    
+  ];
+  
 const galleryImages: string[] = [
   './images/gallery/DSC00249-scaled.webp',
   './images/gallery/DSC00265-scaled.webp',
@@ -117,9 +200,9 @@ const galleryImages: string[] = [
 const highlights = [
   {
     icon: Users,
-    title: 'Legal Professionals',
+    title: 'Curated Knowledge Exchange',
     description:
-      '500+ attendees including General Counsels, Law Firm Partners, and Senior Advocates',
+      'Engage with leading legal minds through thought-provoking keynotes, high-level panels and fireside chats addressing the most pressing legal challenges and transformative innovations of our time.',
     color: 'text-blue-600',
   },
   {
@@ -130,18 +213,32 @@ const highlights = [
     color: 'text-yellow-600',
   },
   {
-    icon: Target,
-    title: 'Innovation Focus',
+    icon: Trophy,
+    title: 'Global Jurist Awards',
     description:
-      'Showcasing cutting-edge legal technology and emerging trends in the profession',
+      'Recognising trailblazing legal professionals and thought leaders from around the world who are driving progress across legal systems and shaping the future of international law.',
     color: 'text-green-600',
   },
   {
-    icon: Building,
-    title: 'Pan-India Network',
+    icon: Network,
+    title: 'Strategic Networking Opportunities',
     description:
-      'Connecting legal minds from across major cities and legal hubs in India',
+      'Connect with a dynamic mix of general counsel, judges, legal tech pioneers, regulators and advisors in a collaborative and immersive environment.',
     color: 'text-purple-600',
+  },
+  {
+    icon: Target,
+    title: 'Future-Ready Focus',
+    description:
+      'Explore the cutting edge of legal innovation- from AI and legal automation to emerging global compliance standards and policy frameworks.',
+    color: 'text-yellow-600',
+  },
+  {
+    icon: Globe,
+    title: 'Global Legal Collaboration Forums',
+    description:
+      'Participate in exclusive roundtables and bilateral forums designed to foster cross-border legal cooperation, promote harmonisation of regulations, and encourage legal diplomacy among nations, institutions and international organisations.',
+    color: 'text-blue-600',
   },
 ];
 
@@ -219,7 +316,7 @@ export default function About() {
             {/* Key Highlights */}
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-primary-main mb-8 text-center">
-                Why Le Grand Legal Summit?
+                What We Offer
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {highlights.map((highlight, index) => (
@@ -249,7 +346,13 @@ export default function About() {
                 ))}
               </div>
             </div>
-
+            {/* FAQ Sections */}
+            <div>
+              <h2 className="text-3xl font-bold text-primary-main mb-8 text-center">
+                FAQ's
+                </h2>
+                <FAQ faqs={popularFAQs} />
+            </div>
             {/* Gallery */}
             <div>
               <h2 className="text-3xl font-bold text-primary-main mb-8 text-center">
@@ -260,6 +363,7 @@ export default function About() {
           </div>
         </div>
       </section>
+             
       <Footer />
     </>
   );
