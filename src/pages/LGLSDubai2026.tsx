@@ -10,6 +10,7 @@ import EventPartners from '../components/EventPartners';
 import MediaPartners from '../components/MediaPartners';
 import UpcomingEvents from '../components/UpcomingEvents';
 import Footer from '../components/Footer';
+import Testimonials from '../components/testimonials';
 import HonourableGuests from '../components/HonourableGuests';
 import VideoHighlight from '../components/VideoHighlight';
 import {
@@ -29,6 +30,7 @@ import {
   pastEvents,
   agendaSection,
 } from '../data/dubai';
+import { testimonials } from '../data/testimonials';
 import PastEvents from '../components/PastEvents';
 
 function LGLSDubai2026() {
@@ -48,6 +50,8 @@ function LGLSDubai2026() {
       <MediaPartners mediaPartners={mediaPartners} />
       <PastEvents pastEvents={pastEvents} />
       <VideoHighlight videoHighlight={videoHighlight} />
+      <Testimonials testimonials={testimonials} />
+
       <Footer />
     </div>
   );

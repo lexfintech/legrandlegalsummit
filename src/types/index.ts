@@ -97,3 +97,9 @@ export type NavItem = {
   href: string;
   dropdownItems?: NavItem[];
 };
+
+export type Testimonial = {
+  name: string;
+  role: string;
+  feedback: string;
+}
