@@ -7,23 +7,23 @@ import { upcomingEvents, pastEvents } from '../data/events';
 import Footer from '../components/Footer';
 import FAQ from '../components/FAQ';
 
-
 const aboutContent = [
   `<strong>Le Grand Legal Summit</strong>  is one of the world’s most prestigious platforms celebrating excellence, innovation, and leadership in the legal and intellectual property domains. Hosted annually by Le Confluence, this landmark event convenes a global community of influential legal professionals, corporate counsel, policymakers, thought leaders and innovators for an immersive experience of ideas, dialogue and recognition.
 Designed as a crucible for visionary conversations and actionable strategies, the Summit is shaping the future of law, justice and governance across jurisdictions and continents.`,
-`<strong>Our Vision</strong> <br>To elevate the global legal landscape by fostering meaningful dialogue, showcasing transformative leadership and honouring those who drive impact across the legal, regulatory and policy spheres. `,
-`<strong>Why It Matters</strong> <br>In an increasingly complex and interconnected world, Le Grand Legal Summit serves as a beacon for ethical leadership, cross-border collaboration and transformational thinking. It’s more than just a conference- it’s a global movement for legal excellence, driving systemic change and collective progress across the international legal ecosystem.`,
-`<strong>Join the Movement</strong> <br>Whether you're a seasoned legal expert, a rising star, or an innovator at the intersection of law and technology, the Le Grand Legal Summit is your global platform to connect, contribute and lead.`,
-]
+  `<strong>Our Vision</strong> <br>To elevate the global legal landscape by fostering meaningful dialogue, showcasing transformative leadership and honouring those who drive impact across the legal, regulatory and policy spheres. `,
+  `<strong>Why It Matters</strong> <br>In an increasingly complex and interconnected world, Le Grand Legal Summit serves as a beacon for ethical leadership, cross-border collaboration and transformational thinking. It’s more than just a conference- it’s a global movement for legal excellence, driving systemic change and collective progress across the international legal ecosystem.`,
+  `<strong>Join the Movement</strong> <br>Whether you're a seasoned legal expert, a rising star, or an innovator at the intersection of law and technology, the Le Grand Legal Summit is your global platform to connect, contribute and lead.`,
+];
 
 const popularFAQs = [
-    {
-      question: "What is the Le Grand Legal Summit?",
-      answer: "Le Grand Legal Summit is a premier annual gathering that brings together over 300 of India’s most distinguished legal professionals—General Counsels, Law Firm Partners, Judges, Senior Advocates, and LegalTech innovators. The summit is a hub for knowledge-sharing, networking, innovation, and celebrating legal excellence."
-      },
-    {
-      question: "Who can attend?",
-      answer: `The summit is open to: 
+  {
+    question: 'What is the Le Grand Legal Summit?',
+    answer:
+      'Le Grand Legal Summit is a premier annual gathering that brings together over 300 of India’s most distinguished legal professionals—General Counsels, Law Firm Partners, Judges, Senior Advocates, and LegalTech innovators. The summit is a hub for knowledge-sharing, networking, innovation, and celebrating legal excellence.',
+  },
+  {
+    question: 'Who can attend?',
+    answer: `The summit is open to: 
       <ul class="list-disc pl-6">
       <li>Legal practitioners and law firm leaders</li>
 <li>In-house counsels and corporate legal teams</li>
@@ -31,12 +31,11 @@ const popularFAQs = [
 <li>LegalTech professionals and startup founders</li>
 <li>Law students and academicians</li>
 <li>Anyone passionate about the future of legal practice</li>
-</ul>`
-      
-    },
-    {
-      question: " What are the main highlights of the event?",
-      answer: `<ul class="list-disc pl-6">
+</ul>`,
+  },
+  {
+    question: ' What are the main highlights of the event?',
+    answer: `<ul class="list-disc pl-6">
       <li>Keynote addresses by India’s leading legal minds</li>
 <li>Bharat Nyaya Puraskar Awards – honoring Indian legal excellence across 50+ categories</li>
 <li>Global Jurist Awards – recognizing outstanding international legal achievers</li>
@@ -44,58 +43,61 @@ const popularFAQs = [
 <li>Exclusive roundtables and networking lounges</li>
 <li>Official Summit Magazine and media coverage</li>
 <li>Certificates of Participation for all attendees</li>
-</ul>`
-     },
-     {
-      question: "Will attendees receive certificates?",
-      answer: "Yes. All registered participants will receive an official Certificate of Participation."
-      },
-      {
-      question: "Are meals and refreshments provided?",
-      answer: "Yes. Complimentary lunch, high tea, and refreshments will be available to all registered attendees."
-      },
-      {
-      question: "Can I apply to speak at the summit?",
-      answer: "Yes. Legal professionals, thought leaders, and academics can apply via the official summit website. Speaking slots are limited and granted based on experience and proposal strength."
-      },
-      {
-      question: "What awards are presented at the summit?",
-      answer: "Bharat Nyaya Puraskar, Global Jurist Awards"
-      },
-      {
-      question: " Who organizes the summit?",
-      answer: "Le Grand Legal Summit is organized by Le Confluence, a thought leadership platform uniting legal, policy, and innovation leaders across the globe."
-      },
-      {
-      question: " What networking opportunities are available?",
-      answer:`<ul class="list-disc pl-6">
+</ul>`,
+  },
+  {
+    question: 'Will attendees receive certificates?',
+    answer:
+      'Yes. All registered participants will receive an official Certificate of Participation.',
+  },
+  {
+    question: 'Are meals and refreshments provided?',
+    answer:
+      'Yes. Complimentary lunch, high tea, and refreshments will be available to all registered attendees.',
+  },
+  {
+    question: 'Can I apply to speak at the summit?',
+    answer:
+      'Yes. Legal professionals, thought leaders, and academics can apply via the official summit website. Speaking slots are limited and granted based on experience and proposal strength.',
+  },
+  {
+    question: 'What awards are presented at the summit?',
+    answer: 'Bharat Nyaya Puraskar, Global Jurist Awards',
+  },
+  {
+    question: ' Who organizes the summit?',
+    answer:
+      'Le Grand Legal Summit is organized by Le Confluence, a thought leadership platform uniting legal, policy, and innovation leaders across the globe.',
+  },
+  {
+    question: ' What networking opportunities are available?',
+    answer: `<ul class="list-disc pl-6">
       <li>GC Roundtables and leadership dialogues</li>
 <li>LegalTech exhibitions and startup showcases</li>
 <li>Curated networking lounges during lunch, tea breaks, and evening sessions</li>
-    </ul>`
-      },
-      {
-      question: " Are sponsorship opportunities available?",
-      answer:`Yes. Strategic sponsorship packages include options to:
+    </ul>`,
+  },
+  {
+    question: ' Are sponsorship opportunities available?',
+    answer: `Yes. Strategic sponsorship packages include options to:
       <ul class="list-disc pl-6">
       <li>Showcase your brand to key legal decision-makers</li>
 <li>Launch or demo LegalTech products/services</li>
 <li>Gain media exposure and placement in the official Summit Magazine</li>
 <li>Host branded sessions, lounges, or award categories</li>
-     </ul>`
-      },
-      {
-      question: "How can I contact the organizers?",
-      answer:`For queries, speaker applications, registration support, or sponsorship discussions:
+     </ul>`,
+  },
+  {
+    question: 'How can I contact the organizers?',
+    answer: `For queries, speaker applications, registration support, or sponsorship discussions:
       <ul class="list-disc pl-6">
       <li>Visit the official event website</li>
 <li>Follow Le Confluence on LinkedIn, Instagram, and other platforms for updates</li>
 
-     </ul>`
-      },
-    
-  ];
-  
+     </ul>`,
+  },
+];
+
 const galleryImages: string[] = [
   './images/gallery/DSC00249-scaled.webp',
   './images/gallery/DSC00265-scaled.webp',
@@ -350,8 +352,8 @@ export default function About() {
             <div>
               <h2 className="text-3xl font-bold text-primary-main mb-8 text-center">
                 FAQ's
-                </h2>
-                <FAQ faqs={popularFAQs} />
+              </h2>
+              <FAQ faqs={popularFAQs} />
             </div>
             {/* Gallery */}
             <div>
@@ -363,7 +365,7 @@ export default function About() {
           </div>
         </div>
       </section>
-             
+
       <Footer />
     </>
   );

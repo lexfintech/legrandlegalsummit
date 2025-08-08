@@ -8,7 +8,7 @@ const Testimonials = ({ testimonials }: { testimonials: Testimonial[] }) => {
     // Set up an interval to automatically advance the testimonials every 5 seconds
     const interval = setInterval(() => {
       setCurrentTestimonialIndex((prevIndex) =>
-        prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+        prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1,
       );
     }, 5000); // Change testimonial every 5 seconds
 
@@ -41,7 +41,9 @@ const Testimonials = ({ testimonials }: { testimonials: Testimonial[] }) => {
               <p className="text-text-primary font-semibold text-lg">
                 {visibleTestimonial.name}
               </p>
-              <p className="text-text-muted text-sm">{visibleTestimonial.role}</p>
+              <p className="text-text-muted text-sm">
+                {visibleTestimonial.role}
+              </p>
             </div>
           </div>
         </div>

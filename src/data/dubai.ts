@@ -450,8 +450,6 @@ export const videoHighlight: VideoHighlight = {
   backgroundImage: './images/misc/DSC01629.webp',
 };
 
-
-
 export {
   filteredUpcomingEvents as upcomingEvents,
   filteredPastEvents as pastEvents,

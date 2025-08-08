@@ -14,10 +14,8 @@ const FAQ = ({ faqs }: FAQProps) => {
   const [openItems, setOpenItems] = useState<number[]>([]);
 
   const toggleItem = (index: number) => {
-    setOpenItems(prev => 
-      prev.includes(index) 
-        ? prev.filter(i => i !== index)
-        : [...prev, index]
+    setOpenItems((prev) =>
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index],
     );
   };
 
@@ -34,7 +32,9 @@ const FAQ = ({ faqs }: FAQProps) => {
                 onClick={() => toggleItem(index)}
                 className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
               >
-                <span className="font-medium text-primary-dark">{faq.question}</span>
+                <span className="font-medium text-primary-dark">
+                  {faq.question}
+                </span>
                 {openItems.includes(index) ? (
                   <ChevronUp className="h-5 w-5 text-primary-green" />
                 ) : (
@@ -43,7 +43,10 @@ const FAQ = ({ faqs }: FAQProps) => {
               </button>
               {openItems.includes(index) && (
                 <div className="px-6 pb-4 animate-slide-up">
-                  <p dangerouslySetInnerHTML={{__html:faq.answer}} className="text-primary-muted leading-relaxed"></p>
+                  <p
+                    dangerouslySetInnerHTML={{ __html: faq.answer }}
+                    className="text-primary-muted leading-relaxed"
+                  ></p>
                 </div>
               )}
             </div>

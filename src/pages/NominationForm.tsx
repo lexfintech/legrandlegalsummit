@@ -240,25 +240,25 @@ const NominationForm = () => {
   const validate = () => {
     const newErrors: { [key: string]: string } = {};
     const fieldLabels: { [key: string]: string } = {
-        name: 'Your Name',
-        email: 'Email',
-        phone: 'Phone Number',
-        nomineeName: 'Nominee Name',
-        designation: 'Designation',
-        company: 'Company',
-        profileLink: 'Profile Link',
-        education: 'Education',
-        bestDescribe: 'Nominee Description',
-        experience: 'Years of Experience',
-        bio: 'Brief Bio',
-        expertise: 'Key Expertise',
-        categoryHead: 'Category Head',
-        awardCategory: 'Award Category',
-        city: 'City',
-        state: 'State',
-        date: 'Date',
-        hours: 'Hour',
-        minutes: 'Minutes',
+      name: 'Your Name',
+      email: 'Email',
+      phone: 'Phone Number',
+      nomineeName: 'Nominee Name',
+      designation: 'Designation',
+      company: 'Company',
+      profileLink: 'Profile Link',
+      education: 'Education',
+      bestDescribe: 'Nominee Description',
+      experience: 'Years of Experience',
+      bio: 'Brief Bio',
+      expertise: 'Key Expertise',
+      categoryHead: 'Category Head',
+      awardCategory: 'Award Category',
+      city: 'City',
+      state: 'State',
+      date: 'Date',
+      hours: 'Hour',
+      minutes: 'Minutes',
     };
 
     Object.entries(form).forEach(([key, value]) => {
@@ -453,7 +453,7 @@ const NominationForm = () => {
                 </p>
               )}
             </div>
-            
+
             {/* Designation */}
             <div>
               <label
@@ -653,7 +653,7 @@ const NominationForm = () => {
             {/* Interview Time Slot - NEWLY ADDED */}
             <div className="md:col-span-2">
               <label className="block text-sm font-medium text-gray-700 mb-1">
-                 Time
+                Time
               </label>
               <div className="flex items-center gap-2">
                 <div className="flex-1">
@@ -682,12 +682,16 @@ const NominationForm = () => {
                     className={inputClass}
                   >
                     <option value="">Minutes</option>
-                    {["00", "15", "30", "45"].map((min) => (
-                       <option key={min} value={min}>{min}</option>
+                    {['00', '15', '30', '45'].map((min) => (
+                      <option key={min} value={min}>
+                        {min}
+                      </option>
                     ))}
                   </select>
-                   {errors.minutes && (
-                    <p className="text-red-600 text-xs mt-1">{errors.minutes}</p>
+                  {errors.minutes && (
+                    <p className="text-red-600 text-xs mt-1">
+                      {errors.minutes}
+                    </p>
                   )}
                 </div>
                 <div className="flex-1">
@@ -703,13 +707,12 @@ const NominationForm = () => {
                 </div>
               </div>
             </div>
-
           </div>
 
           {/* This section contains all other non-grid fields */}
 
-           {/* Nominee Description - NEWLY ADDED */}
-           <div>
+          {/* Nominee Description - NEWLY ADDED */}
+          <div>
             <label
               htmlFor="bestDescribe"
               className="block text-sm font-medium text-gray-700 mb-1"

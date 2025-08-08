@@ -122,7 +122,7 @@ export const whatToExpect: WhatToExpect[] = [
     title: 'Bharat Nyaya Puraskar',
     description: 'Ceremony with 50+ Legal Awards',
   },
-  
+
   {
     icon: Users,
     title: '500+ Legal Professionals',

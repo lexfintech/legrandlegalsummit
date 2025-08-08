@@ -6,6 +6,7 @@ import {
   Phone,
   MapPin,
 } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -25,7 +26,11 @@ const Footer = () => {
       href: 'https://www.linkedin.com/company/le-grand-legal-summit/',
       color: 'hover:text-blue-600',
     },
-    // { icon: MessageCircle, href: 'sms:+919582723995', color: 'hover:text-green-500' },
+    {
+      icon: FaWhatsapp,
+      href: 'https://chat.whatsapp.com/K9wGyGYF0TcDfPfeUnXoFh?mode=ac_t',
+      color: 'hover:text-green-500',
+    },
   ];
 
   return (
